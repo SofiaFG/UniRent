@@ -35,7 +35,7 @@
 					</li>
 					<li>
 						<h3>Business deletion</h3>
-						<p>We reserve the right to remove any business listings if we feel that they're infringing on any laws or if they contain objectionable material such as adult content (including images, vulgar language, content or links). In such cases, the business poster will receive a full refund for the listing.</p>
+						<p>We reserve the right to remove any business listings if we feel that they're infringing on any laws or if they contain objectionable material such as adult content (including images, vulgar language, content or links).</p>
 					</li>
 					<li>
 						<h3>Security and privacy</h3>
@@ -43,7 +43,7 @@
 					</li>
 					<li>
 						<h3>Governing Law</h3>
-						<p>These Terms shall be governed and construed in accordance with the laws of Ontario, Canada, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>
+						<p>These Terms shall be governed and construed in accordance with the portuguese, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.</p>
 					</li>
 					<li>
 						<h3>Contact Us</h3>
