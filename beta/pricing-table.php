@@ -80,6 +80,11 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-sm-6 col-xs-12">
+			</div>
+			<div class="col-sm-6 col-xs-12">
+			<small><sup>*</sup>O valor a pagar pelo seguro vai depender do bem e do período de aluguer.</small>
+			</div>
 			<div class="col-xs-12">
 				<div class="signUpMessage">
 					<p>Não tens Conta? <a href="sign-up.php">Sign up</a></p>

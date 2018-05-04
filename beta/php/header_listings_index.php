@@ -127,33 +127,22 @@
           <div class="collapse navbar-collapse navbar-dash">
             <ul class="nav navbar-nav mr0">
               <li class="active">
-                <a href="listings.php"><i aria-hidden="true"></i>Bem vindo/a:</a>
+                <a href="listings.php"><i aria-hidden="true"></i>Bem vindo:</a>
               </li>
               <li class="dropdown singleDrop">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-ul icon-dash" aria-hidden="true"></i> Owner <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                 <ul class="dropdown-menu dropdown-menu-left">
                   <li><a href="dashboard.php">Dashboard</a></li>
-                  <li><a href="itens_history.php">Histórico dos meus itens</a></li>
-                  <li><a href="add-listings.php">Adicionar um bem</a></li>
-                  <li><a href="manage_ads.php">Gerir anuncios</a></li>
+                  <li><a href="itens_history.php">Histórico dos meus Bens</a></li>
+                  <li><a href="add-listings.php">Adicionar um Bem</a></li>
+                  <li><a href="manage_ads.php">Gerir Anúncios</a></li>
                 </ul>
               </li>
               <li class="dropdown singleDrop">
                 <a href="my_rentals.php" class="scrolling"><i class="fa fa-star-o" aria-hidden="true"></i> Borrower</a>
               </li>
             </ul>
-            <div class="row adjustRow">
-              <div class="pull-right col-xs-12 col-sm-4">
-                <form class="navbar-form" role="search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Pesquisar" name="q">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button"><i class="icon-listy icon-search-2"></i></button>
-                    </span>
-                  </div>
-                </form>
-              </div>
-            </div>
+            
           </div>
         </div>
       </nav>

@@ -18,10 +18,9 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h2>Inserir um novo item (bem)</h2>
+        <h2>Inserir um novo Bem</h2>
         <ol class="breadcrumb">
           <li><a href="listings.php">Início</a></li>
-          <li class="active">Adicionar um aluguel</li>
         </ol>
       </div>
     </div>
@@ -37,12 +36,11 @@
 				<form action="" method="" class="listing__form">
 					<div class="dashboardBoxBg mb30">
 						<div class="profileIntro paraMargin">
-							<h3>Sobre</h3>
-							<p>Não nos responsabilizamos por quaisquer danos causados pelo uso deste website ou pela publicação de itens (bens) aqui. Por favor, use o nosso site a seu próprio critério e exercer bom senso, bem como o bom senso ao anunciar negócios aqui.</p>
+						<h3>Sobre o Bem</h3>
 							<div class="row">
 								<div class="form-group col-sm-6 col-xs-12">
-									<label for="itemName">Nome do item*</label>
-									<input maxlength="45" type="text" class="form-control" id="itemName" name="itemName" placeholder="Nome do item">
+									<label for="itemName">Nome do Bem*</label>
+									<input maxlength="45" type="text" class="form-control" id="itemName" name="itemName">
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
 									<label for="listingCategory">Categoria</label>
@@ -64,8 +62,8 @@
 									</div>
 								</div>
 								<div class="form-group col-xs-12">
-									<label for="itemDescription">Descrição do Item</label>
-									<textarea maxlength="300" class="form-control" rows="3" id="itemDescription" name="itemDescription" placeholder="Descreva o seu item"></textarea>
+									<label for="itemDescription">Descrição do Bem</label>
+									<textarea maxlength="300" class="form-control" rows="3" id="itemDescription" name="itemDescription" placeholder="Exemplo: A GoPro tem um pequeno risco no lado superior direito."></textarea>
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
 									<label for="itemPrice">Preço*</label>
@@ -80,13 +78,16 @@
                     </div>
                   </div>
                 </div>
-							</div>
+					<div class="form-group col-xs-12">
+						<h5>Disclaimer</h5>
+						<p>Não nos responsabilizamos por quaisquer danos causados pelo uso deste website ou pela publicação de bens aqui. Por favor, use o nosso site a seu próprio critério e exercer bom senso, bem como o bom senso ao anunciar negócios aqui.</p>
+					</div>
+				</div>
 						</div>
 					</div>
 					<div class="dashboardBoxBg mb30">
 						<div class="profileIntro paraMargin">
 							<h3>Galeria</h3>
-							<p>Não nos responsabilizamos por quaisquer danos causados pelo uso deste website ou pela publicação de itens (bens) aqui. Por favor, use o nosso site a seu próprio critério e exercer bom senso, bem como o bom senso ao anunciar negócios aqui.</p>
 							<div class="row">
 								<div class="form-group col-xs-12">
 									<div class="imageUploader text-center">
@@ -109,7 +110,6 @@
 					<div class="dashboardBoxBg mb30">
 						<div class="profileIntro paraMargin">
 							<h3>Política de segurança</h3>
-							<p>Não nos responsabilizamos por quaisquer danos causados pelo uso deste website ou pela publicação de itens (bens) aqui. Por favor, use o nosso site a seu próprio critério e exercer bom senso, bem como o bom senso ao anunciar negócios aqui.</p>
 							<div class="row">
 								<div class="form-group col-sm-6 col-xs-12 contactSelect">
 									<label for="scurityType">Tipo</label>
@@ -124,7 +124,7 @@
 								</div>
 								<div class="form-group col-xs-12">
 									<label for="securityDescription">Descrição do motivo da taxa</label>
-									<input  maxlength="200" type="text" class="form-control" id="securityDescription" name="securityDescription" placeholder="Descreva o motivo da taxa">
+									<input  maxlength="200" type="text" class="form-control" id="securityDescription" name="securityDescription">
 								</div>
 							</div>
 						</div>
@@ -155,7 +155,7 @@
 						</div>
 					</div>
 					<div class="form-footer text-center">
-						<button type="submit" class="btn-submit">Registar Item</button>
+						<button type="submit" class="btn-submit">Registar Bem</button>
 					</div>
 				</form>
 			</div>
