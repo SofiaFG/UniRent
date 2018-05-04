@@ -76,11 +76,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h2>Alugados</h2>
+        <h2>Histórico de Alugados</h2>
         <ol class="breadcrumb">
           <li><a href="listings.php">Início</a></li>
-          <li class="active">Meus alugados</li>
-        </ol>
+          </ol>
       </div>
     </div>
   </div>
@@ -96,20 +95,21 @@
 						<div class="profileIntro">
 							<div class="row">
 							<form action="" method="" class="listing__form">
+									<h3>Filtrar por:</h3>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="itemName">Nome do item</label>
-									<input type="text" class="form-control" id="itemName" name="itemName" placeholder="Nome do item">
+									<label for="itemName">Nome do Bem</label>
+									<input type="text" class="form-control" id="itemName" name="itemName">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="ownerUsername">Username do owner do item</label>
-									<input type="text" class="form-control" id="ownerUsername" name="ownerUsername" placeholder="Username do owner">
+									<label for="ownerUsername">Username do <u>Borrower</u></label>
+									<input type="text" class="form-control" id="ownerUsername" name="ownerUsername">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="totalPrice">Preço total</label>
+									<label for="totalPrice">Preço Total</label>
 									<input type="text" class="form-control" id="totalPrice" name="totalPrice" placeholder="€">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="initialRentalDay">Data inicial do aluguer</label>
+									<label for="initialRentalDay">Data de início do Aluguer</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 											<input type="text" class="form-control" id="initialRentalDay" name="initialRentalDay" placeholder="mm/dd/yyyy">
@@ -120,7 +120,7 @@
 									</div>
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="endRentalDay">Data final do aluguer</label>
+									<label for="endRentalDay">Data de fim do Aluguer</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 											<input type="text" class="form-control" id="endRentalDay" name="endRentalDay" placeholder="mm/dd/yyyy">
@@ -131,7 +131,7 @@
 									</div>
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="publishDate">Data de publicação do item</label>
+									<label for="publishDate">Data de Publicação do Bem</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 											<input type="text" class="form-control" id="publishDate" name="publishDate" placeholder="mm/dd/yyyy">
@@ -154,23 +154,21 @@
 					<table id="ordersTable" class="table table-small-font table-bordered table-striped" cellspacing="0" width="100%">
 						<thead>
 							<tr>
-								<th data-priority="0">ID do item</th>
-								<th data-priority="1">Nome do item</th>
-								<th data-priority="2">Preço total do aluguer</th>
-								<th data-priority="3">Data inicial do aluguer</th>
-								<th data-priority="4">Data final do aluguer</th>
-								<th data-priority="5">Status</th>
-								<th data-priority="6">Ações</th>
+								<th data-priority="0">ID do Bem</th>
+								<th data-priority="1">Nome do Bem</th>
+								<th data-priority="2">Preço Total do Aluguer</th>
+								<th data-priority="3">Data de início do Aluguer</th>
+								<th data-priority="4">Data de fim do Aluguer</th>
+								<th data-priority="5">Ações</th>
 							</tr>
 						</thead>
 						<tfoot>
 							<tr>
-								<th>ID do item</th>
-								<th>Nome do item</th>
-								<th>Preço total do aluguer</th>
-								<th>Data inicial do aluguer</th>
-								<th>Data final do aluguer</th>
-								<th>Status</th>
+								<th>ID do Bem</th>
+								<th>Nome do Bem</th>
+								<th>Preço total do Aluguer</th>
+								<th>Data de início do Aluguer</th>
+								<th>Data de fim do Aluguer</th>
 								<th>Ações</th>
 							</tr>
 						</tfoot>

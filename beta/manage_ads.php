@@ -79,7 +79,6 @@
         <h2>Alugados</h2>
         <ol class="breadcrumb">
           <li><a href="listings.php">Início</a></li>
-          <li class="active">Meus alugados</li>
         </ol>
       </div>
     </div>
@@ -96,23 +95,23 @@
 					<table id="ordersTable" class="table table-small-font table-bordered table-striped" cellspacing="0" width="100%">
 						<thead>
 							<tr>
-								<th data-priority="0">ID do item</th>
-								<th data-priority="1">Nome do item</th>
-								<th data-priority="2">Preço total do aluguer</th>
-								<th data-priority="3">Data inicial do aluguer</th>
-								<th data-priority="4">Data final do aluguer</th>
-								<th data-priority="5">Status</th>
+								<th data-priority="0">ID do Bem</th>
+								<th data-priority="1">Nome do Bem</th>
+								<th data-priority="2">Preço Total do Aluguer</th>
+								<th data-priority="3">Data de início do Aluguer</th>
+								<th data-priority="4">Data de fim do Aluguer</th>
+								<th data-priority="5">Estado</th>
 								<th data-priority="6">Ações</th>
 							</tr>
 						</thead>
 						<tfoot>
 							<tr>
-								<th>ID do item</th>
-								<th>Nome do item</th>
-								<th>Preço total do aluguer</th>
-								<th>Data inicial do aluguer</th>
-								<th>Data final do aluguer</th>
-								<th>Status</th>
+								<th>ID do Bem</th>
+								<th>Nome do Bem</th>
+								<th>Preço Total do Aluguer</th>
+								<th>Data de início do Aluguer</th>
+								<th>Data de fim do Aluguer</th>
+								<th>Estado</th>
 								<th>Ações</th>
 							</tr>
 						</tfoot>

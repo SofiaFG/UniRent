@@ -15,7 +15,7 @@
                 <ul class="list-styled list-contact">
                   <li><i class="fa fa-phone" aria-hidden="true"></i>[+351] 657 524 332</li>
                   <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:contacto@unirent.online?Subject=Contact%20UniRent" target="_top">contacto@unirent.online</a></li>
-                  <li><i class="fa fa-globe" aria-hidden="true"></i><a href="index_EN.php">Alterar idioma para o <u>Inglês</u></a></li>
+                  <li><i class="fa fa-globe" aria-hidden="true"></i><a href="index_EN.php">Alterar idioma para <u>Inglês</u></a></li>
                 </ul>
               </div>
             </div>
@@ -23,7 +23,7 @@
             </div>
             <div class="col-sm-2 col-xs-12">
               <div class="footerInfoTitle">
-                <h4>Companhia</h4>
+                <h4>Empresa</h4>
               </div>
               <div class="useLink">
                 <ul class="list-unstyled">

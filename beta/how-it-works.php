@@ -34,8 +34,8 @@
 						<div class="col-sm-8 col-sm-pull-4 col-xs-12">
 							<div class="howWorksInfo text-left">
 								<p>1º passo</p>
-								<h3>Necessidade</h3>
-								<p>Tu precisas de um bem, e a melhor maneira é alugar em vez de comprar.</p>
+								<h2>Necessidade</h2>
+								<p>Precisas de um bem, e a melhor maneira é alugar em vez de comprar.</p>
 							</div>
 						</div>
 					</div>
@@ -48,7 +48,7 @@
 						<div class="col-sm-8 col-xs-12">
 							<div class="howWorksInfo text-right">
 								<p>2º Passo</p>
-								<h3>Pesquisa</h3>
+								<h2>Pesquisa</h2>
 								<p>Procura, na nossa plataforma, por qualquer bem que gostarias de alugar. Também podes fazer um pedido de um bem quando precisares dele.</p>
 							</div>
 						</div>
@@ -62,26 +62,26 @@
 						<div class="col-sm-8 col-sm-pull-4 col-xs-12">
 							<div class="howWorksInfo text-left">
 								<p>3º Passo</p>
-								<h3>Aluga</h3>
-								<p>Aluga qualquer bem que precises, diretamente do seu proprietário, de maneira simples.</p>
+								<h2>Aluga</h2>
+								<p>Aluga qualquer bem que precises, diretamente com o <u>Owner</u>, de maneira simples e eficaz.</p>
 							</div>
 						</div>
 					</div>
 				</div>
-        <div class="howWorksInner">
-          <div class="row">
-            <div class="col-sm-4 col-xs-12">
-              <div class="howWorksImage text-left"><img src="img/works/Return.png" width="250" height="250" alt="Image Works"></div>
-            </div>
-            <div class="col-sm-8 col-xs-12">
-              <div class="howWorksInfo text-right">
-                <p>4º Passo</p>
-                <h3>Devolve</h3>
-                <p>Devolve o bem que alugaste ao seu proprietário, não esquecendo de o entregar num horário conveniente. </p>
-              </div>
-            </div>
-          </div>
-        </div>
+		        <div class="howWorksInner">
+		          <div class="row">
+		            <div class="col-sm-4 col-xs-12">
+		              <div class="howWorksImage text-left"><img src="img/works/Return.png" width="250" height="250" alt="Image Works"></div>
+		            </div>
+		            <div class="col-sm-8 col-xs-12">
+		              <div class="howWorksInfo text-right">
+		                <p>4º Passo</p>
+		                <h2>Devolve</h2>
+		                <p>Devolve o bem que alugaste ao seu <u>Owner</u>, não esquecendo de o entregar num horário conveniente. </p>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
 			</div>
 		</div>
 	</div>
