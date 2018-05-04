@@ -13,7 +13,7 @@
 
 
 <!-- BANNER SECTION -->
-<section class="clearfix homeBanner" style="background-image: url(img/banner/5.png);">
+<section class="clearfix homeBanner" style="background-image: url(img/banner/5.jpg);">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">

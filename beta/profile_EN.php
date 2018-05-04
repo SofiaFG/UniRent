@@ -170,57 +170,6 @@
  }
 </style>
 
-    <!-- Dashboard header -->
-    <section class="navbar-dashboard-area">
-      <nav class="navbar navbar-default lightHeader navbar-dashboard" role="navigation">
-        <div class="container">
-
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-dash">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse navbar-dash">
-            <ul class="nav navbar-nav mr0">
-              <li class="active">
-                <a href="listings_EN.php"><i aria-hidden="true"></i> <?php echo  "Welcome: " . $login_session; ?></a>
-              </li>
-              <li><a href="dashboard_EN.php"><i class="fa fa-tachometer icon-dash" aria-hidden="true"></i> Dashboard</a></li>
-              <li class="dropdown singleDrop">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-ul icon-dash" aria-hidden="true"></i> Rents <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                <ul class="dropdown-menu dropdown-menu-left">
-                  <li><a href="listings_EN.php">My rents</a></li>
-                  <li><a href="add-listings_EN.php">Add a rent</a></li>
-                  <li><a href="#">Edit my rents</a></li>
-                </ul>
-              </li>
-              <li class="dropdown singleDrop">
-                <a href="orders_EN.php" class="scrolling"><i class="fa fa-star-o" aria-hidden="true"></i> Rented</a>
-              </li>
-            </ul>
-            <div class="row adjustRow">
-              <div class="pull-right col-xs-12 col-sm-4">
-                <form class="navbar-form" role="search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="q">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button"><i class="icon-listy icon-search-2"></i></button>
-                    </span>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </section>
-
 
 <!-- Dashboard breadcrumb section -->
 <div class="section dashboard-breadcrumb-section bg-dark">

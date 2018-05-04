@@ -33,9 +33,9 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-6 col-xs-12">
-				<div class="priceTableWrapper">
+				<div class="priceTableWrapper advancedSupport">
 					<div class="priceTableTitle">
-						<h2>Without Assurance</h2><p></p>
+						<h2>Without Assurance</h2><br>
 					</div>
 					<div class="priceAmount">
 						<h2>0<small>€</small></h2>

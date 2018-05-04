@@ -33,7 +33,7 @@
 					<ul class="list-unstyled list-address">
 						<li>
 							<i class="fa fa-map-marker" aria-hidden="true"></i>
-							Rua do Quelhas 6, 1200-781 <br> Lisboa, Portugal
+							1º andar - Time Out Market Lisboa <br> Avenida 24 de Julho 1200-479 <br> Lisboa, Portugal
 						</li>
 						<li>
 							<i class="fa fa-phone" aria-hidden="true"></i>
