@@ -57,7 +57,7 @@
 
 
 <?php
-  require_once('php/footer.php');
+  require_once('php/footer_EN.php');
   // print UniRent header
   do_unirent_footer();
 ?>
