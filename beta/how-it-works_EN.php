@@ -3,7 +3,7 @@
 <?php
   require_once('php/header_EN.php');
   // print UniRent header
-  do_unirent_header('How it works - UniRent');
+  do_unirent_header('How it Works - UniRent');
 ?>
 
 
@@ -34,8 +34,8 @@
 						<div class="col-sm-8 col-sm-pull-4 col-xs-12">
 							<div class="howWorksInfo text-left">
 								<p>Step 1</p>
-								<h3>Need</h3>
-								<p>You had a need of an item, and the best way is to rent instead of buying.</p>
+								<h2>Need</h2>
+								<p>You have a need for an item, and the best way is to rent instead of buying.</p>
 							</div>
 						</div>
 					</div>
@@ -48,7 +48,7 @@
 						<div class="col-sm-8 col-xs-12">
 							<div class="howWorksInfo text-right">
 								<p>Step 2</p>
-								<h3>Search</h3>
+								<h2>Search</h2>
 								<p>Search for any item you would like to rent in our platform. You can also request an item when necessary.</p>
 							</div>
 						</div>
@@ -62,8 +62,8 @@
 						<div class="col-sm-8 col-sm-pull-4 col-xs-12">
 							<div class="howWorksInfo text-left">
 								<p>Step 3</p>
-								<h3>Rent</h3>
-								<p>Rent any item you need straight from its Owner in a easy way.</p>
+								<h2>Rent</h2>
+								<p>Rent any item you need straight from its Owner in a easy and efficient way.</p>
 							</div>
 						</div>
 					</div>
@@ -76,8 +76,8 @@
             <div class="col-sm-8 col-xs-12">
               <div class="howWorksInfo text-right">
                 <p>Step 4</p>
-                <h3>Return</h3>
-                <p>Return the item to its owner at a convenient time.</p>
+                <h2>Return</h2>
+                <p>Return the item to its Owner, at a convenient time.</p>
               </div>
             </div>
           </div>

@@ -30,7 +30,7 @@
                   <li><a href="contact-us_EN.php">Contact Us</a></li>
                   <li><a href="terms-of-services_EN.php">Terms and Conditions</a></li>
                   <li><a href="how-it-works_EN.php">How It Works</a></li>
-                  <li><a href="pricing-table_EN.php">Assurance</a></li>
+                  <li><a href="assurance_EN.php">Assurance</a></li>
                 </ul>
               </div>
             </div>

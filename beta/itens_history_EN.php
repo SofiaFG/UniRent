@@ -6,7 +6,7 @@
 	include('db/session.php');
 
 	// print UniRent header
-	do_unirent_header('Rented');
+	do_unirent_header('Renting History');
 
 	// connect to UniRent DB
 	$conn = db_connect();
@@ -76,10 +76,9 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h2>Rented</h2>
+        <h2>Renting History</h2>
         <ol class="breadcrumb">
           <li><a href="listings_EN.php">Home</a></li>
-          <li class="active">My rented itens</li>
         </ol>
       </div>
     </div>
@@ -96,20 +95,21 @@
 						<div class="profileIntro">
 							<div class="row">
 							<form action="" method="" class="listing__form">
+									<h3>Filter by:</h3>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
 									<label for="itemName">Item Name</label>
-									<input type="text" class="form-control" id="itemName" name="itemName" placeholder="Item Name">
+									<input type="text" class="form-control" id="itemName" name="itemName">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="ownerUsername">Item owner username</label>
-									<input type="text" class="form-control" id="ownerUsername" name="ownerUsername" placeholder="Owner username">
+									<label for="ownerUsername">Item Borrower Username</label>
+									<input type="text" class="form-control" id="ownerUsername" name="ownerUsername">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
 									<label for="totalPrice">Total Price</label>
 									<input type="text" class="form-control" id="totalPrice" name="totalPrice" placeholder="€">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="initialRentalDay">Initial rental day</label>
+									<label for="initialRentalDay">Initial Rental Day</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 											<input type="text" class="form-control" id="initialRentalDay" name="initialRentalDay" placeholder="mm/dd/yyyy">
@@ -120,7 +120,7 @@
 									</div>
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="endRentalDay">End rental day</label>
+									<label for="endRentalDay">End Rental Day</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 											<input type="text" class="form-control" id="endRentalDay" name="endRentalDay" placeholder="mm/dd/yyyy">
@@ -131,7 +131,7 @@
 									</div>
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="publishDate">Item publish date</label>
+									<label for="publishDate">Item Publish Date</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 											<input type="text" class="form-control" id="publishDate" name="publishDate" placeholder="mm/dd/yyyy">
@@ -157,8 +157,8 @@
 								<th data-priority="0">Item ID</th>
 								<th data-priority="1">Item Name</th>
 								<th data-priority="2">Total Rental Price</th>
-								<th data-priority="3">Initial rental day</th>
-								<th data-priority="4">End rental day</th>
+								<th data-priority="3">Initial Rental Day</th>
+								<th data-priority="4">End Rental Day</th>
 								<th data-priority="5">Status</th>
 								<th data-priority="6">Action</th>
 							</tr>
@@ -168,8 +168,8 @@
 								<th>Item ID</th>
 								<th>Item Name</th>
 								<th>Total Rental Price</th>
-								<th>Initial rental day</th>
-								<th>End rental day</th>
+								<th>Initial Rental Day</th>
+								<th>End Rental Day</th>
 								<th>Status</th>
 								<th>Action</th>
 							</tr>

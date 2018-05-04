@@ -42,8 +42,8 @@
   <div class="container">
     <div class="page-header text-center">
       <h1>How it Works?</h1><br>
-        <h3>UniRent is an innovative service for students like you who need an item just for a short period of time. It's safe and practical, and lets you browse thousands of items available to rent and match your needs.<br><br>
-        <small>We give you a simple solution divided in 4 <b>easy</b> steps</small>
+        <h3>UniRent is an innovative service for students like you, who need an item just for a short period of time. It's safe, practical, and lets you browse through thousands of items available to rent and match your needs.<br><br>
+        <small>We give you a simple solution in 4 <b>easy</b> steps</small>
       </h3>
     </div>
     <div class="row">
@@ -52,7 +52,7 @@
           <img src="img/works/Need.png" width="160" width="160" alt="Image works">
           <div class="caption">
             <a href="how-it-works_EN.php"><h3>Need</h3></a>
-            <p>You had a need of an item, and the best way is to rent instead of buying.</p>
+            <p>If you have a need for an item, the best way is to rent instead of buying.</p>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
           <img src="img/works/Search.png" width="160" width="160" alt="Image works">
           <div class="caption">
             <a href="how-it-works_EN.php"><h3>Search</h3></a>
-            <p>You search for this item that you would like to rent in our platform.</p>
+            <p>Search for the item you would like to rent in our platform.</p>
           </div>
         </div>
       </div>
@@ -123,15 +123,14 @@
 <section class="clearfix filterProtfolio">
   <div class="container">
     <div class="page-header text-center">
-      <h2>What People Like You Are Renting <small>This Are Some Of Most Popular Renting Stuffs Nowadays</small></h2>
+      <h2>What People Like You Are Renting</h2>
     </div>
     <div class="row">
       <div class="col-xs-12">
         <div class="filter-container isotopeFilters">
           <ul class="list-inline filter">
-            <li class="active"><a href="#" data-filter="*">Popular Item</a></li>
-            <li><a href="#" data-filter=".recentItem">Recent Item</a></li>
-            <li><a href="#" data-filter=".featuredItem">Featured Item</a></li>
+            <li class="active"><a href="#" data-filter="*">Most Popular Item</a></li>
+            <li><a href="#" data-filter=".recentItem">Most Recent Item</a></li>
           </ul>
         </div>
       </div>
@@ -308,7 +307,7 @@
 <section class="clearfix articlesArea">
   <div class="container">
     <div class="page-header text-center">
-      <h2>Your Main Benefits <small>We are sure that your short time need can be found here.</small></h2>
+      <h2>Your Main Benefits <small>We are convicted that your need can be met here.</small></h2>
     </div>
     <div class="row">
       <div class="col-xs-12">
@@ -320,7 +319,7 @@
               </div>
               <div class="servicesInfo">
                 <h2>Secure Trading</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod</p>
+                <p>Your data will remain secure, it will not be transmitted to third parties withouth your permission.</p>
               </div>
             </li>
             <li>
@@ -329,7 +328,7 @@
               </div>
               <div class="servicesInfo">
                 <h2>24/7 Hours Support</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod</p>
+                <p>We are always available to answer any doubt you may have.</p>
               </div>
             </li>
             <li>
@@ -338,7 +337,7 @@
               </div>
               <div class="servicesInfo">
                 <h2>Easy Trading</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod</p>
+                <p>The item you are renting is a click away from you.</p>
               </div>
             </li>
           </ul>
@@ -530,14 +529,9 @@
 <section class="clearfix callAction">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-10 col-sm-9 col-xs-12">
+			<div class="col-md-15 col-sm-15 col-xs-20">
 				<div class="callInfo">
 					<h4><span>UniRent</span> is the <span>best way</span> <br>to Find Great Products for a short time</h4>
-				</div>
-			</div>
-			<div class="col-md-2 col-sm-3 col-xs-12">
-				<div class="btnArea">
-					<a href="sign-up_EN.php" class="btn btn-primary btn-block">Get Started</a>
 				</div>
 			</div>
 		</div>

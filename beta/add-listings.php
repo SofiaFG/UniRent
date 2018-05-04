@@ -6,7 +6,7 @@
   include('db/session.php');
 
   // print UniRent header
-  do_unirent_header('Inserir um novo item');
+  do_unirent_header('Adicionar um Bem');
 
   // connect to UniRent DB
   //$conn = db_connect();
@@ -70,7 +70,7 @@
 									<input maxlength="6" type="text" class="form-control" id="itemPrice" name="itemPrice" placeholder="€">
 								</div>
                 <div class="dateSelect col-sm-6 col-xs-12">
-                  <label for="yearBought" class="control-label">Ano que foi comprado</label>
+                  <label for="yearBought" class="control-label">Ano em que foi comprado</label>
                   <div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
                     <input maxlength="10" type="text" class="form-control" id="yearBought" name="yearBought" placeholder="mm/dd/yyyy">
                     <div class="input-group-addon">
@@ -94,7 +94,7 @@
 										<div class="file-upload">
 											<div class="upload-area">
 												<input type="file" id="img" name="img[]" class="file">
-												<button class="browse" type="button">Clique ou arraste as imagens aqui</button>
+												<button class="browse" type="button">Clique ou Arraste as imagens para aqui</button>
 											</div>
 										</div>
 									</div>

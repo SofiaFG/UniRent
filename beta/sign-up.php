@@ -32,7 +32,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="pageTitle">
-					<h2>Página de inscrição</h2>
+					<h2>Página de Inscrição</h2>
 				</div>
 			</div>
 		</div>
@@ -55,7 +55,7 @@
 					<div class="priceInfo">
 						<ul class="list-unstyled">
 							<li>15% da transacção pertence à UniRent</li>
-							<li>E o restante, ao anunciante</li>
+							<li>E o restante, ao Owner</li>
 						</ul>
 					</div>
 				</div>

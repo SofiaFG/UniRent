@@ -27,7 +27,7 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
 				<div class="pricingIntro">
-					<p>We offer you the option to add an assurance to each rental you make, that way you won't have to worry about any security deposit or statement of responsability to cover any eventuality that happens with the good you are renting.</p>
+					<p>We offer you the option to add an assurance to each rental you make, so you won't have to worry about any security deposit or statement of responsability to cover any eventuality that happens with the item you are renting.</p>
 				</div>
 			</div>
 		</div>
@@ -79,6 +79,11 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="col-sm-6 col-xs-12">
+			</div>
+			<div class="col-sm-6 col-xs-12">
+			<small><sup>*</sup>The amount you'll have to pay will depend on the item you are renting and the rental period.</small>
 			</div>
 			<div class="col-xs-12">
 				<div class="signUpMessage">

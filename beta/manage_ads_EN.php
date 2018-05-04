@@ -79,7 +79,6 @@
         <h2>Rented</h2>
         <ol class="breadcrumb">
           <li><a href="listings_EN.php">Home</a></li>
-          <li class="active">My rented itens</li>
         </ol>
       </div>
     </div>
@@ -99,8 +98,8 @@
 								<th data-priority="0">Item ID</th>
 								<th data-priority="1">Item Name</th>
 								<th data-priority="2">Total Rental Price</th>
-								<th data-priority="3">Initial rental day</th>
-								<th data-priority="4">End rental day</th>
+								<th data-priority="3">Initial Rental Day</th>
+								<th data-priority="4">End Rental Day</th>
 								<th data-priority="5">Status</th>
 								<th data-priority="6">Action</th>
 							</tr>
