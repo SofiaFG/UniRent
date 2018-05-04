@@ -13,7 +13,7 @@
 
 
 <!-- BANNER SECTION -->
-<section class="clearfix homeBanner" style="background-image: url(img/banner/5.png);">
+<section class="clearfix homeBanner" style="background-image: url(img/banner/5.jpg);">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -419,7 +419,7 @@
 <section class="clearfix thingsArea">
   <div class="container">
     <div class="page-header text-center">
-      <h2>Conhece a nossa Equipa <small>5 Amigos Loucos do ISEG - Lisboa para o Mundo</small></h2>
+      <h2>Conhece a nossa Equipa <small>5 Amigos Loucos do ISEG - De Lisboa para o Mundo</small></h2>
     </div>
     <div class="row">
       <div class="col-xs-12">
@@ -532,7 +532,7 @@
     <div class="row">
       <div class="col-md-10 col-sm-9 col-xs-12">
         <div class="callInfo">
-          <h4><span>UniRent</span> é a <span>melhor maneira</span> <br>para encontrar os Melhores Produtos para um curto tempo</h4>
+          <h4><span>UniRent</span> é a <span>melhor maneira</span> <br>para encontrar os Melhores Produtos para um curto período de tempo</h4>
         </div>
       </div>
       <div class="col-md-2 col-sm-3 col-xs-12">

@@ -96,6 +96,7 @@
                       <li><a href="contact-us.php">Contactos</a></li>
                       <li><a href="terms-of-services.php">Termos e Condições</a></li>
                       <li><a href="how-it-works.php">Como Funciona</a></li>
+                      <li><a href="pricing-table.php">Seguro</a></li>
                   </ul>
                 </li>
                 <li class=""><a href="login.php">Login </a></li>

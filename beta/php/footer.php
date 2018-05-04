@@ -4,7 +4,7 @@
 ?>
 
   <!-- FOOTER -->
-    <footer style="background-image: url(img/banner/4.png);">
+    <footer style="background-image: url(img/banner/4.jpg);">
       <!-- FOOTER INFO -->
       <div class="clearfix footerInfo">
         <div class="container">
@@ -30,6 +30,7 @@
                   <li><a href="contact-us.php">Contactos</a></li>
                   <li><a href="terms-of-services.php">Termos e Condições</a></li>
                   <li><a href="how-it-works.php">Como Funciona</a></li>
+                  <li><a href="pricing-table.php">Seguro</a></li>
                 </ul>
               </div>
             </div>

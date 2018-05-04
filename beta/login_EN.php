@@ -2,6 +2,7 @@
 
 <?php
   require_once('php/header_EN.php');
+
   // print UniRent header
   do_unirent_header('Login - UniRent');
 ?>
@@ -15,17 +16,18 @@
 				<div class="panel panel-default loginPanel">
 					<div class="panel-heading text-center">Members log in</div>
 					<div class="panel-body">
-						<form class="loginForm">
+						<form class="loginForm" action="db/login_validation.php" method="post">
 							<div class="form-group">
-								<label for="userName">User Name *</label>
-								<input type="text" class="form-control" id="userName">
+								<label for="username">Username*</label>
+								<input type="text" class="form-control" id="username" name="username">
 							</div>
 							<div class="form-group">
-								<label for="userPassword">Password *</label>
-								<input type="password" class="form-control" id="userPassword">
+								<label for="password">Password*</label>
+								<input type="password" class="form-control" id="password" name="password">
 							</div>
 							<div class="form-group">
-								<button type="submit" class="btn btn-primary pull-left">Log In</button>
+								<input type="hidden" name="pageName" value="loginEN">
+								<button type="submit" name="submit" class="btn btn-primary pull-left">Log In</button>
 								<a href="#" class="pull-right link">Fogot Password?</a>
 							</div>
 						</form>
@@ -42,6 +44,7 @@
 
 <?php
   require_once('php/footer_EN.php');
+
   // print UniRent header
   do_unirent_footer();
 ?>

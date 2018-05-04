@@ -20,7 +20,7 @@
 		}
 	
 		// If ok, put in db
-		$result = $conn->query("insert into Login values('', '" . $username . "', sha1('" . $password . "'), sha1('" . $passwordAgain . "'))");
+		$result = $conn->query("insert into Login values('', '" . $username . "', '" . $password . "', '" . $passwordAgain . "')");
 
 		if (!$result) {
 			throw new Exception('Could not register you in database - please try again later.');
@@ -53,7 +53,7 @@
 		return $last_id;
 	}
 	
-	function register_Customer($firstName, $surname, $dateOfBirthday, $emailAdress, $phoneNumber, $nationality, $gender, $studentNumber, $studentDegree, $EducationalEstablishment, $course, $Address_id, $Login_idLogin) {
+	function register_Customer($firstName, $surname, $dateOfBirthday, $emailAdress, $phoneNumber, $gender, $studentNumber, $studentDegree, $EducationalEstablishment, $course, $Address_id, $Login_idLogin, $nationality) {
 		// register new Customer in db
 		// return true or error message
 	
@@ -72,8 +72,8 @@
 		}
 	
 		// If ok, put in db
-		$result = $conn->query("insert into Customer values('', '" . $firstName . "', '" . $surname . "', '" . $dateOfBirthday . "', '" . $emailAdress . "', '". $phoneNumber . "', '". $nationality . "', ". $gender . ", '', '', '', '". $studentNumber . "', '". $studentDegree . "', " . $EducationalEstablishment . ", " . $course . ", " . $Address_id . ", ". $Login_idLogin . ")");
-
+		$result = $conn->query("insert into Customer values('', '" . $firstName . "', '" . $surname . "', '" . $dateOfBirthday . "', '" . $emailAdress . "', '". $phoneNumber . "', ". $gender . ", '', '', '', '". $studentNumber . "', '". $studentDegree . "', " . $EducationalEstablishment . ", " . $course . ", " . $Address_id . ", ". $Login_idLogin . ", ". $nationality . ")");
+		
 		if (!$result) {
 			throw new Exception('Could not register you in database - please try again later.');
 		}

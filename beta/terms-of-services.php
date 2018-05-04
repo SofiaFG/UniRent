@@ -3,7 +3,7 @@
 <?php
   require_once('php/header.php');
   // print UniRent header
-  do_unirent_header('Terms of services - UniRent');
+  do_unirent_header('Termos e Condições - UniRent');
 ?>
 
 

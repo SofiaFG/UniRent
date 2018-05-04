@@ -15,12 +15,9 @@
 <style type="text/css">
  .scrollable{
     overflow: auto;
-    width: 270px; /* adjust this width depending to amount of text to display */
-	height: 120px; /* adjust height depending on number of options to display */
- }
- 
- .scrollable select{
-	border: none;
+    position: absolute;
+    width: 360px; /* adjust this width depending to amount of text to display */
+	height: 370px; /* adjust height depending on number of options to display */
  }
  
  .hide {
@@ -76,24 +73,24 @@
 								<div class="row">
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="firstName" class="control-label">First Name*</label>
-										<input type="text" class="form-control" id="firstName" name="firstName">
+										<input maxlength="45" type="text" class="form-control" id="firstName" name="firstName">
 									</div>
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="surname" class="control-label">Surname*</label>
-										<input type="text" class="form-control" id="surname" name="surname">
+										<input maxlength="45" type="text" class="form-control" id="surname" name="surname">
 									</div>
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="emailAdress" class="control-label">Email Address*</label>
-										<input type="email" class="form-control" id="emailAdress" name="emailAdress">
+										<input maxlength="45" type="email" class="form-control" id="emailAdress" name="emailAdress">
 									</div>
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="phoneNumber" class="control-label">Phone Number*</label>
-										<input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
+										<input maxlength="13" type="text" class="form-control" id="phoneNumber" name="phoneNumber">
 									</div>
 									<div class="dateSelect col-sm-6 col-xs-12">
 										<label for="dateOfBirthday" class="control-label">Date of Birthday*</label>
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-											<input type="text" class="form-control" name="dateOfBirthday" placeholder="mm/dd/yyyy">
+											<input maxlength="10" type="text" class="form-control" name="dateOfBirthday" placeholder="mm/dd/yyyy">
 											<div class="input-group-addon">
 												<i class="fa fa-calendar" aria-hidden="true"></i>
 											</div>
@@ -101,9 +98,27 @@
 									</div>
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="nationality" class="control-label">Nationality*</label>
-										<input type="text" class="form-control" id="nationality" name="nationality">
+										<div class="contactSelect scrollable">
+											<select name="nationality" id="nationality" class="select-drop">
+
+												<?php
+
+													$result_nationality = $conn->query("select id, nationality from Nationality");
+
+													while ($row = $result_nationality->fetch_assoc()) {
+                  										unset($id, $name);
+									                	$id = $row['id'];
+									                	$name = $row['nationality']; 
+									                	echo '<option value="'.$id.'">'.$name.'</option>';
+													}
+
+												?>
+
+											</select>
+										</div>
 									</div>
 									<div class="form-group col-sm-6 col-xs-12">
+										<br><br>
 										<label for="gender" class="control-label">Gender</label>
 										<div class="contactSelect">
 											<select name="gender" id="gender" class="select-drop">
@@ -120,15 +135,15 @@
 								<div class="row">
 									<div class="form-group col-xs-12">
 										<label for="username" class="control-label">Username*</label>
-										<input type="text" class="form-control" id="username" name="username">
+										<input maxlength="15" type="text" class="form-control" id="username" name="username">
 									</div>
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="password" class="control-label">Password*</label>
-										<input type="password" class="form-control" id="password" name="password">
+										<input maxlength="15" type="password" class="form-control" id="password" name="password">
 									</div>
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="passwordAgain" class="control-label">Password (re-type)*</label>
-										<input type="password" class="form-control" id="passwordAgain" name="passwordAgain">
+										<input maxlength="15" type="password" class="form-control" id="passwordAgain" name="passwordAgain">
 									</div>
 								</div>
 							</div>
@@ -137,7 +152,7 @@
 								<div class="row">
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="country" class="control-label">Country</label>
-										<div class="contactSelect">
+										<div class="contactSelect scrollable">
 											<select name="country" id="country" class="select-drop">
 
 												<?php
@@ -158,7 +173,7 @@
 									</div>
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="city" class="control-label">City</label>
-										<div class="contactSelect">
+										<div class="contactSelect scrollable">
 											<select name="city" id="city" class="select-drop">
 												
 												<?php
@@ -178,16 +193,17 @@
 										</div>
 									</div>
 									<div class="form-group col-xs-12">
+										<br><br>
 										<label for="addressLine1" class="control-label">Address Line 1*</label>
-										<input type="text" class="form-control" id="addressLine1" name="addressLine1">
+										<input maxlength="60" type="text" class="form-control" id="addressLine1" name="addressLine1">
 									</div>
 									<div class="form-group col-xs-12">
 										<label for="addressLine2" class="control-label">Address Line 2</label>
-										<input type="text" class="form-control" id="addressLine2" name="addressLine2">
+										<input maxlength="60" type="text" class="form-control" id="addressLine2" name="addressLine2">
 									</div>
 									<div class="form-group col-xs-6">
 										<label for="postalCode" class="control-label">Postal Code*</label>
-										<input type="text" class="form-control" id="postalCode" name="postalCode">
+										<input maxlength="15" type="text" class="form-control" id="postalCode" name="postalCode">
 									</div>
 								</div>
 							</div>
@@ -203,7 +219,7 @@
 									</div>
 									<div id="countryOfStudy" class="form-group col-sm-6 col-xs-12">
 										<label for="countryOfStudy" class="control-label">Country of Study*</label>
-										<div class="contactSelect">
+										<div class="contactSelect scrollable">
 											<select name="countryOfStudy" id="countryOfStudy" class="select-drop">
 
 												<?php
@@ -224,7 +240,7 @@
 									</div>
 									<div id="EducationalEstablishment" class="form-group col-sm-6 col-xs-12">
 										<label for="EducationalEstablishment" class="control-label">Educational Establishment*</label>
-										<div class="contactSelect">
+										<div class="contactSelect scrollable">
 											<select name="EducationalEstablishment" id="EducationalEstablishment" class="select-drop">
 												
 												<?php
@@ -244,8 +260,9 @@
 										</div>
 									</div>
 									<div id="courseArea" class="form-group col-sm-6 col-xs-12">
-										<label for="courseArea" class="control-label">Couse area*</label>
-										<div class="contactSelect">
+										<br><br>
+										<label for="courseArea" class="control-label">Course area*</label>
+										<div class="contactSelect scrollable">
 											<select name="courseArea" id="courseArea" class="select-drop">
 												
 												<?php
@@ -264,16 +281,27 @@
 											</select>
 										</div>
 									</div>
+									<div id="studentDegree" class="form-group col-sm-6 col-xs-12">
+										<br><br>
+										<label for="studentDegree" class="control-label">Student Degree*</label>
+										<div class="contactSelect">
+											<select name="studentDegree" id="studentDegree" class="select-drop">
+												<option value="Bachelor">Bachelor</option>
+												<option value="Master">Master</option>
+												<option value="Other">Other</option>           
+											</select>
+										</div>
+									</div>
 									<div id="course" class="form-group col-sm-6 col-xs-12">
 										<label for="course" class="control-label">Course*</label>
-										<div class="contactSelect">
+										<div class="contactSelect scrollable">
 											<select name="course" id="course" class="select-drop">
 												
 												<?php
 
-													$result_courseArea = $conn->query("select id, name from Course where language = 'PT'");
+													$result_course = $conn->query("select id, name from Course where language = 'EN'");
 
-													while ($row = $result_courseArea->fetch_assoc()) {
+													while ($row = $result_course->fetch_assoc()) {
 	                  									unset($id, $name);
 										                $id = $row['id'];
 										                $name = $row['name']; 
@@ -285,13 +313,9 @@
 											</select>
 										</div>
 									</div>
-									<div id="studentDegree" class="form-group col-xs-6">
-										<label for="studentDegree" class="control-label">Student Degree</label>
-										<input type="text" class="form-control" id="studentDegree" name="studentDegree">
-									</div>
 									<div id="studentNumber" class="form-group col-xs-6">
-										<label for="studentNumber" class="control-label">Student Numbber</label>
-										<input type="text" class="form-control" id="studentNumber" name="studentNumber">
+										<label for="studentNumber" class="control-label">Student Number</label>
+										<input maxlength="45" type="text" class="form-control" id="studentNumber" name="studentNumber">
 									</div>
 								</div>
 							</div>
@@ -307,7 +331,8 @@
 										</div>
 									</div>
 									<div class="form-group col-xs-12 mb0">
-										<button type="submit" name="submit" class="btn btn-primary">Create Account</button>
+										<input type="hidden" name="pageName" value="loginEN"/>
+										<button type="submit" name="submit_EN" class="btn btn-primary">Create Account</button>
 									</div>
 								</div>
 							</div>
