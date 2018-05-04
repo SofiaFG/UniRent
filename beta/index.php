@@ -62,6 +62,7 @@
           <div class="caption">
             <a href="how-it-works.php"><h3>Pesquisar</h3></a>
             <p>Procura pelo bem que gostarias de alugar na nossa plataforma.</p>
+            <span style="display:inline-block; width: YOURWIDTH;"></span>
           </div>
         </div>
       </div>
@@ -71,6 +72,7 @@
           <div class="caption">
             <a href="how-it-works.php"><h3>Alugar</h3></a>
             <p>Aluga qualquer bem diretamente com o <u>Owner</u> de uma maneira fácil.</p>
+            <span style="display:inline-block; width: YOURWIDTH;"></span>
           </div>
         </div>
       </div>
@@ -80,6 +82,7 @@
           <div class="caption">
             <a href="how-it-works.php"><h3>Devolver</h3></a>
             <p>Depois de o utilizares, devolves o bem ao seu <u>Owner</u> da forma mais conveniente.</p>
+            <span style="display:inline-block; width: YOURWIDTH;"></span>
           </div>
         </div>
       </div>
@@ -418,7 +421,7 @@
 <section class="clearfix thingsArea">
   <div class="container">
     <div class="page-header text-center">
-      <h2>Conhece a nossa Equipa <small>5 Amigos Loucos do ISEG - De Lisboa para o Mundo</small><small><a href="about-us.html">Sobre Nós</a></small></h2>
+      <h2>Conhece a nossa Equipa <small>5 Amigos Loucos do ISEG - De Lisboa para o Mundo</small><small><a href="about-us.php">Sobre Nós</a></small></h2>
     </div>
     <div class="row">
       <div class="col-xs-12">

@@ -419,7 +419,7 @@
 <section class="clearfix thingsArea">
   <div class="container">
     <div class="page-header text-center">
-      <h2>Meet Our Team <small>5 Crazy Friends From ISEG - Lisbon To The World</small><small><a href="about-us_EN.html">About us</a></small></h2>
+      <h2>Meet Our Team <small>5 Crazy Friends From ISEG - Lisbon To The World</small><small><a href="about-us_EN.php">About us</a></small></h2>
     </div>
     <div class="row">
       <div class="col-xs-12">

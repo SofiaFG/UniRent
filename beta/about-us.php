@@ -3,7 +3,7 @@
 <?php
   require_once('php/header.php');
   // print UniRent header
-  do_unirent_header('Como Funciona - UniRent');
+  do_unirent_header('Sobre - UniRent');
 ?>
 
 
@@ -13,7 +13,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="pageTitle">
-					<h2>Como funciona</h2>
+					<h2>Sobre a nossa história</h2>
 				</div>
 			</div>
 		</div>
@@ -68,20 +68,20 @@
 						</div>
 					</div>
 				</div>
-		        <div class="howWorksInner">
-		          <div class="row">
-		            <div class="col-sm-4 col-xs-12">
-		              <div class="howWorksImage text-left"><img src="img/works/Return.png" width="250" height="250" alt="Image Works"></div>
-		            </div>
-		            <div class="col-sm-8 col-xs-12">
-		              <div class="howWorksInfo text-right">
-		                <p>4º Passo</p>
-		                <h2>Devolve</h2>
-		                <p>Devolve o bem que alugaste ao seu <u>Owner</u>, não esquecendo de o entregar num horário conveniente. </p>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
+        <div class="howWorksInner">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12">
+              <div class="howWorksImage text-left"><img src="img/works/Return.png" width="250" height="250" alt="Image Works"></div>
+            </div>
+            <div class="col-sm-8 col-xs-12">
+              <div class="howWorksInfo text-right">
+                <p>4º Passo</p>
+                <h2>Devolve</h2>
+                <p>Devolve o bem que alugaste ao seu <u>Owner</u>, não esquecendo de o entregar num horário conveniente. </p>
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
 		</div>
 	</div>
