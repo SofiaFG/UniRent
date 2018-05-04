@@ -25,7 +25,7 @@
 <section class="clearfix howWorksSection">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-8">
+			<div class="col-xs-12">
 				<div class="howWorksInner">
 					<div class="row">
 						<div class="col-sm-4 col-sm-push-8 col-xs-12">

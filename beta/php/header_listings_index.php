@@ -142,7 +142,18 @@
                 <a href="my_rentals.php" class="scrolling"><i class="fa fa-star-o" aria-hidden="true"></i> Borrower</a>
               </li>
             </ul>
-            
+            <div class="row adjustRow">
+              <div class="pull-right col-xs-12 col-sm-4">
+                <form class="navbar-form" role="search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Pesquisar" name="q">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button"><i class="icon-listy icon-search-2"></i></button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </nav>

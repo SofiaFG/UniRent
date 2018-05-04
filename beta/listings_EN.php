@@ -57,8 +57,7 @@
 						<img src="img/dashboard/avatar.png" alt="Image User" class="img-circle" width="170" height="170">
 					</div>
 					<div class="profileUserInfo bt profileName">
-						<p><?php echo $emailAdress; ?></p>
-						<h4>Your birthday: <?php echo $dateFormated; ?></h4>
+						<h4><?php echo $login_session; ?></h4>
 						<h5><?php echo $emailAdress . " | " . $phoneNumber; ?></h5>
 						<a href="profile_EN.php" class="btn btn-primary">Update</a>
 					</div>

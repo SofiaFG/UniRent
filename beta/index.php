@@ -418,7 +418,7 @@
 <section class="clearfix thingsArea">
   <div class="container">
     <div class="page-header text-center">
-      <h2>Conhece a nossa Equipa <small>5 Amigos Loucos do ISEG - De Lisboa para o Mundo</small><small><a href="#">Sobre Nós</a></small></h2>
+      <h2>Conhece a nossa Equipa <small>5 Amigos Loucos do ISEG - De Lisboa para o Mundo</small><small><a href="about-us.html">Sobre Nós</a></small></h2>
     </div>
     <div class="row">
       <div class="col-xs-12">
