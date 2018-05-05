@@ -103,7 +103,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<form name="add_item" onsubmit="return validateForm()" action="" method="" class="listing__form">
+				<form name="add_item" onsubmit="return validateForm()" action="db/register_new_item.php" method="POST" class="listing__form">
 					<div class="dashboardBoxBg mb30">
 						<div class="profileIntro paraMargin">
 							<h3>About the Item</h3>
@@ -189,7 +189,7 @@
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
 									<label for="securityFee">Fee*</label>
-									<input  maxlength="6" type="text" class="form-control" id="securityFee" name="securityFee" placeholder="€" value="€">
+									<input  maxlength="6" type="text" class="form-control" id="securityFee" name="securityFee" placeholder="€">
 								</div>
 								<div class="form-group col-xs-12">
 									<label for="securityDescription">Fee reason description</label>
@@ -265,9 +265,9 @@
 							<h3>Item Availability</h3>
 							<div class="row">
 								<div class="dateSelect col-sm-6 col-xs-12">
-                  				<label for="initialRentalDay" class="control-label">Beggining Date*</label>
+                  				<label for="initialAvailableDay" class="control-label">Beggining Date*</label>
                   					<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-                    				<input maxlength="10" type="text" class="form-control" id="initialAvailableDay" name="initialRentalDay" placeholder="mm/dd/yyyy">
+                    				<input maxlength="10" type="text" class="form-control" id="initialAvailableDay" name="initialAvailableDay" placeholder="mm/dd/yyyy">
                     					<div class="input-group-addon">
                       					<i class="fa fa-calendar" aria-hidden="true"></i>
                     					</div>
@@ -286,6 +286,7 @@
 						</div>
 					</div>
 					<div class="form-footer text-center">
+						<input type="hidden" name="pageName" value="addEN"/>
 						<button type="submit" class="btn-submit">Submit Item</button>
 					</div>
 				</form>

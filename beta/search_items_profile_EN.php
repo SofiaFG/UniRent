@@ -101,9 +101,9 @@
 								echo "</tr>";
 							echo "</tfoot>";
 							echo "<tbody>";
-								echo "<tr>";
 								
 							while ($row = $result_ToRent->fetch_assoc()) {
+								echo "<tr>";
 								unset($name, $price, $publishDate, $initialAvailableDay, $endAvailableDay);
 							    $name  		  		 = $row['name'];
 								$price 				 = $row['price'];
@@ -116,13 +116,18 @@
 				                echo "<td>$publishDate</td>";
 				                echo "<td>$initialAvailableDay</td>";
 				                echo "<td>$endAvailableDay</td>";
-				                echo "<td><button type='button' class='btn btn-primary'>View</button></td>";
+				                
+				                echo "<td>";
+									echo "<div class='btn-group'>";
+										echo "<button type='submit' name='ver' id='ver' class='btn btn-primary'>View</button>";
+									echo "</div>";
+								echo "</td>";
+								echo "</tr>";
 							}
 						} else {
 							echo "<br><center><h2>No item found </h2><i class='fa fa-frown' aria-hidden='true'></i></center>";
 						}
 
-							echo "</tr>";
 						echo "</tbody>";
 				?>
 					</table>

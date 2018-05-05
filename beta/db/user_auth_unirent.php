@@ -32,7 +32,7 @@
 	}
 
 	function register_Address($addressLine1, $addressLine2, $postalCode, $city, $country) {
-		// register new Customer in db
+		// register new Address in db
 		// return true or error message
 	
 		// connect to db
@@ -45,7 +45,29 @@
 		    $last_id = $conn->insert_id;
 		    //echo "New record created successfully. Last inserted ID is: " . $last_id;
 		} else {
-		    throw new Exception('Could not register you in database - please try again later.');
+		    throw new Exception('Could not register_Address in database - please try again later.');
+		}
+
+		$conn->close();
+
+		return $last_id;
+	}
+
+	function register_SecurityPolice($securityType, $securityDescription, $securityFee) {
+		// register new SecurityPolice in db
+		// return true or error message
+	
+		// connect to db
+		$conn = db_connect();
+	
+		// If ok, put in db
+		$sql = "insert into SecurityPolice values('', '" . $securityType . "', '" . $securityDescription . "', " . $securityFee . ")";
+
+		if ($conn->query($sql) === TRUE) {
+		    $last_id = $conn->insert_id;
+		    //echo "New record created successfully. Last inserted ID is: " . $last_id;
+		} else {
+		    throw new Exception('Could not register_SecurityPolice in database - please try again later.');
 		}
 
 		$conn->close();
@@ -75,7 +97,26 @@
 		$result = $conn->query("insert into Customer values('', '" . $firstName . "', '" . $surname . "', '" . $dateOfBirthday . "', '" . $emailAdress . "', '". $phoneNumber . "', ". $gender . ", '', '', '', '". $studentNumber . "', '". $studentDegree . "', " . $EducationalEstablishment . ", " . $course . ", " . $Address_id . ", ". $Login_idLogin . ", ". $nationality . ")");
 		
 		if (!$result) {
-			throw new Exception('Could not register you in database - please try again later.');
+			throw new Exception('Could not register_Customer in database - please try again later.');
+		}
+
+		$conn->close();
+
+		return true;
+	}
+
+	function register_Item($itemName, $itemDescription, $itemPrice, $today, $yearBought, $videoUrl, $initialAvailableDay, $endAvailableDay, $Login_idLogin, $SecurityPolice_id, $itemCategory, $Address_id) {
+		// register new Customer in db
+		// return true or error message
+	
+		// connect to db
+		$conn = db_connect();
+	
+		// Insert in Item DB
+		$result = $conn->query("insert into Item values('', '" . $itemName . "', '" . $itemDescription . "', " . $itemPrice . ", '" . $today . "', '". $yearBought . "', '', '', '', '". $videoUrl . "', '". $initialAvailableDay . "', '". $endAvailableDay . "', " . $Login_idLogin . ", " . $SecurityPolice_id . ", " . $itemCategory . ", ". $Address_id . ")");
+		
+		if (!$result) {
+			throw new Exception('Could not register_Item in database - please try again later.');
 		}
 
 		$conn->close();
@@ -84,9 +125,6 @@
 	}
 
 	function retrieve_Login($username) {
-		// register new Customer in db
-		// return true or error message
-	
 		// connect to db
 		$conn = db_connect();
 		$idLogin;
