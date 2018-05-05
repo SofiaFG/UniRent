@@ -3,6 +3,19 @@
 	// print UniRent header
 ?>
 
+<script>
+  function validateForm() {
+    
+      var x = document.forms["search_items"]["findItem"].value;
+
+      if (x == "") {
+          alert("Por favor, introduza o que estás à procura!");
+          document.getElementById("findItem").focus();
+          return false;
+      }
+  }
+</script>
+
 <html lang="en">
 <head>
 
@@ -131,13 +144,13 @@
                 <a href="my_rentals.php" class="scrolling"><i class="fa fa-star-o" aria-hidden="true"></i> Borrower</a>
               </li>
             </ul>
-			<div class="row adjustRow">
+			      <div class="row adjustRow">
               <div class="pull-right col-xs-12 col-sm-4">
-                <form class="navbar-form" role="search">
+                <form name="search_items" class="form-inline" onsubmit="return validateForm()" action="search_items_profile.php" method="POST" class="navbar-form">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Pesquisar" name="q">
+                    <input type="text" name="findItem" id="findItem" class="form-control" placeholder="Pesquisar">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button"><i class="icon-listy icon-search-2"></i></button>
+                      <button class="btn btn-default" type="submit" id="submit" name="submit"><i class="icon-listy icon-search-2"></i></button>
                     </span>
                   </div>
                 </form>
