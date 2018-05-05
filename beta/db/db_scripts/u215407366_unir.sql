@@ -2,10 +2,10 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: 04-Maio-2018 às 10:42
--- Versão do servidor: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Host: localhost:3306
+-- Generation Time: 05-Maio-2018 às 13:57
+-- Versão do servidor: 10.1.31-MariaDB
+-- PHP Version: 7.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,19 +30,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Address` (
   `id` int(11) NOT NULL,
-  `addressLine1` varchar(60) NOT NULL,
-  `addressLine2` varchar(60) DEFAULT NULL,
-  `postalCode` varchar(15) NOT NULL,
+  `addressLine1` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `addressLine2` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `postalCode` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
   `City_id` int(11) NOT NULL,
   `Country_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `Address`
---
-
-INSERT INTO `Address` (`id`, `addressLine1`, `addressLine2`, `postalCode`, `City_id`, `Country_id`) VALUES
-(1, 'Rua do Cara doido', '', '12345', 36, 73);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -52,10 +45,10 @@ INSERT INTO `Address` (`id`, `addressLine1`, `addressLine2`, `postalCode`, `City
 
 CREATE TABLE `City` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `Country_idCountry` int(11) NOT NULL,
-  `language` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `language` varchar(45) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `City`
@@ -373,9 +366,9 @@ INSERT INTO `City` (`id`, `name`, `Country_idCountry`, `language`) VALUES
 
 CREATE TABLE `Country` (
   `id` int(11) NOT NULL,
-  `countryPT` varchar(45) NOT NULL,
-  `countryEN` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `countryPT` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `countryEN` varchar(45) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `Country`
@@ -644,10 +637,10 @@ INSERT INTO `Country` (`id`, `countryPT`, `countryEN`) VALUES
 CREATE TABLE `Course` (
   `id` int(11) NOT NULL,
   `CourseArea_id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `language` varchar(45) NOT NULL,
-  `type` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `language` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `type` varchar(45) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `Course`
@@ -1091,9 +1084,9 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (435, 15, 'Architecture (Preparatory) [MI]', 'EN', '1'),
 (436, 15, 'Architecture [MI]', 'EN', '1'),
 (437, 15, 'Architecture and Urbanism [MI]', 'EN', '1'),
-(438, 15, 'Architecture, area of ??specialization in Int', 'EN', '1'),
-(439, 15, 'Architecture, in the area of ??specialization', 'EN', '1'),
-(440, 15, 'Architecture, in the area of ??specialization', 'EN', '1'),
+(438, 15, 'Architecture, area of ​​specialization in Int', 'EN', '1'),
+(439, 15, 'Architecture, in the area of ​​specialization', 'EN', '1'),
+(440, 15, 'Architecture, in the area of ​​specialization', 'EN', '1'),
 (441, 15, 'Art - Conservation and Restoration', 'EN', '1'),
 (442, 15, 'Art and Design', 'EN', '1'),
 (443, 15, 'Art', 'EN', '1'),
@@ -1421,10 +1414,10 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (765, 19, 'Cultural Heritage and Archeology', 'EN', '1'),
 (766, 19, 'Cultural Heritage', 'EN', '1'),
 (767, 19, 'Development and Social Entrepreneurship', 'EN', '1'),
-(768, 19, 'European Languages ??and Literatures (post-la', 'EN', '1'),
-(769, 19, 'European Languages ??and Literatures', 'EN', '1'),
+(768, 19, 'European Languages ​​and Literatures (post-la', 'EN', '1'),
+(769, 19, 'European Languages ​​and Literatures', 'EN', '1'),
 (770, 19, 'Foreign Applied Languages', 'EN', '1'),
-(771, 19, 'Foreign Languages ??and Cultures', 'EN', '1'),
+(771, 19, 'Foreign Languages ​​and Cultures', 'EN', '1'),
 (772, 19, 'Foreign Languages: English and Spanish', 'EN', '1'),
 (773, 19, 'General Studies', 'EN', '1'),
 (774, 19, 'History and Archeology', 'EN', '1'),
@@ -1432,13 +1425,13 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (776, 19, 'History', 'EN', '1'),
 (777, 19, 'Language sciences (post-labour regime)', 'EN', '1'),
 (778, 19, 'Language Sciences', 'EN', '1'),
-(779, 19, 'Languages ??and Business Relationships', 'EN', '1'),
-(780, 19, 'Languages ??and Communication', 'EN', '1'),
-(781, 19, 'Languages ??and Editorial Studies', 'EN', '1'),
-(782, 19, 'Languages ??and International Relations', 'EN', '1'),
-(783, 19, 'Languages ??and Literatures', 'EN', '1'),
-(784, 19, 'Languages ??and Translation', 'EN', '1'),
-(785, 19, 'Languages ??for International Relations', 'EN', '1'),
+(779, 19, 'Languages ​​and Business Relationships', 'EN', '1'),
+(780, 19, 'Languages ​​and Communication', 'EN', '1'),
+(781, 19, 'Languages ​​and Editorial Studies', 'EN', '1'),
+(782, 19, 'Languages ​​and International Relations', 'EN', '1'),
+(783, 19, 'Languages ​​and Literatures', 'EN', '1'),
+(784, 19, 'Languages ​​and Translation', 'EN', '1'),
+(785, 19, 'Languages ​​for International Relations', 'EN', '1'),
 (786, 19, 'Languages, Literatures and Cultures', 'EN', '1'),
 (787, 19, 'Lusophone Relations and Portuguese Language', 'EN', '1'),
 (788, 19, 'Modern and Contemporary History', 'EN', '1'),
@@ -3632,9 +3625,9 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (2973, 12, 'Public Health Nursing', 'EN', '0'),
 (2974, 12, 'Medical-Surgical Nursing', 'EN', '0'),
 (2975, 12, 'Perioperative Nursing', 'EN', '0'),
-(2976, 12, 'Nursing, area of ??specialization in Communit', 'EN', '0'),
-(2977, 12, 'Nursing, Area of ??Specialization in Health U', 'EN', '0'),
-(2978, 12, 'Nursing, Area of ??Specialization in Family H', 'EN', '0'),
+(2976, 12, 'Nursing, area of ​​specialization in Communit', 'EN', '0'),
+(2977, 12, 'Nursing, Area of ​​Specialization in Health U', 'EN', '0'),
+(2978, 12, 'Nursing, Area of ​​Specialization in Family H', 'EN', '0'),
 (2979, 12, 'Nursing', 'EN', '0'),
 (2980, 12, 'Epidemiology', 'EN', '0'),
 (2981, 12, 'Evidence and Decision in Health', 'EN', '0'),
@@ -3927,7 +3920,7 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (3268, 15, 'Education Sciences - School Management', 'EN', '0'),
 (3269, 15, 'Educational Sciences - Pedagogical Innovation', 'EN', '0'),
 (3270, 15, 'Education Sciences - Pedagogical Supervision', 'EN', '0'),
-(3271, 15, 'Education Sciences, Area of ??Specialization ', 'EN', '0'),
+(3271, 15, 'Education Sciences, Area of ​​Specialization ', 'EN', '0'),
 (3272, 15, 'Education Sciences, specialization area in Sp', 'EN', '0'),
 (3273, 15, 'Education sciences', 'EN', '0'),
 (3274, 15, 'Didactics of the Portuguese Language in the 1', 'EN', '0'),
@@ -3971,7 +3964,7 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (3312, 15, 'Child Studies', 'EN', '0'),
 (3313, 15, 'Intervention and Artistic Animation', 'EN', '0'),
 (3314, 15, 'Early intervention', 'EN', '0'),
-(3315, 15, 'Game, Toys and Languages ??in Childhood Educa', 'EN', '0'),
+(3315, 15, 'Game, Toys and Languages ​​in Childhood Educa', 'EN', '0'),
 (3316, 15, 'Mathematics for Teaching', 'EN', '0'),
 (3317, 15, 'Mathematics for Teachers', 'EN', '0'),
 (3318, 15, 'E-Learning Pedagogy', 'EN', '0'),
@@ -3979,8 +3972,8 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (3320, 15, 'Promotion of Reading and School Libraries', 'EN', '0'),
 (3321, 15, 'Chemistry in School Context', 'EN', '0'),
 (3322, 15, 'Educational Administration', 'EN', '0'),
-(3323, 15, 'Education Sciences - area of ??specialization', 'EN', '0'),
-(3324, 15, 'Educational Sciences, Area of ??Specializatio', 'EN', '0'),
+(3323, 15, 'Education Sciences - area of ​​specialization', 'EN', '0'),
+(3324, 15, 'Educational Sciences, Area of ​​Specializatio', 'EN', '0'),
 (3325, 15, 'Didactics of Natural Sciences and Mathematics', 'EN', '0'),
 (3326, 15, 'Didactics of Portuguese Non-Mother Language', 'EN', '0'),
 (3327, 15, 'Education in Mathematics and Science', 'EN', '0'),
@@ -4051,7 +4044,7 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (3392, 17, 'Communication and Media', 'EN', '0'),
 (3393, 17, 'Integrated communication', 'EN', '0'),
 (3394, 17, 'Communication in Organizations', 'EN', '0'),
-(3395, 17, 'Organizational Communication - area of ??spec', 'EN', '0'),
+(3395, 17, 'Organizational Communication - area of ​​spec', 'EN', '0'),
 (3396, 17, 'Social Communication', 'EN', '0'),
 (3397, 17, 'Communication, Art and Culture', 'EN', '0'),
 (3398, 17, 'Communication, Citizenship and Education', 'EN', '0'),
@@ -4072,7 +4065,7 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (3413, 17, 'Development and International Cooperation', 'EN', '0'),
 (3414, 17, 'Sport and Health for Children and Young Peopl', 'EN', '0'),
 (3415, 17, 'Sport Nature', 'EN', '0'),
-(3416, 17, 'Sport, area of ??expertise in Human Resources', 'EN', '0'),
+(3416, 17, 'Sport, area of ​​expertise in Human Resources', 'EN', '0'),
 (3417, 17, 'Sports, Education and Physical Literacy', 'EN', '0'),
 (3418, 17, 'Diplomacy and International Relations', 'EN', '0'),
 (3419, 17, 'Hotel Management and Management', 'EN', '0'),
@@ -4364,7 +4357,7 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (3705, 17, 'Management', 'EN', '0'),
 (3706, 17, 'Interiority and Transfrontier Relations', 'EN', '0'),
 (3707, 17, 'Journalism and Communication', 'EN', '0'),
-(3708, 17, 'Languages ??and Business Relationships', 'EN', '0'),
+(3708, 17, 'Languages ​​and Business Relationships', 'EN', '0'),
 (3709, 17, 'Marketing', 'EN', '0'),
 (3710, 17, 'Financial math', 'EN', '0'),
 (3711, 17, 'Markets of Art', 'EN', '0'),
@@ -4500,7 +4493,7 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (3840, 19, 'Portuguese Studies', 'EN', '0'),
 (3841, 19, 'Romance Studies', 'EN', '0'),
 (3842, 19, 'Studies on Europe', 'EN', '0'),
-(3843, 19, 'Contemporary Philosophy - Values ??and Societ', 'EN', '0'),
+(3843, 19, 'Contemporary Philosophy - Values ​​and Societ', 'EN', '0'),
 (3844, 19, 'Philosophy for Children', 'EN', '0'),
 (3845, 19, 'Political Philosophy', 'EN', '0'),
 (3846, 19, 'Philosophy', 'EN', '0'),
@@ -4533,9 +4526,9 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 (3873, 19, 'Lexicography (European Masters)', 'EN', '0'),
 (3874, 19, 'Portuguese Sign Language and Education of the', 'EN', '0'),
 (3875, 19, 'English Language, Literature and Culture', 'EN', '0'),
-(3876, 19, 'Languages ??Applied to Business Sciences', 'EN', '0'),
-(3877, 19, 'Languages ??and Linguistics: Translation and ', 'EN', '0'),
-(3878, 19, 'Foreign Languages ??Applied - TEFL (Teaching ', 'EN', '0'),
+(3876, 19, 'Languages ​​Applied to Business Sciences', 'EN', '0'),
+(3877, 19, 'Languages ​​and Linguistics: Translation and ', 'EN', '0'),
+(3878, 19, 'Foreign Languages ​​Applied - TEFL (Teaching ', 'EN', '0'),
 (3879, 19, 'Languages, Literatures and Cultures', 'EN', '0'),
 (3880, 19, 'Linguistics: Societies and Cultures', 'EN', '0'),
 (3881, 19, 'Linguistics', 'EN', '0'),
@@ -4595,9 +4588,9 @@ INSERT INTO `Course` (`id`, `CourseArea_id`, `name`, `language`, `type`) VALUES
 
 CREATE TABLE `CourseArea` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `language` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `language` varchar(45) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `CourseArea`
@@ -4633,30 +4626,23 @@ INSERT INTO `CourseArea` (`id`, `name`, `language`) VALUES
 
 CREATE TABLE `Customer` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `surname` varchar(45) NOT NULL,
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `surname` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `dateOfBirth` date NOT NULL,
-  `email` varchar(45) NOT NULL,
+  `email` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `phoneNumber` int(11) NOT NULL,
   `gender` int(11) DEFAULT NULL,
-  `img_name` varchar(45) DEFAULT NULL,
-  `img_path` varchar(45) DEFAULT NULL,
-  `img_type` varchar(45) DEFAULT NULL,
-  `studentNumber` varchar(45) DEFAULT NULL,
-  `studentDegree` varchar(45) DEFAULT NULL,
+  `img_name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `img_path` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `img_type` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `studentNumber` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `studentDegree` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `EduacationEstablishment_id` int(11) NOT NULL,
   `Course_id` int(11) NOT NULL,
   `Address_id` int(11) NOT NULL,
   `Login_idLogin` int(11) NOT NULL,
   `Nationality_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `Customer`
---
-
-INSERT INTO `Customer` (`id`, `name`, `surname`, `dateOfBirth`, `email`, `phoneNumber`, `gender`, `img_name`, `img_path`, `img_type`, `studentNumber`, `studentDegree`, `EduacationEstablishment_id`, `Course_id`, `Address_id`, `Login_idLogin`, `Nationality_id`) VALUES
-(1, 'Mário', 'Romão', '1978-03-23', 'mromao@iseg.com', 980876554, 2, '', '', '', '', 'Bachelor', 1, 1, 1, 1, 77);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -4668,7 +4654,7 @@ CREATE TABLE `Customer_has_Address` (
   `Customer_id` int(11) NOT NULL,
   `Address_id` int(11) NOT NULL,
   `registDate` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -4678,11 +4664,11 @@ CREATE TABLE `Customer_has_Address` (
 
 CREATE TABLE `EducationalEstablishment` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `email` varchar(45) DEFAULT NULL,
-  `phoneNumber` varchar(20) DEFAULT NULL,
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phoneNumber` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Country_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `EducationalEstablishment`
@@ -4819,7 +4805,7 @@ INSERT INTO `EducationalEstablishment` (`id`, `name`, `email`, `phoneNumber`, `C
 (128, '	Instituto Politécnico do Cávado e do Ave - E', 'est@ipca.pt', '+351 253 802 260', 193),
 (129, '	Universidade Católica Portuguesa - Faculdade', 'secretaria.ffcs@braga.ucp.pt', '+351 253 201 200', 193),
 (130, '	Universidade Católica Portuguesa - Faculdade', 'secretaria.facteo@braga.ucp.pt', '+351 253 206 100', 193),
-(131, '	Universidade do Minho - Escola Superior de E', 'sec.presidencia@ese.uminho.?pt', '+351 253 601 300', 193),
+(131, '	Universidade do Minho - Escola Superior de E', 'sec.presidencia@ese.uminho.​pt', '+351 253 601 300', 193),
 (132, '	Universidade Lusíada - Norte - Vila Nova de ', 'info@fam.ulusiada.pt', '+351 252 309 200', 193),
 (133, '	CESPU-Instituto Politécnico de Saúde do Nort', 'dir.iucs@cespu.pt', '+351 224 157 100', 193),
 (134, '	Instituto Politécnico de Bragança - Escola S', 'estig@ipb.pt', '+351 273 303 000', 193),
@@ -5019,21 +5005,22 @@ INSERT INTO `EducationalEstablishment` (`id`, `name`, `email`, `phoneNumber`, `C
 
 CREATE TABLE `Item` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `description` varchar(300) DEFAULT NULL,
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,
   `price` double NOT NULL,
   `publishDate` date NOT NULL,
   `yearBought` date DEFAULT NULL,
-  `img_name` varchar(45) DEFAULT NULL,
-  `img_path` varchar(45) DEFAULT NULL,
-  `img_type` varchar(45) DEFAULT NULL,
-  `videoURL` varchar(45) DEFAULT NULL,
-  `initialAvailableDay` varchar(45) NOT NULL,
-  `endAvailableDay` varchar(45) NOT NULL,
+  `img_name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `img_path` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `img_type` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `videoURL` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `initialAvailableDay` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `endAvailableDay` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `Customer_id` int(11) NOT NULL,
   `SecurityPolice_id` int(11) NOT NULL,
-  `ItemCategory_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `ItemCategory_id` int(11) NOT NULL,
+  `Address_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -5043,9 +5030,9 @@ CREATE TABLE `Item` (
 
 CREATE TABLE `ItemCategory` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `language` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `language` varchar(45) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `ItemCategory`
@@ -5086,7 +5073,7 @@ INSERT INTO `ItemCategory` (`id`, `name`, `language`) VALUES
 CREATE TABLE `Item_has_ItemCategory` (
   `Item_id` int(11) NOT NULL,
   `ItemCategory_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -5096,17 +5083,10 @@ CREATE TABLE `Item_has_ItemCategory` (
 
 CREATE TABLE `Login` (
   `id` int(11) NOT NULL,
-  `username` varchar(15) NOT NULL,
-  `password` varchar(15) NOT NULL,
-  `passwordAgain` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `Login`
---
-
-INSERT INTO `Login` (`id`, `username`, `password`, `passwordAgain`) VALUES
-(1, 'mromao', '1234567', '1234567');
+  `username` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `passwordAgain` varchar(15) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -5116,9 +5096,9 @@ INSERT INTO `Login` (`id`, `username`, `password`, `passwordAgain`) VALUES
 
 CREATE TABLE `Nationality` (
   `id` int(11) NOT NULL,
-  `nationality` varchar(45) NOT NULL,
-  `language` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `nationality` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `language` varchar(45) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `Nationality`
@@ -5514,11 +5494,11 @@ INSERT INTO `Nationality` (`id`, `nationality`, `language`) VALUES
 CREATE TABLE `Payment` (
   `id` int(11) NOT NULL,
   `number` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `dateEx` date NOT NULL,
   `CVV` int(11) NOT NULL,
   `Customer_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -5534,7 +5514,7 @@ CREATE TABLE `Rental` (
   `totalPrice` double NOT NULL,
   `assurance` int(11) DEFAULT NULL,
   `assuranceAmount` double DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -5544,10 +5524,10 @@ CREATE TABLE `Rental` (
 
 CREATE TABLE `SecurityPolice` (
   `id` int(11) NOT NULL,
-  `type` varchar(45) NOT NULL,
-  `description` varchar(200) DEFAULT NULL,
+  `type` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `fee` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Indexes for dumped tables
@@ -5620,7 +5600,8 @@ ALTER TABLE `Item`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_Item_Customer1_idx` (`Customer_id`),
   ADD KEY `fk_Item_SecurityPolice1_idx` (`SecurityPolice_id`),
-  ADD KEY `fk_Item_ItemCategory1_idx` (`ItemCategory_id`);
+  ADD KEY `fk_Item_ItemCategory1_idx` (`ItemCategory_id`),
+  ADD KEY `fk_Item_Address1_idx` (`Address_id`);
 
 --
 -- Indexes for table `ItemCategory`
@@ -5677,7 +5658,7 @@ ALTER TABLE `SecurityPolice`
 -- AUTO_INCREMENT for table `Address`
 --
 ALTER TABLE `Address`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `City`
@@ -5707,7 +5688,7 @@ ALTER TABLE `CourseArea`
 -- AUTO_INCREMENT for table `Customer`
 --
 ALTER TABLE `Customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `EducationalEstablishment`
@@ -5731,7 +5712,7 @@ ALTER TABLE `ItemCategory`
 -- AUTO_INCREMENT for table `Login`
 --
 ALTER TABLE `Login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Nationality`
@@ -5795,6 +5776,7 @@ ALTER TABLE `EducationalEstablishment`
 -- Limitadores para a tabela `Item`
 --
 ALTER TABLE `Item`
+  ADD CONSTRAINT `fk_Item_Address1` FOREIGN KEY (`Address_id`) REFERENCES `Address` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Item_Customer1` FOREIGN KEY (`Customer_id`) REFERENCES `Customer` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Item_ItemCategory1` FOREIGN KEY (`ItemCategory_id`) REFERENCES `ItemCategory` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Item_SecurityPolice1` FOREIGN KEY (`SecurityPolice_id`) REFERENCES `SecurityPolice` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;

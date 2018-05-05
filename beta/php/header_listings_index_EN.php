@@ -99,7 +99,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
               <ul class="nav navbar-nav navbar-right">
                 </li>
-                <li><a href="profile_EN.php"><i class="fa fa-cogs icon-dash" aria-hidden="true"></i>My Account</a></li>
+                <li><a href="profile_EN.php"><i class="fa fa-cogs icon-dash" aria-hidden="true"></i> My Account</a></li>
               </ul>
             </div>
             <a class="btn btn-default navbar-btn" href="db/logout_EN.php"><span>Logout</span></a>
