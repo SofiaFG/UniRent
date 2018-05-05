@@ -88,6 +88,14 @@
           document.getElementById("passwordAgain").focus();
           return false;
       }
+
+	  if (password != passwordAgain) {
+          alert("As palavra-passe que você digitou não correspondem - volte e tente novamente!");
+          document.getElementById("password").value = '';
+          document.getElementById("passwordAgain").value = '';
+          document.getElementById("password").focus();
+          return false;
+      }      
   }
 </script>
 
