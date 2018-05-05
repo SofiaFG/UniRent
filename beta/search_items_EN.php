@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
 <?php
-	require_once('php/header.php');
+	require_once('php/header_EN.php');
 	require_once('db/unirent_functions.php');
 
 	// print UniRent header
-	do_unirent_header('Pesquisa');
+	do_unirent_header('Find');
 
 	// connect to UniRent DB
 	$conn = db_connect();
@@ -24,13 +24,13 @@
 						<div class="profileIntro">
 							<div class="row">
 							<form action="" method="" class="listing__form">
-									<h3>Filtrar por:</h3>
+									<h3>Filter by:</h3>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="itemName">Nome do Bem</label>
+									<label for="itemName">Item Name</label>
 									<input type="text" class="form-control" id="itemName" name="itemName">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="initialRentalDay">Data de Início do Aluguer</label>
+									<label for="initialRentalDay">Initial Rental Day</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 											<input type="text" class="form-control" id="initialRentalDay" name="initialRentalDay" placeholder="mm/dd/yyyy">
@@ -41,7 +41,7 @@
 									</div>
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="endRentalDay">Data de Fim do Aluguer</label>
+									<label for="endRentalDay">End Rental Day</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 											<input type="text" class="form-control" id="endRentalDay" name="endRentalDay" placeholder="mm/dd/yyyy">
@@ -52,7 +52,7 @@
 									</div>
 								</div>
 								<div class="form-footer text-center">
-									<button type="submit" id="submit" name="submit" class="btn-submit">Pesquisar</button>
+									<button type="submit" id="submit" name="submit" class="btn-submit">Submit</button>
 								</div>
 							</form>
 							</div>
@@ -82,22 +82,22 @@
 
 							echo "<thead>";
 								echo "<tr>";
-									echo "<th data-priority='0'>Nome do Bem</th>";
-									echo "<th data-priority='1'>Preço do Aluguer</th>";
-									echo "<th data-priority='2'>Data de publicação</th>";
-									echo "<th data-priority='3'>Data de início do Aluguer</th>";
-									echo "<th data-priority='4'>Data de fim do Aluguer</th>";
-									echo "<th data-priority='5'>Mais Detalhes</th>";
+									echo "<th data-priority='0'>Item Name</th>";
+									echo "<th data-priority='1'>Rental Price</th>";
+									echo "<th data-priority='2'>Publish Date</th>";
+									echo "<th data-priority='3'>Initial Rental Day</th>";
+									echo "<th data-priority='4'>End Rental Day</th>";
+									echo "<th data-priority='5'>More Details</th>";
 								echo "</tr>";
 							echo "</thead>";
 							echo "<tfoot>";
 								echo "<tr>";
-									echo "<th>Nome do Bem</th>";
-									echo "<th>Preço do Aluguer</th>";
-									echo "<th>Data de publicação</th>";
-									echo "<th>Data de início do Aluguer</th>";
-									echo "<th>Data de fim do Aluguer</th>";
-									echo "<th>Mais Detalhes</th>";
+									echo "<th>Item Name</th>";
+									echo "<th>Rental Price</th>";
+									echo "<th>Publish Date</th>";
+									echo "<th>Initial Rental Day</th>";
+									echo "<th>End Rental Day</th>";
+									echo "<th>More Details</th>";
 								echo "</tr>";
 							echo "</tfoot>";
 							echo "<tbody>";
@@ -116,10 +116,10 @@
 				                echo "<td>$publishDate</td>";
 				                echo "<td>$initialAvailableDay</td>";
 				                echo "<td>$endAvailableDay</td>";
-				                echo "<td><button type='button' class='btn btn-primary'>Ver</button></td>";
+				                echo "<td><button type='button' class='btn btn-primary'>View</button></td>";
 							}
 						} else {
-							echo "<br><center><h2>Nenhum item encontrado </h2><i class='fa fa-frown' aria-hidden='true'></i></center>";
+							echo "<br><center><h2>No item found </h2><i class='fa fa-frown' aria-hidden='true'></i></center>";
 						}
 
 							echo "</tr>";
@@ -137,7 +137,7 @@
   // disconnect to UniRent DB
   //$conn->close();
 
-  require_once('php/footer.php');
+  require_once('php/footer_EN.php');
 
   // print UniRent header
   do_unirent_footer();

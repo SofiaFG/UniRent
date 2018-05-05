@@ -12,13 +12,13 @@
 ?>
 
 <script>
-function validateForm() {
-    var x = document.forms["search_items"]["findItem"].value;
-    if (x == "") {
-        alert("Name must be filled out");
-        return false;
-    }
-}
+  function validateForm() {
+      var x = document.forms["search_items"]["findItem"].value;
+      if (x == "") {
+          alert("Por favor, introduza o que estás à procura!");
+          return false;
+      }
+  }
 </script>
 
 <!-- BANNER SECTION -->
