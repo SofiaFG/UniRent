@@ -80,7 +80,18 @@
 						My Items<span class="label label-primary">Today</span>
 					</div>
 					<div class="panel-body">
-						<h2>0</h2>
+						<h2>
+							<?php
+								// check for Customer rentals in Rental DB
+								$result_ToRent = $conn->query("select * from Item where Customer_id = " . $Login_idLogin . "");
+
+								if (!$result_ToRent) {
+									throw new Exception('Could not execute result_ToRent query');
+								}
+
+								echo $result_ToRent->num_rows;
+							?>
+						</h2>
 						<p>Compared with last week <span class="resultInfo resultUp">10% <i class="fa fa-level-up" aria-hidden="true"></i></span></p>
 					</div>
 				</div>
