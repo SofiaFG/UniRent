@@ -3,7 +3,7 @@
 <?php
   require_once('php/header_EN.php');
   // print UniRent header
-  do_unirent_header('Terms of services - UniRent');
+  do_unirent_header('Terms and Conditions - UniRent');
 ?>
 
 
@@ -43,7 +43,7 @@
 					</li>
 					<li>
 						<h3>Governing Law</h3>
-						<p>These Terms shall be governed and construed in accordance with the portuguese, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.</p>
+						<p>These Terms shall be governed and construed in accordance with the portuguese law, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.</p>
 					</li>
 					<li>
 						<h3>Contact Us</h3>

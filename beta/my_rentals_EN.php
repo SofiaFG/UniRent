@@ -6,7 +6,7 @@
   include('db/session.php');
 
   // print UniRent header
-  do_unirent_header('My rented stuffs');
+  do_unirent_header('My Rented Items');
 
   // connect to UniRent DB
   //$conn = db_connect();
@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="dashboardPageTitle">
-					<h2>My rented stuffs</h2>
+					<h2>My Rented Items</h2>
 				</div>
 				<div class="table-responsive"  data-pattern="priority-columns">
 					<table class="table listingsTable">
@@ -29,7 +29,7 @@
 								<th data-priority="1">Item</th>
 								<th data-priority="2">Price</th>
 								<th data-priority="3">Initial Day</th>
-								<th data-priority="4">End day</th>
+								<th data-priority="4">End Day</th>
 								<th data-priority="5">Category</th>
 								<th data-priority="6">Status</th>
 							</tr>

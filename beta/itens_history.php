@@ -109,7 +109,7 @@
 									<input type="text" class="form-control" id="totalPrice" name="totalPrice" placeholder="€">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="initialRentalDay">Data de início do Aluguer</label>
+									<label for="initialRentalDay">Data de Início do Aluguer</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 											<input type="text" class="form-control" id="initialRentalDay" name="initialRentalDay" placeholder="mm/dd/yyyy">
@@ -120,7 +120,7 @@
 									</div>
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="endRentalDay">Data de fim do Aluguer</label>
+									<label for="endRentalDay">Data de Fim do Aluguer</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 											<input type="text" class="form-control" id="endRentalDay" name="endRentalDay" placeholder="mm/dd/yyyy">

@@ -5,7 +5,7 @@
   require_once('db/unirent_functions.php');
   
   // print UniRent header
-  do_unirent_header('Sign-Up - UniRent');
+  do_unirent_header('Sign Up - UniRent');
   
   // connect to UniRent DB
   $conn = db_connect();
@@ -55,7 +55,7 @@
 					<div class="priceInfo">
 						<ul class="list-unstyled">
 							<li>15% of the transaction is ours</li>
-							<li>And the rest to the renter</li>
+							<li>And the rest belongs to the Owner</li>
 						</ul>
 					</div>
 				</div>
@@ -194,7 +194,7 @@
 									</div>
 									<div class="form-group col-xs-12">
 										<br><br>
-										<label for="addressLine1" class="control-label">Address Line 1*</label>
+										<label for="addressLine1" class="control-label">Address Line 1</label>
 										<input maxlength="60" type="text" class="form-control" id="addressLine1" name="addressLine1">
 									</div>
 									<div class="form-group col-xs-12">
@@ -202,7 +202,7 @@
 										<input maxlength="60" type="text" class="form-control" id="addressLine2" name="addressLine2">
 									</div>
 									<div class="form-group col-xs-6">
-										<label for="postalCode" class="control-label">Postal Code*</label>
+										<label for="postalCode" class="control-label">Postal Code</label>
 										<input maxlength="15" type="text" class="form-control" id="postalCode" name="postalCode">
 									</div>
 								</div>

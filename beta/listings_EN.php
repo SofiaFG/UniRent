@@ -77,7 +77,7 @@
 				<br><br>
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						Meus stuffs <span class="label label-primary">Today</span>
+						My Items<span class="label label-primary">Today</span>
 					</div>
 					<div class="panel-body">
 						<h2>0</h2>
@@ -89,7 +89,7 @@
 				<br><br>
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						Meus rents <span class="label label-primary">Today</span>
+						My Rentings <span class="label label-primary">Today</span>
 					</div>
 					<div class="panel-body">
 						<h2>0</h2>
