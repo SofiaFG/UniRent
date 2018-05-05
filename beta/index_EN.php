@@ -62,6 +62,7 @@
           <div class="caption">
             <a href="how-it-works_EN.php"><h3>Search</h3></a>
             <p>Search for the item you would like to rent in our platform.</p>
+            <span style="display:inline-block; width: YOURWIDTH;"></span>
           </div>
         </div>
       </div>
