@@ -13,9 +13,12 @@
 
 <script>
   function validateForm() {
+    
       var x = document.forms["search_items"]["findItem"].value;
+
       if (x == "") {
           alert("Por favor, introduza o que estás à procura!");
+          document.getElementById("findItem").focus();
           return false;
       }
   }

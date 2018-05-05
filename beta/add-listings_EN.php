@@ -25,6 +25,64 @@
  }
 </style>
 
+
+<script>
+  function validateForm() {
+
+  	  // Check AAdd an Item for empty fields
+      var itemName 	 		  = document.forms["add_item"]["itemName"].value;
+      var itemPrice 		  = document.forms["add_item"]["itemPrice"].value;
+      var securityFee 	 	  = document.forms["add_item"]["securityFee"].value;
+      var addressLine1 		  = document.forms["add_item"]["addressLine1"].value;
+      var postalCode 		  = document.forms["add_item"]["postalCode"].value;
+      var initialAvailableDay = document.forms["add_item"]["initialAvailableDay"].value;
+      var endAvailableDay  	  = document.forms["add_item"]["endAvailableDay"].value;
+      
+      if (itemName == "") {
+          alert("Please enter the item name!");
+          document.getElementById("itemName").focus();
+          return false;
+      }
+
+      if (itemPrice == "") {
+          alert("Please enter the item price!");
+          document.getElementById("itemPrice").focus();
+          return false;
+      }
+
+      if (securityFee == "") {
+          alert("Please enter the amount of the fee!");
+          document.getElementById("securityFee").focus();
+          return false;
+      }
+
+      if (addressLine1 == "") {
+          alert("Please enter the address line 1!");
+          document.getElementById("addressLine1").focus();
+          return false;
+      }
+
+      if (postalCode == "") {
+          alert("Please enter the postal code!");
+          document.getElementById("postalCode").focus();
+          return false;
+      }
+
+      if (initialAvailableDay == "") {
+          alert("Please enter the start rental date!");
+          document.getElementById("initialAvailableDay").focus();
+          return false;
+      }
+
+      if (endAvailableDay == "") {
+          alert("Please enter the end rental date!");
+          document.getElementById("endAvailableDay").focus();
+          return false;
+      }
+  }
+</script>
+
+
 <!-- Dashboard breadcrumb section -->
 <div class="section dashboard-breadcrumb-section bg-dark">
   <div class="container">
@@ -45,7 +103,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<form action="" method="" class="listing__form">
+				<form name="add_item" onsubmit="return validateForm()" action="" method="" class="listing__form">
 					<div class="dashboardBoxBg mb30">
 						<div class="profileIntro paraMargin">
 							<h3>About the Item</h3>
@@ -130,7 +188,7 @@
 											</select>
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
-									<label for="securityFee">Fee</label>
+									<label for="securityFee">Fee*</label>
 									<input  maxlength="6" type="text" class="form-control" id="securityFee" name="securityFee" placeholder="€" value="€">
 								</div>
 								<div class="form-group col-xs-12">
@@ -192,7 +250,7 @@
 									<input maxlength="60" type="text" class="form-control" id="addressLine1" name="addressLine1">
 								</div>
 								<div class="form-group col-xs-12">
-									<label for="addressLine2" class="control-label">Address Line 2*</label>
+									<label for="addressLine2" class="control-label">Address Line 2</label>
 									<input maxlength="60" type="text" class="form-control" id="addressLine2" name="addressLine2">
 								</div>
 								<div class="form-group col-xs-6">
@@ -207,7 +265,7 @@
 							<h3>Item Availability</h3>
 							<div class="row">
 								<div class="dateSelect col-sm-6 col-xs-12">
-                  				<label for="initialRentalDay" class="control-label">Beggining Date</label>
+                  				<label for="initialRentalDay" class="control-label">Beggining Date*</label>
                   					<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
                     				<input maxlength="10" type="text" class="form-control" id="initialAvailableDay" name="initialRentalDay" placeholder="mm/dd/yyyy">
                     					<div class="input-group-addon">
@@ -216,9 +274,9 @@
                   					</div>
                 			</div>
                 			<div class="dateSelect col-sm-6 col-xs-12">
-                  				<label for="endRentalDay" class="control-label">End Date</label>
+                  				<label for="endAvailableDay" class="control-label">End Date*</label>
                   					<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-                    				<input maxlength="10" type="text" class="form-control" id="endAvailableDay" name="endRentalDay" placeholder="mm/dd/yyyy">
+                    				<input maxlength="10" type="text" class="form-control" id="endAvailableDay" name="endAvailableDay" placeholder="mm/dd/yyyy">
                     					<div class="input-group-addon">
                       					<i class="fa fa-calendar" aria-hidden="true"></i>
                     					</div>

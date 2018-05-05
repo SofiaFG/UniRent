@@ -170,6 +170,69 @@
  }
 </style>
 
+
+<script>
+  function validateForm() {
+
+  	  // Check Meu Perfil for empty fields
+      var firstName 	  = document.forms["update_profile"]["firstName"].value;
+      var surname 		  = document.forms["update_profile"]["surname"].value;
+      var emailAdress 	  = document.forms["update_profile"]["emailAdress"].value;
+      var phoneNumber 	  = document.forms["update_profile"]["phoneNumber"].value;
+      var dateOfBirthday  = document.forms["update_profile"]["dateOfBirthday"].value;
+      
+      if (firstName == "") {
+          alert("Por favor, introduza o seu primeiro nome!");
+          document.getElementById("firstName").focus();
+          return false;
+      }
+
+      if (surname == "") {
+          alert("Por favor, introduza o seu último nome!");
+          document.getElementById("surname").focus();
+          return false;
+      }
+
+      if (emailAdress == "") {
+          alert("Por favor, introduza o seu endereço de email!");
+          document.getElementById("emailAdress").focus();
+          return false;
+      }
+
+      if (phoneNumber == "") {
+          alert("Por favor, introduza o seu número de telemóvel!");
+          document.getElementById("phoneNumber").focus();
+          return false;
+      }
+
+      if (dateOfBirthday == "") {
+          alert("Por favor, introduza a sua data de nascimento!");
+          document.getElementById("dateOfBirthday").focus();
+          return false;
+      }
+  }
+
+  function validatePasswordForm() {
+
+  	  //Check Informações de conta for empty fields
+      var newPassword 	  = document.forms["update_password"]["newPassword"].value;
+      var confirmPassword = document.forms["update_password"]["confirmPassword"].value;
+
+      if (newPassword == "") {
+          alert("Por favor, introduza a sua nova palavra-passe!");
+          document.getElementById("newPassword").focus();
+          return false;
+      }
+
+      if (confirmPassword == "") {
+          alert("Por favor, introduza a confirmação da sua nova palavra-passe!");
+          document.getElementById("confirmPassword").focus();
+          return false;
+      }
+  }
+</script>
+
+
 <!-- Dashboard breadcrumb section -->
 <div class="section dashboard-breadcrumb-section bg-dark">
   <div class="container">
@@ -210,7 +273,7 @@
 				</div>
 			</div>
 			<div class="col-md-8 col-sm-7 col-xs-12">
-				<form>
+				<form name="update_profile" onsubmit="return validateForm()" action="#" method="#">
 					<div class="dashboardBoxBg">
 						<div class="profileIntro">
 							<h2>Seu perfil</h2>
@@ -247,7 +310,7 @@
 									</div>
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
-									<label for="nationality">Nacionalidade</label>
+									<label for="nationality">Nacionalidade*</label>
 									<div class="contactSelect scrollable">
 										<select name="nationality" id="nationality" class="select-drop">
 											<?php
@@ -501,9 +564,12 @@
 						</div>
 					</div>
 
-					<div class="btn-area mt30">
-						<button class="btn btn-primary" type="button">Salvar alterações</button>
+					<div class="form-group col-xs-15 mb0">
+						<br><br>
+						<center><button type="submit" name="submit_PT" class="btn btn-primary">Salvar alterações</button></center>
 					</div>
+				</form>
+				<form name="update_password" onsubmit="return validatePasswordForm()" action="#" method="#">
 					<div class="dashboardBoxBg mt30">
 						<div class="profileIntro">
 							<h3>Alterar palavra passe</h3>
@@ -514,14 +580,14 @@
 								</div>
 								<div class="form-group col-xs-12">
 									<label for="newPassword">Palavra passe</label>
-									<input maxlength="15" type="password" class="form-control" id="newPassword" placeholder="New Password">
+									<input maxlength="15" type="password" class="form-control" id="newPassword" name="newPassword" placeholder="New Password">
 								</div>
 								<div class="form-group col-xs-12">
 									<label for="confirmPassword">Palavra passe (confirmação)</label>
-									<input maxlength="15" type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+									<input maxlength="15" type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
 								</div>
 								<div class="form-group col-xs-12">
-									<button class="btn btn-primary" type="button">Alterar palavra passe</button>
+									<button type="submit" name="submit_password_PT" class="btn btn-primary">Alterar palavra passe</button>
 								</div>
 							</div>
 						</div>
