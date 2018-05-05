@@ -12,6 +12,18 @@
   //$conn = db_connect();
 ?>
 
+<style type="text/css">
+ .scrollable{
+    overflow: auto;
+    position: absolute;
+    width: 510px; /* adjust this width depending to amount of text to display */
+	height: 370px; /* adjust height depending on number of options to display */
+ }
+ 
+ .hide {
+ 	display: none;
+ }
+</style>
 
 <!-- Dashboard breadcrumb section -->
 <div class="section dashboard-breadcrumb-section bg-dark">
@@ -124,6 +136,68 @@
 								<div class="form-group col-xs-12">
 									<label for="securityDescription">Fee reason description</label>
 									<input  maxlength="200" type="text" class="form-control" id="securityDescription" name="securityDescription" placeholder="Describe the reason for the fee">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dashboardBoxBg mb30">
+						<div class="profileIntro paraMargin">
+							<h3>Item Address</h3>
+							<div class="row"> 
+								<div class="form-group col-sm-6 col-xs-12 contactSelect">
+									<label for="country" class="control-label">Country*</label>
+									<div class="contactSelect scrollable">
+										<select name="country" id="country" class="select-drop">
+
+											<?php
+
+												$result_Country = $conn->query("select id, countryEN from Country");
+
+												while ($row = $result_Country->fetch_assoc()) {
+              										unset($id, $name);
+								                	$id = $row['id'];
+								                	$name = $row['countryEN']; 
+								                	echo '<option value="'.$id.'">'.$name.'</option>';
+												}
+
+											?>
+
+										</select>
+									</div>
+								</div>
+								<div class="form-group col-sm-6 col-xs-12">
+									<label for="city" class="control-label">City*</label>
+									<div class="contactSelect scrollable">
+										<select name="city" id="city" class="select-drop">
+											
+											<?php
+
+												$result_City = $conn->query("select id, name from City");
+
+												while ($row = $result_City->fetch_assoc()) {
+                  									unset($id, $name);
+									                $id = $row['id'];
+									                $name = $row['name']; 
+									                echo '<option value="'.$id.'">'.$name.'</option>';
+												}
+
+											?>
+
+										</select>
+									</div>
+								</div>
+								<div class="form-group col-xs-12">
+									<br><br>
+									<label for="addressLine1" class="control-label">Address Line 1*</label>
+									<input maxlength="60" type="text" class="form-control" id="addressLine1" name="addressLine1">
+								</div>
+								<div class="form-group col-xs-12">
+									<label for="addressLine2" class="control-label">Address Line 2*</label>
+									<input maxlength="60" type="text" class="form-control" id="addressLine2" name="addressLine2">
+								</div>
+								<div class="form-group col-xs-6">
+									<label for="postalCode" class="control-label">Postal Code*</label>
+									<input maxlength="15" type="text" class="form-control" id="postalCode" name="postalCode">
 								</div>
 							</div>
 						</div>
