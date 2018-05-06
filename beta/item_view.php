@@ -197,7 +197,8 @@
                       <input type="password" class="form-control" name="password" id="password">
                     </div>
                     <div class="form-group">
-                      <input type="hidden" name="pageName" value="login"/>
+                      <input type="hidden" name="pageName" value="view">
+                      <input type="hidden" name="itemID" value="<?php echo $itemID; ?>">
                       <button type="submit" name="submit" class="btn btn-primary pull-left">Login</button>
                       <a href="#" class="pull-right link">Esqueci-me da Password</a>
                     </div>

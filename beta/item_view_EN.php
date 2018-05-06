@@ -197,7 +197,8 @@
                       <input type="password" class="form-control" id="password" name="password">
                     </div>
                     <div class="form-group">
-                      <input type="hidden" name="pageName" value="loginEN">
+                      <input type="hidden" name="pageName" value="viewEN">
+                      <input type="hidden" name="itemID" value="<?php echo $itemID; ?>">
                       <button type="submit" name="submit" class="btn btn-primary pull-left">Log In</button>
                       <a href="#" class="pull-right link">Fogot Password?</a>
                     </div>
