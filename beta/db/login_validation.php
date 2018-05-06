@@ -49,10 +49,10 @@
 					header("location: ../listings.php"); // Redirecting To Portuguese Home Page
 				} elseif ((strcmp("view",$pageName)) == 0) {
 					$itemID = $_POST['itemID'];
-					header("location: ../item_view_profile.php?itemID=$itemID");
+					header("location: ../item_view_profile_preload.php?itemID=$itemID");
 				} elseif ((strcmp("viewEN",$pageName)) == 0) {
 					$itemID = $_POST['itemID'];
-					header("location: ../item_view_profile_EN.php?itemID=$itemID");
+					header("location: ../item_view_profile_preload_EN.php?itemID=$itemID");
 				} else{ 
 					header("location: ../listings_EN.php"); // Redirecting To English Home Page
 				}
