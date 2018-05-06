@@ -241,7 +241,6 @@
         <h2>Meu Perfil</h2>
         <ol class="breadcrumb">
           <li><a href="listings.php">Início</a></li>
-          <li class="active">Minha conta</li>
         </ol>
       </div>
     </div>

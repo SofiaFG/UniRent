@@ -241,7 +241,6 @@
         <h2>My Profile</h2>
         <ol class="breadcrumb">
           <li><a href="listings_EN.php">Home</a></li>
-          <li class="active">My Profile</li>
         </ol>
       </div>
     </div>
