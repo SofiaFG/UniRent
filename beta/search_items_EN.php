@@ -72,6 +72,7 @@
 						}
 
 						// Rentals variables
+						$id;
 						$name;
 						$price;
 						$publishDate;
@@ -104,7 +105,8 @@
 								
 							while ($row = $result_ToRent->fetch_assoc()) {
 								echo "<tr>";
-								unset($name, $price, $publishDate, $initialAvailableDay, $endAvailableDay);
+								unset($id, $name, $price, $publishDate, $initialAvailableDay, $endAvailableDay);
+								$id  		  		 = $row['id'];
 							    $name  		  		 = $row['name'];
 								$price 				 = $row['price'];
 								$publishDate     	 = $row['publishDate'];
@@ -118,9 +120,11 @@
 				                echo "<td>$endAvailableDay</td>";
 				                
 				                echo "<td>";
+				                	echo "<form action='item_view_EN.php' method='GET'>";
 									echo "<div class='btn-group'>";
-										echo "<button type='submit' name='ver' id='ver' class='btn btn-primary'>View</button>";
+										echo "<button type='submit' name='itemID' id='itemID' value='$id' class='btn btn-primary'>Ver</button>";
 									echo "</div>";
+									echo "</form>";
 								echo "</td>";
 								echo "</tr>";
 							}
