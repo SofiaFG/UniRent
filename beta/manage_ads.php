@@ -105,11 +105,13 @@
 								} 
 
 								echo "<td>";
+									echo "<form action='view_item_profile.php' method='GET'>";
 									echo "<div class='btn-group'>";
-										echo "<button type='submit' name='ver' id='ver' class='btn btn-primary'>Ver</button>";
-										echo "<button type='submit' name='ver' id='ver' class='btn btn-primary'>Editar</button>";
-										echo "<button type='submit' name='ver' id='ver' class='btn btn-primary'>Apagar</button>";
+										echo "<button type='submit' name='itemID' id='itemID' value='$id' class='btn btn-primary'>Ver</button>";
+										echo "<button type='button' name='ver' id='ver' class='btn btn-primary'>Editar</button>";
+										echo "<button type='button' name='ver' id='ver' class='btn btn-primary'>Apagar</button>";
 									echo "</div>";
+									echo "</form>";
 								echo "</td>";
 								echo "</tr>";
 							}
