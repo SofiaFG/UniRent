@@ -1,7 +1,6 @@
 <?php
 	// Include function files for this application
 	require_once('unirent_functions.php');
-	//require_once('../php/Encryption/passwordEncryption.php');
 
 	// Personal Information variables
 	$firstName      		  = $_POST['firstName'];

@@ -20,7 +20,7 @@
 		}
 	
 		// If ok, put in db
-		$result = $conn->query("insert into Login values('', '" . $username . "', '" . $password . "', '" . $passwordAgain . "')");
+		$result = $conn->query("insert into Login values('', '" . $username . "', sha1('".$password."'), sha1('".$passwordAgain."'))");
 
 		if (!$result) {
 			throw new Exception('Could not register you in database - please try again later.');
