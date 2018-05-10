@@ -11,6 +11,18 @@
   $conn = db_connect();
 ?>
 
+<script>
+  function validateForm() {
+    
+      var x = document.forms["search_items"]["findItem"].value;
+
+      if (x == "") {
+          alert("Por favor, introduza o que estás à procura!");
+          document.getElementById("findItem").focus();
+          return false;
+      }
+  }
+</script>
 
 <!-- BANNER SECTION -->
 <section class="clearfix homeBanner" style="background-image: url(img/banner/5.jpg);">
@@ -20,15 +32,15 @@
         <div class="banerInfo">
           <h1>Aluga tudo o que possas imaginar</h1>
           <p>O mercado de aluguer para estudantes</p>
-          <form class="form-inline" action="#" method="">
+          <form name="search_items" class="form-inline" onsubmit="return validateForm()" action="search_items.php" method="POST">
             <div class="form-group">
               <div class="input-group">
                 <div class="input-group-addon">Encontrar</div>
-                <input type="text" class="form-control" id="findItem" placeholder="O que estás à procura?">
+                <input type="text" class="form-control" id="findItem" name="findItem" placeholder="O que estás à procura?">
                 <div class="input-group-addon addon-right"></div>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary">Pesquisar <i class="fa fa-search" aria-hidden="true"></i></button>
+            <button type="submit" name="submit" class="btn btn-primary">Pesquisar <i class="fa fa-search" aria-hidden="true"></i></button>
           </form>
         </div>
       </div>

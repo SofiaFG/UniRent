@@ -9,6 +9,28 @@
 ?>
 
 
+<script>
+  function validateForm() {
+
+  	  // Check Login de Utilizadores for empty fields
+      var username = document.forms["login_form"]["username"].value;
+      var password = document.forms["login_form"]["password"].value;
+      
+      if (username == "") {
+          alert("Por favor, introduza o seu nome de utilizador!");
+          document.getElementById("username").focus();
+          return false;
+      }
+
+      if (password == "") {
+          alert("Por favor, introduza a sua palavra-passe!");
+          document.getElementById("password").focus();
+          return false;
+      }
+  }
+</script>
+
+
 <!-- LOGIN SECTION -->
 <section class="clearfix loginSection">
 	<div class="container">
@@ -17,7 +39,7 @@
 				<div class="panel panel-default loginPanel">
 					<div class="panel-heading text-center">Login de Utilizadores</div>
 					<div class="panel-body">
-						<form class="loginForm" action="db/login_validation.php" method="post">
+						<form name="login_form" onsubmit="return validateForm()" class="loginForm" action="db/login_validation.php" method="post">
 							<div class="form-group">
 								<label for="username">Username*</label>
 								<input type="text" class="form-control" name="username" id="username">

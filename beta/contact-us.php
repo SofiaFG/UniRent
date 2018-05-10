@@ -7,6 +7,42 @@
 ?>
 
 
+<script>
+  function validateForm() {
+
+  	  // Check Entra em Contacto Connosco for empty fields
+      var subject 	   = document.forms["contact_form"]["subject"].value;
+      var yourName 	   = document.forms["contact_form"]["yourName"].value;
+      var emailAddress = document.forms["contact_form"]["emailAddress"].value;
+      var textBox 	   = document.forms["contact_form"]["textBox"].value;
+      
+      if (subject == "") {
+          alert("Por favor, introduza o assunto do contacto!");
+          document.getElementById("subject").focus();
+          return false;
+      }
+
+      if (yourName == "") {
+          alert("Por favor, introduza o seu nome!");
+          document.getElementById("yourName").focus();
+          return false;
+      }
+
+      if (emailAddress == "") {
+          alert("Por favor, introduza o seu endereço de email!");
+          document.getElementById("emailAddress").focus();
+          return false;
+      }
+
+      if (textBox == "") {
+          alert("Por favor, introduza a mensagem!");
+          document.getElementById("textBox").focus();
+          return false;
+      }
+  }
+</script>
+
+
 <!-- PAGE TITLE SECTION -->
 <section class="clearfix pageTitleSection bg-image" style="background-image: url(img/banner/6.png);">
 	<div class="container">
@@ -53,13 +89,13 @@
 						<p>Por favor não tenhas medo de nos contactar se tiveres dúvidas, precisares de mais informações ou qualquer outra coisa.</p>
 					</div>
 					<div class="signUpForm">
-						<form action="#" method="">
+						<form name="contact_form" onsubmit="return validateForm()" action="#" method="">
 							<div class="formSection">
 								<div class="row">
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="selectSome" class="control-label">Escolhe o tipo de pedido*</label>
 										<div class="contactSelect">
-											<select name="guiest_id8" id="guiest_id8" class="select-drop">
+											<select name="tipo_pedido" id="tipo_pedido" class="select-drop">
 												<option value="0">-- Selecione o assunto --</option>
 												<option value="1">Quero alugar um bem</option>
 												<option value="2">Quero rentabilizar um bem</option>           
@@ -67,20 +103,20 @@
 										</div>
 									</div>
 									<div class="form-group col-sm-6 col-xs-12">
-										<label for="companyName" class="control-label">Assunto*</label>
-										<input type="text" class="form-control" id="companyName">
+										<label for="subject" class="control-label">Assunto*</label>
+										<input type="text" class="form-control" id="subject" name="subject">
 									</div>
 									<div class="form-group col-xs-12">
 										<label for="yourName" class="control-label">Nome*</label>
-										<input type="text" class="form-control" id="yourName">
+										<input type="text" class="form-control" id="yourName" name="yourName">
 									</div>
 									<div class="form-group col-xs-12">
 										<label for="emailAddress" class="control-label">Endereço de Email*</label>
-										<input type="email" class="form-control" id="emailAddress">
+										<input type="email" class="form-control" id="emailAddress" name="emailAddress">
 									</div>
 									<div class="form-group col-xs-12">
 										<label for="textBox" class="control-label">Texto*</label>
-										<textarea class="form-control" rows="3"></textarea>
+										<textarea class="form-control" rows="3" id="textBox" name="textBox"></textarea>
 									</div>
 									<div class="form-group col-xs-12 mb0">
 										<button type="submit" class="btn btn-primary">Enviar</button>

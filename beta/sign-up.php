@@ -26,6 +26,80 @@
 </style>
 
 
+<script>
+  function validateForm() {
+
+  	  // Check Informações de contacto for empty fields
+      var firstName 	 = document.forms["register_customer"]["firstName"].value;
+      var surname 		 = document.forms["register_customer"]["surname"].value;
+      var emailAdress 	 = document.forms["register_customer"]["emailAdress"].value;
+      var phoneNumber 	 = document.forms["register_customer"]["phoneNumber"].value;
+      var dateOfBirthday = document.forms["register_customer"]["dateOfBirthday"].value;
+
+      //Check Informações de conta for empty fields
+      var username 		 = document.forms["register_customer"]["username"].value;
+      var password 		 = document.forms["register_customer"]["password"].value;
+      var passwordAgain  = document.forms["register_customer"]["passwordAgain"].value;
+      
+      if (firstName == "") {
+          alert("Por favor, introduza o seu primeiro nome!");
+          document.getElementById("firstName").focus();
+          return false;
+      }
+
+      if (surname == "") {
+          alert("Por favor, introduza o seu último nome!");
+          document.getElementById("surname").focus();
+          return false;
+      }
+
+      if (emailAdress == "") {
+          alert("Por favor, introduza o seu endereço de email!");
+          document.getElementById("emailAdress").focus();
+          return false;
+      }
+
+      if (phoneNumber == "") {
+          alert("Por favor, introduza o seu número de telemóvel!");
+          document.getElementById("phoneNumber").focus();
+          return false;
+      }
+
+      if (dateOfBirthday == "") {
+          alert("Por favor, introduza a sua data de nascimento!");
+          document.getElementById("dateOfBirthday").focus();
+          return false;
+      }
+
+      if (username == "") {
+          alert("Por favor, introduza o seu nome de utilizador!");
+          document.getElementById("username").focus();
+          return false;
+      }
+
+      if (password == "") {
+          alert("Por favor, introduza a sua palavra-passe!");
+          document.getElementById("password").focus();
+          return false;
+      }
+
+      if (passwordAgain == "") {
+          alert("Por favor, introduza a confirmação da sua palavra-passe!");
+          document.getElementById("passwordAgain").focus();
+          return false;
+      }
+
+	  if (password != passwordAgain) {
+          alert("As palavra-passe que você digitou não correspondem - volte e tente novamente!");
+          document.getElementById("password").value = '';
+          document.getElementById("passwordAgain").value = '';
+          document.getElementById("password").focus();
+          return false;
+      }      
+  }
+</script>
+
+
 <!-- PAGE TITLE SECTION -->
 <section class="clearfix pageTitleSection" style="background-image: url();">
 	<div class="container">
@@ -67,7 +141,7 @@
 						<p>Por favor preenche os campos abaixo para criares a tua conta. De seguida, iremos enviar as informações da tua conta para o email registado. As tuas informações e o teu email NÃO serão vendidos ou partilhados com terceiros. Se já tens uma conta criada, por favor <a href="login.php">clica aqui</a>.</p>
 					</div>
 					<div class="signUpForm">
-						<form action="db/register_new_user.php" method="POST">
+						<form name="register_customer" onsubmit="return validateForm()" action="db/register_new_user.php" method="POST">
 							<div class="formSection">
 								<h3>Informações de contacto</h3>
 								<div class="row">

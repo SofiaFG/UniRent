@@ -11,6 +11,18 @@
   $conn = db_connect();
 ?>
 
+<script>
+  function validateForm() {
+
+      var x = document.forms["search_items"]["findItem"].value;
+      
+      if (x == "") {
+          alert("Please, write what are you looking for!");
+          document.getElementById("findItem").focus();
+          return false;
+      }
+  }
+</script>
 
 <!-- BANNER SECTION -->
 <section class="clearfix homeBanner" style="background-image: url(img/banner/5.jpg);">
@@ -20,15 +32,15 @@
 				<div class="banerInfo">
 					<h1>All you can think, you can rent</h1>
 					<p>The student's renting marketplace</p>
-					<form class="form-inline" action="#" method="">
+					<form name="search_items" class="form-inline" onsubmit="return validateForm()" action="search_items_EN.php" method="POST">
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-addon">Find</div>
-								<input type="text" class="form-control" id="findItem" placeholder="What are you looking for?">
+								<input type="text" class="form-control" id="findItem" name="findItem" placeholder="What are you looking for?">
 								<div class="input-group-addon addon-right"></div>
 							</div>
 						</div>
-						<button type="submit" class="btn btn-primary">Search <i class="fa fa-search" aria-hidden="true"></i></button>
+						<button type="submit" name="submit" class="btn btn-primary">Search <i class="fa fa-search" aria-hidden="true"></i></button>
 					</form>
 				</div>
 			</div>
@@ -62,6 +74,7 @@
           <div class="caption">
             <a href="how-it-works_EN.php"><h3>Search</h3></a>
             <p>Search for the item you would like to rent in our platform.</p>
+            <span style="display:inline-block; width: YOURWIDTH;"></span>
           </div>
         </div>
       </div>

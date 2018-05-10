@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 
 <?php
-  require_once('php/header_listings.php');
-  //require_once('db/unirent_functions.php');
-  include('db/session.php');
+	require_once('php/header_listings.php');
+	require_once('db/unirent_functions.php');
+	include('db/session.php');
 
-  // print UniRent header
-  do_unirent_header('Dashboard | UniRent');
+	// print UniRent header
+	do_unirent_header('Dashboard | UniRent');
 
-  // connect to UniRent DB
-  //$conn = db_connect();
+	// connect to UniRent DB
+	$conn = db_connect();
+
+	// Retrieve Login ID 
+	$Login_idLogin = retrieve_Login($login_session);
 ?>
 
 
@@ -37,7 +40,24 @@
 						Bens Disponíveis <span class="label label-primary">Por Dia</span>
 					</div>
 					<div class="panel-body">
-						<h3><center>5 unidades</center></h3>
+						<h3><center>
+							<?php
+								// check for Customer rentals in Rental DB
+								$result_CheckRentend = $conn->query("SELECT * FROM Item i WHERE NOT EXISTS(SELECT * FROM Rental r WHERE r.Item_ID = i.id AND i.Customer_id = $Login_idLogin)");
+
+								if (!$result_CheckRentend) {
+									throw new Exception('Could not execute result_ToRent query');
+								}
+
+								if ($result_CheckRentend->num_rows < 0) {
+									echo $result_CheckRentend->num_rows . " unidades";
+								} elseif ($result_CheckRentend->num_rows == 1) {
+									echo $result_CheckRentend->num_rows . " unidade";
+								} elseif ($result_CheckRentend->num_rows > 1) {
+									echo $result_CheckRentend->num_rows . " unidades";
+								}
+							?>
+						</center></h3>
 					</div>
 				</div>
 			</div>
@@ -54,10 +74,27 @@
 			<div class="col-sm-4 col-xs-12">
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						Total de Bens <span class="label label-primary">Detalhes</span>
+						Total de Bens <span class="label label-primary">Hoje</span>
 					</div>
 					<div class="panel-body">
-						<h3><center>10 unidades</center></h3>
+						<h3><center>
+							<?php
+								// check for Customer rentals in Rental DB
+								$result_ToRent = $conn->query("select * from Item where Customer_id = " . $Login_idLogin . "");
+
+								if (!$result_ToRent) {
+									throw new Exception('Could not execute result_ToRent query');
+								}
+
+								if ($result_ToRent->num_rows < 0) {
+									echo $result_ToRent->num_rows . " unidades";
+								} elseif ($result_ToRent->num_rows == 1) {
+									echo $result_ToRent->num_rows . " unidade";
+								} elseif ($result_ToRent->num_rows > 1) {
+									echo $result_ToRent->num_rows . " unidades";
+								}
+							?>
+						</center></h3>
 					</div>
 				</div>
 			</div>
@@ -66,7 +103,7 @@
 			<div class="col-sm-4 col-xs-12">
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						As minhas Reviwes <span class="label label-primary">Detalhes</span>
+						As minhas Reviews <span class="label label-primary">Detalhes</span>
 					</div>
 					<div class="panel-body plr">
 						<ul class="list-unstyled panel-list">
