@@ -470,7 +470,7 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
                   <div class="thingsImage">
-                    <img src="img/team/catia.png" alt="Cátia Matias" height="350" width="500">
+                    <img src="img/team/catia.jpeg" alt="Cátia Matias" height="350" width="500">
                   </div>
                   <div class="thingsCaption">
                     <ul class="list-inline captionItem">
@@ -486,7 +486,7 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
                   <div class="thingsImage">
-                    <img src="img/team/patrick.jpg" alt="Patrick Fonseca" height="350" width="500">
+                    <img src="img/team/patrick.jpeg" alt="Patrick Fonseca" height="350" width="500">
                   </div>
                   <div class="thingsCaption">
                     <ul class="list-inline captionItem">
@@ -502,7 +502,7 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
                   <div class="thingsImage">
-                    <img src="img/team/rui.png" alt="Rui Varela" height="350" width="500">
+                    <img src="img/team/rui.jpeg" alt="Rui Varela" height="350" width="500">
                   </div>
                   <div class="thingsCaption">
                     <ul class="list-inline captionItem">
@@ -518,7 +518,7 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
                   <div class="thingsImage">
-                    <img src="img/team/sofia.png" alt="Sofia Gonçalves" height="350" width="500">
+                    <img src="img/team/sofia.jpeg" alt="Sofia Gonçalves" height="350" width="500">
                   </div>
                   <div class="thingsCaption">
                     <ul class="list-inline captionItem">
