@@ -22,6 +22,17 @@
           return false;
       }
   }
+
+  function validateFormNewsletter() {
+    
+      var x = document.forms["newsletter_form"]["email"].value;
+
+      if (x == "") {
+          alert("Please enter your email address!");
+          document.getElementById("email").focus();
+          return false;
+      }
+  }
 </script>
 
 <!-- BANNER SECTION -->
@@ -127,190 +138,6 @@
           <i class="icon-listy icon-microsoft"></i><span>available on <br><strong>Windows Store</strong></span>
         </a>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- MOST RENTED SECTION -->
-<section class="clearfix filterProtfolio">
-  <div class="container">
-    <div class="page-header text-center">
-      <h2>What People Like You Are Renting</h2>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="filter-container isotopeFilters">
-          <ul class="list-inline filter">
-            <li class="active"><a href="#" data-filter="*">Most Popular Item</a></li>
-            <li><a href="#" data-filter=".recentItem">Most Recent Item</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row isotopeContainer" id="container">
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector featuredItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-1.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> 11 k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i> 45</span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">AUDI M3 E92 2016 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>19 Dec, 2017</p>
-            <h3>$80,000</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic,  50 km/h</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector recentItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-2.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> 9k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i>25</span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">BMW NP E87 2018 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>25 jan, 2018</p>
-            <h3>$90,000</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic,  80 km/h</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector recentItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-3.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> 7.5k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i> 35</span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">FERRARY F3 C95 2017 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>29 Dec, 2017</p>
-            <h3>$70,000</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic,  60km/h</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector recentItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-4.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> 9.8k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i> 39</span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">DASTUN F9E 2017 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>19 Nov, 2017</p>
-            <h3>$75,000</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic,  76 km/h</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector featuredItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-5.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> 9.1k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i> 68 </span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">HONDA XE E95 2017 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>28 Feb, 2018</p>
-            <h3>$74,500</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic,  76 km/h</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector featuredItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-6.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i>8.9 k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i> 45</span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">SUZUKI S4 E96 2017 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>29 Jan, 2017</p>
-            <h3>$73,500</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic, 40km/h</p>
-          </div>
-        </article>
-      </div>
-
     </div>
   </div>
 </section>
@@ -549,6 +376,34 @@
 			</div>
 		</div>
 	</div>
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="clearfix thingsArea">
+  <div class="container">
+    <div class="row">
+      <div class="page-header text-center">
+        <h2>Stay tuned to our news</h2>
+      </div>
+      <div class="center-block col-md-5 col-sm-6 col-xs-12">
+        <div class="panel panel-default loginPanel">
+          <div class="panel-heading text-center">Newsletter</div>
+          <div class="panel-body">
+            <form name="newsletter_form" onsubmit="return validateFormNewsletter()" class="loginForm" action="db/newsletter.php" method="post">
+              <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="text" class="form-control" name="email" id="email">
+              </div>
+              <div class="form-group">
+                <button type="submit" name="submit" class="btn btn-primary pull-left">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
