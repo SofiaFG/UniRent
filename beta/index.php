@@ -293,16 +293,16 @@
               </div>
             </div>
 
-            <div class="item row">
+             <div class="item row">
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
                   <div class="thingsImage">
-                    <img src="img/team/catia.jpeg" alt="Cátia Matias" height="350" width="500">
+                    <img src="img/team/patrick.jpeg" alt="Patrick Fonseca" height="350" width="500">
                   </div>
                   <div class="thingsCaption">
                     <ul class="list-inline captionItem">
-                      <li><i class="fa" aria-hidden="true"></i> Cátia Matias</li>
-                      <li><a href="https://www.linkedin.com/in/catiamatias/" target="_blank">LinkedIn</a></li>
+                      <li><i class="fa" aria-hidden="true"></i> Patrick Fonseca</li>
+                      <li><a href="https://www.linkedin.com/in/patrickfcf/" target="_blank">LinkedIn</a></li>
                     </ul>
                   </div>
                 </div>
@@ -313,12 +313,12 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
                   <div class="thingsImage">
-                    <img src="img/team/patrick.jpeg" alt="Patrick Fonseca" height="350" width="500">
+                    <img src="img/team/catia.jpeg" alt="Cátia Matias" height="350" width="500">
                   </div>
                   <div class="thingsCaption">
                     <ul class="list-inline captionItem">
-                      <li><i class="fa" aria-hidden="true"></i> Patrick Fonseca</li>
-                      <li><a href="https://www.linkedin.com/in/patrickfcf/" target="_blank">LinkedIn</a></li>
+                      <li><i class="fa" aria-hidden="true"></i> Cátia Matias</li>
+                      <li><a href="https://www.linkedin.com/in/catiamatias/" target="_blank">LinkedIn</a></li>
                     </ul>
                   </div>
                 </div>

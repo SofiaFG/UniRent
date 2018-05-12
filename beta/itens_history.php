@@ -46,7 +46,7 @@
 									<input type="text" class="form-control" id="itemName" name="itemName">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="ownerUsername">Username do <u>Borrower</u></label>
+									<label for="ownerUsername">Username do <em>Borrower</em></label>
 									<input type="text" class="form-control" id="ownerUsername" name="ownerUsername">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">

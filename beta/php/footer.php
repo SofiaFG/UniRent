@@ -30,7 +30,7 @@
                   <li><a href="contact-us.php">Contactos</a></li>
                   <li><a href="terms-of-services.php">Termos e Condições</a></li>
                   <li><a href="how-it-works.php">Como Funciona</a></li>
-                  <li><a href="assurance.php">Seguro</a></li>
+                  <li><a href="insurance.php">Seguro</a></li>
                 </ul>
               </div>
             </div>

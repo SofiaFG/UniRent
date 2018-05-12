@@ -135,7 +135,7 @@
 									<textarea maxlength="300" class="form-control" rows="3" id="itemDescription" name="itemDescription" placeholder="Example: The GoPro has a small scratch on the upper right side."></textarea>
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
-									<label for="itemPrice">Price*</label>
+									<label for="itemPrice">Price/day*</label>
 									<input maxlength="6" type="text" class="form-control" id="itemPrice" name="itemPrice" placeholder="€">
 								</div>
                 <div class="dateSelect col-sm-6 col-xs-12">
