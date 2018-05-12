@@ -3,6 +3,19 @@
 	// print UniRent header
 ?>
 
+<script>
+  function validateForm() {
+    
+      var x = document.forms["search_items"]["findItem"].value;
+
+      if (x == "") {
+          alert("Por favor, introduza o que estás à procura!");
+          document.getElementById("findItem").focus();
+          return false;
+      }
+  }
+</script>
+
 <html lang="en">
 <head>
 
@@ -99,7 +112,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
               <ul class="nav navbar-nav navbar-right">
                 </li>
-                <li><a href="profile.php"><i class="fa fa-cogs icon-dash" aria-hidden="true"></i> Minha conta</a></li>
+                <li><a href="profile.php"><i class="fa fa-cogs icon-dash" aria-hidden="true"></i> Minha Conta</a></li>
               </ul>
             </div>
             <a class="btn btn-default navbar-btn" href="db/logout.php"><span>Logout</span></a>
@@ -144,11 +157,11 @@
             </ul>
             <div class="row adjustRow">
               <div class="pull-right col-xs-12 col-sm-4">
-                <form class="navbar-form" role="search">
+                <form name="search_items" class="form-inline" onsubmit="return validateForm()" action="search_items_profile.php" method="POST" class="navbar-form">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Pesquisar" name="q">
+                    <input type="text" name="findItem" id="findItem" class="form-control" placeholder="Pesquisar">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button"><i class="icon-listy icon-search-2"></i></button>
+                      <button class="btn btn-default" type="submit" id="submit" name="submit"><i class="icon-listy icon-search-2"></i></button>
                     </span>
                   </div>
                 </form>

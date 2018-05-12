@@ -17,27 +17,11 @@
 			// Define $username and $password
 			$username = $_POST['username'];
 			$password = $_POST['password'];
-			
-			// SQL query to fetch information of registerd users and finds user match.
-			/**$getSHA1Password = $conn->query("select SHA1('$password') from Login where username = '$username'");
 
+			// Calculate SHA1 of password input by user
+			$hashPassword = sha1($password);
 
-			if (!$getSHA1Password) {
-				echo "Something is wrong with SHA1 Password!!";
-			}
-
-			// SHA1 password variable
-			$passwordSHA1;
-
-			if ($getSHA1Password->num_rows > 0) {
-				while ($row = $getSHA1Password->fetch_assoc()) {
-					unset($passwordSHA1);
-		            $passwordSHA1 = $row['password'];
-				}
-			}*/
-
-			//$result = $conn->query("select * from Login where username = '$username' AND password = '$passwordSHA1'");
-			$result = $conn->query("select * from Login where username = '$username'");
+			$result = $conn->query("select * from Login where username = '$username' AND password = '$hashPassword'");
 
 			if (!$result) {
 				echo "Something is wrong!!";
@@ -47,6 +31,12 @@
 				$_SESSION['login_user'] = $username; // Initializing Session
 				if ((strcmp("login",$pageName)) == 0) {
 					header("location: ../listings.php"); // Redirecting To Portuguese Home Page
+				} elseif ((strcmp("view",$pageName)) == 0) {
+					$itemID = $_POST['itemID'];
+					header("location: ../item_view_profile_preload.php?itemID=$itemID");
+				} elseif ((strcmp("viewEN",$pageName)) == 0) {
+					$itemID = $_POST['itemID'];
+					header("location: ../item_view_profile_preload_EN.php?itemID=$itemID");
 				} else{ 
 					header("location: ../listings_EN.php"); // Redirecting To English Home Page
 				}

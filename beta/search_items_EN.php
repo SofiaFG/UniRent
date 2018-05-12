@@ -1,34 +1,18 @@
 <!DOCTYPE html>
 
 <?php
-	require_once('php/header_listings_EN.php');
-	//require_once('db/unirent_functions.php');
-	include('db/session.php');
+	require_once('php/header_EN.php');
+	require_once('db/unirent_functions.php');
 
 	// print UniRent header
-	do_unirent_header('Renting History');
+	do_unirent_header('Find');
 
 	// connect to UniRent DB
 	$conn = db_connect();
 
-	// Retrieve Login ID 
-	$Login_idLogin = retrieve_Login($login_session);
+	// Get searched item
+	$findItem = $_POST['findItem'];
 ?>
-
-
-<!-- Dashboard breadcrumb section -->
-<div class="section dashboard-breadcrumb-section bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Renting History</h2>
-        <ol class="breadcrumb">
-          <li><a href="listings_EN.php">Home</a></li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <!-- DASHBOARD ORDERS SECTION -->
@@ -44,14 +28,6 @@
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
 									<label for="itemName">Item Name</label>
 									<input type="text" class="form-control" id="itemName" name="itemName">
-								</div>
-								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="ownerUsername">Item Borrower Username</label>
-									<input type="text" class="form-control" id="ownerUsername" name="ownerUsername">
-								</div>
-								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="totalPrice">Total Price</label>
-									<input type="text" class="form-control" id="totalPrice" name="totalPrice" placeholder="€">
 								</div>
 								<div class="form-group col-md-4 col-sm-6 col-xs-12">
 									<label for="initialRentalDay">Initial Rental Day</label>
@@ -75,17 +51,6 @@
 										</div>
 									</div>
 								</div>
-								<div class="form-group col-md-4 col-sm-6 col-xs-12">
-									<label for="publishDate">Item Publish Date</label>
-									<div class="dateSelect">
-										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-											<input type="text" class="form-control" id="publishDate" name="publishDate" placeholder="mm/dd/yyyy">
-											<div class="input-group-addon">
-												<i class="icon-listy icon-calendar"></i>
-											</div>
-										</div>
-									</div>
-								</div>
 								<div class="form-footer text-center">
 									<button type="submit" id="submit" name="submit" class="btn-submit">Submit</button>
 								</div>
@@ -100,16 +65,17 @@
 					<?php	
 
 						// check for Customer rentals in Rental DB
-						$result_ToRent = $conn->query("select * from Item where Customer_id = " . $Login_idLogin . "");
+						$result_ToRent = $conn->query("SELECT * FROM Item i WHERE NOT EXISTS(SELECT * FROM Rental r WHERE r.Item_ID = i.id) AND i.name LIKE '%$findItem%'");
 
 						if (!$result_ToRent) {
-							throw new Exception('Could not execute result_ToRent query');
+							throw new Exception('Could not execute Rental query');
 						}
 
 						// Rentals variables
 						$id;
 						$name;
 						$price;
+						$publishDate;
 						$initialAvailableDay;
 						$endAvailableDay; 
 
@@ -117,22 +83,22 @@
 
 							echo "<thead>";
 								echo "<tr>";
-									echo "<th data-priority='0'>Item ID</th>";
-									echo "<th data-priority='1'>Item Name</th>";
-									echo "<th data-priority='2'>Rental Price</th>";
-									echo "<th data-priority='3'>Inital Rental Day</th>";
+									echo "<th data-priority='0'>Item Name</th>";
+									echo "<th data-priority='1'>Rental Price</th>";
+									echo "<th data-priority='2'>Publish Date</th>";
+									echo "<th data-priority='3'>Initial Rental Day</th>";
 									echo "<th data-priority='4'>End Rental Day</th>";
-									echo "<th data-priority='5'>Status</th>";
+									echo "<th data-priority='5'>More Details</th>";
 								echo "</tr>";
 							echo "</thead>";
 							echo "<tfoot>";
 								echo "<tr>";
-									echo "<th>Item ID</th>";
 									echo "<th>Item Name</th>";
 									echo "<th>Rental Price</th>";
-									echo "<th>Inital Rental Day</th>";
+									echo "<th>Publish Date</th>";
+									echo "<th>Initial Rental Day</th>";
 									echo "<th>End Rental Day</th>";
-									echo "<th>Status</th>";
+									echo "<th>More Details</th>";
 								echo "</tr>";
 							echo "</tfoot>";
 							echo "<tbody>";
@@ -140,28 +106,26 @@
 							while ($row = $result_ToRent->fetch_assoc()) {
 								echo "<tr>";
 								unset($id, $name, $price, $publishDate, $initialAvailableDay, $endAvailableDay);
-							    $id  		  		 = $row['id'];
+								$id  		  		 = $row['id'];
 							    $name  		  		 = $row['name'];
 								$price 				 = $row['price'];
 								$publishDate     	 = $row['publishDate'];
 								$initialAvailableDay = $row['initialAvailableDay'];
 								$endAvailableDay 	 = $row['endAvailableDay'];
 
-								echo "<td>$id</td>";
 								echo "<td>$name</td>";
 				                echo "<td>€ $price</td>";
+				                echo "<td>$publishDate</td>";
 				                echo "<td>$initialAvailableDay</td>";
 				                echo "<td>$endAvailableDay</td>";
-
-								$result_AlreadyRented = $conn->query("SELECT * FROM Item i WHERE NOT EXISTS(SELECT * FROM Rental r WHERE r.Item_ID = i.id AND i.id = $id)");
-
-								if($result_AlreadyRented->num_rows > 0) {
-									echo "<td><span class='label label-success'>Available</span></td>";
-								} else {
-									echo "<td><span class='label label-warning'>Rented</span></td>";
-								} 
-
-								//echo "<td><span class='label label-danger'>Expirado</span></td>";
+				                
+				                echo "<td>";
+				                	echo "<form action='item_view_EN.php' method='GET'>";
+									echo "<div class='btn-group'>";
+										echo "<button type='submit' name='itemID' id='itemID' value='$id' class='btn btn-primary'>Ver</button>";
+									echo "</div>";
+									echo "</form>";
+								echo "</td>";
 								echo "</tr>";
 							}
 						} else {
@@ -169,7 +133,7 @@
 						}
 
 						echo "</tbody>";
-					?>
+				?>
 					</table>
 				</div>
 			</div>
@@ -182,7 +146,7 @@
   // disconnect to UniRent DB
   //$conn->close();
 
-  require_once('php/footer_listings_EN.php');
+  require_once('php/footer_EN.php');
 
   // print UniRent header
   do_unirent_footer();

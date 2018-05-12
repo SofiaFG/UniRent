@@ -21,6 +21,42 @@
 </section>
 
 
+<script>
+  function validateForm() {
+
+  	  // Check Get inTouch for empty fields
+      var subject 	   = document.forms["contact_form"]["subject"].value;
+      var yourName 	   = document.forms["contact_form"]["yourName"].value;
+      var emailAddress = document.forms["contact_form"]["emailAddress"].value;
+      var textBox 	   = document.forms["contact_form"]["textBox"].value;
+      
+      if (subject == "") {
+          alert("Please enter the subject of the contact!");
+          document.getElementById("subject").focus();
+          return false;
+      }
+
+      if (yourName == "") {
+          alert("Please enter your name!");
+          document.getElementById("yourName").focus();
+          return false;
+      }
+
+      if (emailAddress == "") {
+          alert("Please enter your email address!");
+          document.getElementById("emailAddress").focus();
+          return false;
+      }
+
+      if (textBox == "") {
+          alert("Please enter the message!");
+          document.getElementById("textBox").focus();
+          return false;
+      }
+  }
+</script>
+
+
 <!-- CONTACT SECTION -->
 <section class="clearfix">
 	<div class="container">
@@ -53,7 +89,7 @@
 						<p>Please feel free to contact us if you have queries, require more information or have any other request.</p>
 					</div>
 					<div class="signUpForm">
-						<form action="#" method="">
+						<form name="contact_form" onsubmit="return validateForm()" action="#" method="">
 							<div class="formSection">
 								<div class="row">
 									<div class="form-group col-sm-6 col-xs-12">

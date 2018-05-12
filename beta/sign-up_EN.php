@@ -5,7 +5,7 @@
   require_once('db/unirent_functions.php');
   
   // print UniRent header
-  do_unirent_header('Sign-Up - UniRent');
+  do_unirent_header('Sign Up - UniRent');
   
   // connect to UniRent DB
   $conn = db_connect();
@@ -24,6 +24,80 @@
  	display: none;
  }
 </style>
+
+
+<script>
+  function validateForm() {
+
+  	  // Check Personal Information for empty fields
+      var firstName 	 = document.forms["register_customer"]["firstName"].value;
+      var surname 		 = document.forms["register_customer"]["surname"].value;
+      var emailAdress 	 = document.forms["register_customer"]["emailAdress"].value;
+      var phoneNumber 	 = document.forms["register_customer"]["phoneNumber"].value;
+      var dateOfBirthday = document.forms["register_customer"]["dateOfBirthday"].value;
+
+      //Check Account Information for empty fields
+      var username 		 = document.forms["register_customer"]["username"].value;
+      var password 		 = document.forms["register_customer"]["password"].value;
+      var passwordAgain  = document.forms["register_customer"]["passwordAgain"].value;
+      
+      if (firstName == "") {
+          alert("Please enter your first name!");
+          document.getElementById("firstName").focus();
+          return false;
+      }
+
+      if (surname == "") {
+          alert("Please enter your surname!");
+          document.getElementById("surname").focus();
+          return false;
+      }
+
+      if (emailAdress == "") {
+          alert("Please enter your email address!");
+          document.getElementById("emailAdress").focus();
+          return false;
+      }
+
+      if (phoneNumber == "") {
+          alert("Please enter your mobile number!");
+          document.getElementById("phoneNumber").focus();
+          return false;
+      }
+
+      if (dateOfBirthday == "") {
+          alert("Please enter your date of birth!");
+          document.getElementById("dateOfBirthday").focus();
+          return false;
+      }
+
+      if (username == "") {
+          alert("Please enter your username!");
+          document.getElementById("username").focus();
+          return false;
+      }
+
+      if (password == "") {
+          alert("Please enter your password!");
+          document.getElementById("password").focus();
+          return false;
+      }
+
+      if (passwordAgain == "") {
+          alert("Please, enter your password confirmation!");
+          document.getElementById("passwordAgain").focus();
+          return false;
+      }
+
+      if (password != passwordAgain) {
+          alert("The passwords you entered do not match – please go back and try again!");
+          document.getElementById("password").value = '';
+          document.getElementById("passwordAgain").value = '';
+          document.getElementById("password").focus();
+          return false;
+      }     
+  }
+</script>
 
 
 <!-- PAGE TITLE SECTION -->
@@ -55,7 +129,7 @@
 					<div class="priceInfo">
 						<ul class="list-unstyled">
 							<li>15% of the transaction is ours</li>
-							<li>And the rest to the renter</li>
+							<li>And the rest belongs to the Owner</li>
 						</ul>
 					</div>
 				</div>
@@ -67,7 +141,7 @@
 						<p>Please fill out the fields below to create your account. We will send your account information to the email address you enter. Your email address and information will NOT be sold or shared with any 3rd party. If you already have an account, please, <a href="login_EN.php">click here</a>.</p>
 					</div>
 					<div class="signUpForm">
-						<form action="db/register_new_user.php" method="POST">
+						<form name="register_customer" onsubmit="return validateForm()" action="db/register_new_user.php" method="POST">
 							<div class="formSection">
 								<h3>Personal Information</h3>
 								<div class="row">
@@ -194,7 +268,7 @@
 									</div>
 									<div class="form-group col-xs-12">
 										<br><br>
-										<label for="addressLine1" class="control-label">Address Line 1*</label>
+										<label for="addressLine1" class="control-label">Address Line 1</label>
 										<input maxlength="60" type="text" class="form-control" id="addressLine1" name="addressLine1">
 									</div>
 									<div class="form-group col-xs-12">
@@ -202,7 +276,7 @@
 										<input maxlength="60" type="text" class="form-control" id="addressLine2" name="addressLine2">
 									</div>
 									<div class="form-group col-xs-6">
-										<label for="postalCode" class="control-label">Postal Code*</label>
+										<label for="postalCode" class="control-label">Postal Code</label>
 										<input maxlength="15" type="text" class="form-control" id="postalCode" name="postalCode">
 									</div>
 								</div>

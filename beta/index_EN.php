@@ -11,6 +11,29 @@
   $conn = db_connect();
 ?>
 
+<script>
+  function validateForm() {
+
+      var x = document.forms["search_items"]["findItem"].value;
+      
+      if (x == "") {
+          alert("Please, write what are you looking for!");
+          document.getElementById("findItem").focus();
+          return false;
+      }
+  }
+
+  function validateFormNewsletter() {
+    
+      var x = document.forms["newsletter_form"]["email"].value;
+
+      if (x == "") {
+          alert("Please enter your email address!");
+          document.getElementById("email").focus();
+          return false;
+      }
+  }
+</script>
 
 <!-- BANNER SECTION -->
 <section class="clearfix homeBanner" style="background-image: url(img/banner/5.jpg);">
@@ -20,15 +43,15 @@
 				<div class="banerInfo">
 					<h1>All you can think, you can rent</h1>
 					<p>The student's renting marketplace</p>
-					<form class="form-inline" action="#" method="">
+					<form name="search_items" class="form-inline" onsubmit="return validateForm()" action="search_items_EN.php" method="POST">
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-addon">Find</div>
-								<input type="text" class="form-control" id="findItem" placeholder="What are you looking for?">
+								<input type="text" class="form-control" id="findItem" name="findItem" placeholder="What are you looking for?">
 								<div class="input-group-addon addon-right"></div>
 							</div>
 						</div>
-						<button type="submit" class="btn btn-primary">Search <i class="fa fa-search" aria-hidden="true"></i></button>
+						<button type="submit" name="submit" class="btn btn-primary">Search <i class="fa fa-search" aria-hidden="true"></i></button>
 					</form>
 				</div>
 			</div>
@@ -42,8 +65,8 @@
   <div class="container">
     <div class="page-header text-center">
       <h1>How it Works?</h1><br>
-        <h3>UniRent is an innovative service for students like you who need an item just for a short period of time. It's safe and practical, and lets you browse thousands of items available to rent and match your needs.<br><br>
-        <small>We give you a simple solution divided in 4 <b>easy</b> steps</small>
+        <h3>UniRent is an innovative service for students like you, who need an item just for a short period of time. It's safe, practical, and lets you browse through thousands of items available to rent and match your needs.<br><br>
+        <small>We give you a simple solution in 4 <b>easy</b> steps</small>
       </h3>
     </div>
     <div class="row">
@@ -52,7 +75,7 @@
           <img src="img/works/Need.png" width="160" width="160" alt="Image works">
           <div class="caption">
             <a href="how-it-works_EN.php"><h3>Need</h3></a>
-            <p>You had a need of an item, and the best way is to rent instead of buying.</p>
+            <p>If you have a need for an item, the best way is to rent instead of buying.</p>
           </div>
         </div>
       </div>
@@ -61,7 +84,8 @@
           <img src="img/works/Search.png" width="160" width="160" alt="Image works">
           <div class="caption">
             <a href="how-it-works_EN.php"><h3>Search</h3></a>
-            <p>You search for this item that you would like to rent in our platform.</p>
+            <p>Search for the item you would like to rent in our platform.</p>
+            <span style="display:inline-block; width: YOURWIDTH;"></span>
           </div>
         </div>
       </div>
@@ -119,196 +143,11 @@
 </section>
 
 
-<!-- MOST RENTED SECTION -->
-<section class="clearfix filterProtfolio">
-  <div class="container">
-    <div class="page-header text-center">
-      <h2>What People Like You Are Renting <small>This Are Some Of Most Popular Renting Stuffs Nowadays</small></h2>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="filter-container isotopeFilters">
-          <ul class="list-inline filter">
-            <li class="active"><a href="#" data-filter="*">Popular Item</a></li>
-            <li><a href="#" data-filter=".recentItem">Recent Item</a></li>
-            <li><a href="#" data-filter=".featuredItem">Featured Item</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row isotopeContainer" id="container">
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector featuredItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-1.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> 11 k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i> 45</span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">AUDI M3 E92 2016 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>19 Dec, 2017</p>
-            <h3>$80,000</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic,  50 km/h</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector recentItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-2.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> 9k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i>25</span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">BMW NP E87 2018 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>25 jan, 2018</p>
-            <h3>$90,000</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic,  80 km/h</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector recentItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-3.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> 7.5k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i> 35</span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">FERRARY F3 C95 2017 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>29 Dec, 2017</p>
-            <h3>$70,000</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic,  60km/h</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector recentItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-4.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> 9.8k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i> 39</span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">DASTUN F9E 2017 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>19 Nov, 2017</p>
-            <h3>$75,000</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic,  76 km/h</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector featuredItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-5.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> 9.1k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i> 68 </span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">HONDA XE E95 2017 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>28 Feb, 2018</p>
-            <h3>$74,500</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic,  76 km/h</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-md-4 col-sm-6 col-xs-12 isotopeSelector featuredItem">
-        <article class="">
-          <figure>
-            <img src="img/cars/car-6.jpg" alt="Image Protfolio" class="img-responsive">
-            <div class="overlay-background">
-              <div class="inner"></div>
-            </div>
-            <a href="#">
-              <div class="overlay">
-                <div class="overlayInfo">
-                  <span class="label label-primary"><i class="fa fa-heart-o" aria-hidden="true"></i>8.9 k</span>
-                  <span class="label label-primary"><i class="fa fa-camera" aria-hidden="true"></i> 45</span>
-                </div>
-              </div>
-            </a>
-          </figure>
-          <div class="figureBody">
-            <h2><a href="#">SUZUKI S4 E96 2017 <i class="fa fa-check-circle" aria-hidden="true"></i></a></h2>
-            <p>29 Jan, 2017</p>
-            <h3>$73,500</h3>
-          </div>
-          <div class="figureFooter">
-            <p>Brand New,  Automatic, 40km/h</p>
-          </div>
-        </article>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
 <!-- BENEFITS SECTION -->
 <section class="clearfix articlesArea">
   <div class="container">
     <div class="page-header text-center">
-      <h2>Your Main Benefits <small>We are sure that your short time need can be found here.</small></h2>
+      <h2>Your Main Benefits <small>We are convicted that your need can be met here.</small></h2>
     </div>
     <div class="row">
       <div class="col-xs-12">
@@ -320,7 +159,7 @@
               </div>
               <div class="servicesInfo">
                 <h2>Secure Trading</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod</p>
+                <p>Your data will remain secure, it will not be transmitted to third parties withouth your permission.</p>
               </div>
             </li>
             <li>
@@ -329,7 +168,7 @@
               </div>
               <div class="servicesInfo">
                 <h2>24/7 Hours Support</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod</p>
+                <p>We are always available to answer any doubt you may have.</p>
               </div>
             </li>
             <li>
@@ -338,7 +177,7 @@
               </div>
               <div class="servicesInfo">
                 <h2>Easy Trading</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod</p>
+                <p>The item you are renting is a click away from you.</p>
               </div>
             </li>
           </ul>
@@ -419,7 +258,7 @@
 <section class="clearfix thingsArea">
   <div class="container">
     <div class="page-header text-center">
-      <h2>Meet Our Team <small>5 Crazy Friends From ISEG - Lisbon To The World</small><small><a href="about-us_EN.html">About us</a></small></h2>
+      <h2>Meet Our Team <small>5 Crazy Friends From ISEG - Lisbon To The World</small><small><a href="about-us_EN.php">About us</a></small></h2>
     </div>
     <div class="row">
       <div class="col-xs-12">
@@ -456,7 +295,7 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
                   <div class="thingsImage">
-                    <img src="img/team/catia.png" alt="Cátia Matias" height="350" width="500">
+                    <img src="img/team/catia.jpeg" alt="Cátia Matias" height="350" width="500">
                   </div>
                   <div class="thingsCaption">
                     <ul class="list-inline captionItem">
@@ -472,7 +311,7 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
                   <div class="thingsImage">
-                    <img src="img/team/patrick.jpg" alt="Patrick Fonseca" height="350" width="500">
+                    <img src="img/team/patrick.jpeg" alt="Patrick Fonseca" height="350" width="500">
                   </div>
                   <div class="thingsCaption">
                     <ul class="list-inline captionItem">
@@ -488,7 +327,7 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
                   <div class="thingsImage">
-                    <img src="img/team/rui.png" alt="Rui Varela" height="350" width="500">
+                    <img src="img/team/rui.jpeg" alt="Rui Varela" height="350" width="500">
                   </div>
                   <div class="thingsCaption">
                     <ul class="list-inline captionItem">
@@ -504,7 +343,7 @@
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
                   <div class="thingsImage">
-                    <img src="img/team/sofia.png" alt="Sofia Gonçalves" height="350" width="500">
+                    <img src="img/team/sofia.jpeg" alt="Sofia Gonçalves" height="350" width="500">
                   </div>
                   <div class="thingsCaption">
                     <ul class="list-inline captionItem">
@@ -530,18 +369,41 @@
 <section class="clearfix callAction">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-10 col-sm-9 col-xs-12">
+			<div class="col-md-15 col-sm-15 col-xs-20">
 				<div class="callInfo">
 					<h4><span>UniRent</span> is the <span>best way</span> <br>to Find Great Products for a short time</h4>
 				</div>
 			</div>
-			<div class="col-md-2 col-sm-3 col-xs-12">
-				<div class="btnArea">
-					<a href="sign-up_EN.php" class="btn btn-primary btn-block">Get Started</a>
-				</div>
-			</div>
 		</div>
 	</div>
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="clearfix thingsArea">
+  <div class="container">
+    <div class="row">
+      <div class="page-header text-center">
+        <h2>Stay tuned to our news</h2>
+      </div>
+      <div class="center-block col-md-5 col-sm-6 col-xs-12">
+        <div class="panel panel-default loginPanel">
+          <div class="panel-heading text-center">Newsletter</div>
+          <div class="panel-body">
+            <form name="newsletter_form" onsubmit="return validateFormNewsletter()" class="loginForm" action="db/newsletter.php" method="post">
+              <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="text" class="form-control" name="email" id="email">
+              </div>
+              <div class="form-group">
+                <button type="submit" name="submit" class="btn btn-primary pull-left">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 

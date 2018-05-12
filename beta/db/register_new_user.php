@@ -1,7 +1,6 @@
 <?php
 	// Include function files for this application
 	require_once('unirent_functions.php');
-	//require_once('../php/Encryption/passwordEncryption.php');
 
 	// Personal Information variables
 	$firstName      		  = $_POST['firstName'];
@@ -40,17 +39,6 @@
 	session_start();
 
 	try {
-		// Check forms filled in
-		//if (!filled_out($_POST)) {
-		//	throw new Exception('You have not filled the form out correctly – please go back and try again.');
-			//BootstrapDialog.alert('I want banana!');
-		//}
-
-		// Email address not valid
-//		if (!valid_email($emailAdress)) {
-//			throw new Exception('That is not a valid email address. Please go back and try again.');
-//		}
-
 		// Passwords not the same
 		if ($password != $passwordAgain) {
 			throw new Exception('The passwords you entered do not match – please go back and try again.');
@@ -62,12 +50,6 @@
 		if ((strlen($password) < 6) || (strlen($password) > 16)) {
 			throw new Exception('Your password must be between 6 and 16 characters. Please go back and try again.');
 		}
-
-		/**
-		$converter = new Encryption;
-		$encoded = $converter->encode($password);
-		$encodedAgain = $converter->encode($passwordAgain); 
-		*/
 
 		// Attempt to register Loing DB
 		register_Login($username, $password, $passwordAgain);

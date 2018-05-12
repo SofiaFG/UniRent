@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-  require_once('php/header_EN.php');
+  require_once('php/header_listings_EN.php');
   // print UniRent header
   do_unirent_header('Terms and Conditions - UniRent');
 ?>
@@ -57,7 +57,7 @@
 
 
 <?php
-  require_once('php/footer_EN.php');
+  require_once('php/footer_listings_EN.php');
   // print UniRent header
   do_unirent_footer();
 ?>

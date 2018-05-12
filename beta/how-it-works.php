@@ -68,20 +68,20 @@
 						</div>
 					</div>
 				</div>
-        <div class="howWorksInner">
-          <div class="row">
-            <div class="col-sm-4 col-xs-12">
-              <div class="howWorksImage text-left"><img src="img/works/Return.png" width="250" height="250" alt="Image Works"></div>
-            </div>
-            <div class="col-sm-8 col-xs-12">
-              <div class="howWorksInfo text-right">
-                <p>4º Passo</p>
-                <h2>Devolve</h2>
-                <p>Devolve o bem que alugaste ao seu <u>Owner</u>, não esquecendo de o entregar num horário conveniente. </p>
-              </div>
-            </div>
-          </div>
-        </div>
+		        <div class="howWorksInner">
+		          <div class="row">
+		            <div class="col-sm-4 col-xs-12">
+		              <div class="howWorksImage text-left"><img src="img/works/Return.png" width="250" height="250" alt="Image Works"></div>
+		            </div>
+		            <div class="col-sm-8 col-xs-12">
+		              <div class="howWorksInfo text-right">
+		                <p>4º Passo</p>
+		                <h2>Devolve</h2>
+		                <p>Devolve o bem que alugaste ao seu <u>Owner</u>, não esquecendo de o entregar num horário conveniente. </p>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
 			</div>
 		</div>
 	</div>

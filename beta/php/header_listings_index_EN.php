@@ -3,6 +3,19 @@
   // print UniRent header
 ?>
 
+<script>
+  function validateForm() {
+
+      var x = document.forms["search_items"]["findItem"].value;
+      
+      if (x == "") {
+          alert("Please, write what are you looking for!");
+          document.getElementById("findItem").focus();
+          return false;
+      }
+  }
+</script>
+
 <html lang="en">
 <head>
 
@@ -99,7 +112,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
               <ul class="nav navbar-nav navbar-right">
                 </li>
-                <li><a href="profile_EN.php"><i class="fa fa-cogs icon-dash" aria-hidden="true"></i> My account</a></li>
+                <li><a href="profile_EN.php"><i class="fa fa-cogs icon-dash" aria-hidden="true"></i> My Account</a></li>
               </ul>
             </div>
             <a class="btn btn-default navbar-btn" href="db/logout_EN.php"><span>Logout</span></a>
@@ -133,8 +146,8 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-ul icon-dash" aria-hidden="true"></i> Owner <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                 <ul class="dropdown-menu dropdown-menu-left">
                   <li><a href="dashboard_EN.php">Dashboard</a></li>
-                  <li><a href="itens_history_EN.php">My itens history</a></li>
-                  <li><a href="add-listings_EN.php">Add a item</a></li>
+                  <li><a href="itens_history_EN.php">Renting History</a></li>
+                  <li><a href="add-listings_EN.php">Add an Item</a></li>
                   <li><a href="manage_ads_EN.php">Manage Ads</a></li>
                 </ul>
               </li>
@@ -144,11 +157,11 @@
             </ul>
             <div class="row adjustRow">
               <div class="pull-right col-xs-12 col-sm-4">
-                <form class="navbar-form" role="search">
+                <form name="search_items" class="form-inline" onsubmit="return validateForm()" action="search_items_profile_EN.php" method="POST" class="navbar-form">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <input type="text" name="findItem" id="findItem" class="form-control" placeholder="Search">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button"><i class="icon-listy icon-search-2"></i></button>
+                      <button class="btn btn-default" type="submit" id="submit" name="submit"><i class="icon-listy icon-search-2"></i></button>
                     </span>
                   </div>
                 </form>
