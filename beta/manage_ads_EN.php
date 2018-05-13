@@ -102,13 +102,15 @@
 								} 
 
 								echo "<td>";
-									echo "<form action='view_item_profile_EN.php' method='GET'>";
 									echo "<div class='btn-group'>";
-										echo "<button type='submit' name='itemID' id='itemID' value='$id' class='btn btn-primary'>View</button>";
-										echo "<button type='button' name='ver' id='ver' class='btn btn-primary'>Edit</button>";
+										echo "<form action='view_item_profile_EN.php' method='GET'>";
+											echo "<button type='submit' name='itemID' id='itemID' value='$id' class='btn btn-primary'>View</button>";
+										echo "</form>";
+										echo "<form action='edit-listings_EN.php' method='GET'>";
+											echo "<button type='submit' name='itemID' id='itemID' value='$id' class='btn btn-primary'>Edit</button>";
+										echo "</form>";
 										echo "<button type='button' name='ver' id='ver' class='btn btn-primary'>Delete</button>";
 									echo "</div>";
-									echo "</form>";
 								echo "</td>";
 								echo "</tr>";
 							}

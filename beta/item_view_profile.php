@@ -3,9 +3,13 @@
 <?php
   require_once('php/header_listings.php');
   require_once('db/unirent_functions.php');
+  include('db/session.php');
 
   // connect to UniRent DB
   $conn = db_connect();
+
+  // Retrieve Login ID 
+  $Login_idLogin = retrieve_Login($login_session);
 
   // Get searched item selected in previous menu
   $itemID = $_GET['itemID'];

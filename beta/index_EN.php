@@ -396,6 +396,7 @@
                 <input maxlength="45" type="text" class="form-control" name="email" id="email">
               </div>
               <div class="form-group">
+                <input type="hidden" name="pageName" value="loginEN"/>
                 <button type="submit" name="submit" class="btn btn-primary pull-left">Subscribe</button>
               </div>
             </form>

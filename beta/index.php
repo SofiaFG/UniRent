@@ -392,12 +392,13 @@
         <div class="panel panel-default loginPanel">
           <div class="panel-heading text-center">Newsletter</div>
           <div class="panel-body">
-            <form name="newsletter_form" onsubmit="return validateFormNewsletter()" class="loginForm" action="sendEmail.php" method="post">
+            <form name="newsletter_form" onsubmit="return validateFormNewsletter()" class="loginForm" action="db/newsletter.php" method="post">
               <div class="form-group">
                 <label for="email">Email*</label>
                 <input maxlength="45" type="text" class="form-control" name="email" id="email" >
               </div>
               <div class="form-group">
+                <input type="hidden" name="pageName" value="login"/>
                 <button type="submit" name="submit" class="btn btn-primary pull-left">Subscrever</button>
               </div>
             </form>

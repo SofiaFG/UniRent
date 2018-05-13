@@ -74,6 +74,30 @@
 
 		return $last_id;
 	}
+
+	function register_Newsletter($email) {
+		// connect to db
+		$conn = db_connect();
+
+		$result = $conn->query("select * from Customer where email = '" . $email . "'");
+
+		if ($result->num_rows>0) {
+			throw new Exception('That email is taken!!');
+			//echo "<script type='text/javascript'>alert('That email is taken!!');</script>";
+		}
+
+		// Insert email into Customer DB
+		$result = $conn->query("insert into Customer values('', '', '', '', '" . $email . "', '', '', '', '', '', '', '', 1, 1, 1, 1, 1, 1)");
+
+		if (!$result) {
+			throw new Exception('Could not register_Newsletter in database - please try again later.');
+		}
+
+		$conn->close();
+
+		return true;
+
+	}
 	
 	function register_Customer($firstName, $surname, $dateOfBirthday, $emailAdress, $phoneNumber, $gender, $studentNumber, $studentDegree, $EducationalEstablishment, $course, $Address_id, $Login_idLogin, $nationality) {
 		// register new Customer in db
@@ -89,15 +113,32 @@
 			throw new Exception('Could not execute query');
 		}
 
+		// Variable to check if this new customer came from a previous newsletter
+		$newsletter;
+
 		if ($result->num_rows>0) {
-			throw new Exception('That username is taken - go back and choose another one.');
-		}
-	
-		// If ok, put in db
-		$result = $conn->query("insert into Customer values('', '" . $firstName . "', '" . $surname . "', '" . $dateOfBirthday . "', '" . $emailAdress . "', '". $phoneNumber . "', ". $gender . ", '', '', '', '". $studentNumber . "', '". $studentDegree . "', '', " . $EducationalEstablishment . ", " . $course . ", " . $Address_id . ", ". $Login_idLogin . ", ". $nationality . ")");
-		
-		if (!$result) {
-			throw new Exception('Could not register_Customer in database - please try again later.');
+			while ($row = $result->fetch_assoc()) {
+				unset($newsletter);
+	            $newsletter = $row['newsletter'];
+			}
+
+			if($newsletter == 1) {
+				$result = $conn->query("update Customer set name = '" . $firstName . "', surname = '" . $surname . "', dateOfBirth = '" . $dateOfBirthday . "', phoneNumber = '". $phoneNumber . "', gender = " . $gender . ", studentNumber = '". $studentNumber . "', studentDegree = '". $studentDegree . "', EduacationEstablishment_id = " . $EducationalEstablishment . ", Course_id = " . $course . ", Address_id = " . $Address_id . ", Login_idLogin = ". $Login_idLogin . ", Nationality_id = ". $nationality . " WHERE email = '" . $emailAdress . "'");
+
+				if (!$result) {
+					throw new Exception('Could not update Customer in database - please try again later.');
+				}
+
+			} else {
+				throw new Exception('That email is taken - go back and choose another one.');
+			}
+		} else {
+			// If ok, put in db
+			$result = $conn->query("insert into Customer values('', '" . $firstName . "', '" . $surname . "', '" . $dateOfBirthday . "', '" . $emailAdress . "', '". $phoneNumber . "', ". $gender . ", '', '', '', '". $studentNumber . "', '". $studentDegree . "', '', " . $EducationalEstablishment . ", " . $course . ", " . $Address_id . ", ". $Login_idLogin . ", ". $nationality . ")");
+
+			if (!$result) {
+				throw new Exception('Could not register_Customer in database - please try again later.');
+			}
 		}
 
 		$conn->close();
@@ -114,8 +155,6 @@
 	
 		// Insert in Item DB
 		$result = $conn->query("insert into Item values('', '" . $itemName . "', '" . $itemDescription . "', " . $itemPrice . ", '" . $today . "', '". $yearBought . "', '', '', '', '". $videoUrl . "', '". $initialAvailableDay . "', '". $endAvailableDay . "', " . $Login_idLogin . ", " . $SecurityPolice_id . ", " . $itemCategory . ", ". $Address_id . ")");
-
-		echo ("insert into Item values('', '" . $itemName . "', '" . $itemDescription . "', " . $itemPrice . ", '" . $today . "', '". $yearBought . "', '', '', '', '". $videoUrl . "', '". $initialAvailableDay . "', '". $endAvailableDay . "', " . $Login_idLogin . ", " . $SecurityPolice_id . ", " . $itemCategory . ", ". $Address_id . ")<br><br>");
 
 		if (!$result) {
 			throw new Exception('Could not register_Item in database - please try again later.');
