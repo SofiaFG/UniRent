@@ -94,7 +94,7 @@
 		}
 	
 		// If ok, put in db
-		$result = $conn->query("insert into Customer values('', '" . $firstName . "', '" . $surname . "', '" . $dateOfBirthday . "', '" . $emailAdress . "', '". $phoneNumber . "', ". $gender . ", '', '', '', '". $studentNumber . "', '". $studentDegree . "', " . $EducationalEstablishment . ", " . $course . ", " . $Address_id . ", ". $Login_idLogin . ", ". $nationality . ")");
+		$result = $conn->query("insert into Customer values('', '" . $firstName . "', '" . $surname . "', '" . $dateOfBirthday . "', '" . $emailAdress . "', '". $phoneNumber . "', ". $gender . ", '', '', '', '". $studentNumber . "', '". $studentDegree . "', '', " . $EducationalEstablishment . ", " . $course . ", " . $Address_id . ", ". $Login_idLogin . ", ". $nationality . ")");
 		
 		if (!$result) {
 			throw new Exception('Could not register_Customer in database - please try again later.');
@@ -114,7 +114,9 @@
 	
 		// Insert in Item DB
 		$result = $conn->query("insert into Item values('', '" . $itemName . "', '" . $itemDescription . "', " . $itemPrice . ", '" . $today . "', '". $yearBought . "', '', '', '', '". $videoUrl . "', '". $initialAvailableDay . "', '". $endAvailableDay . "', " . $Login_idLogin . ", " . $SecurityPolice_id . ", " . $itemCategory . ", ". $Address_id . ")");
-		
+
+		echo ("insert into Item values('', '" . $itemName . "', '" . $itemDescription . "', " . $itemPrice . ", '" . $today . "', '". $yearBought . "', '', '', '', '". $videoUrl . "', '". $initialAvailableDay . "', '". $endAvailableDay . "', " . $Login_idLogin . ", " . $SecurityPolice_id . ", " . $itemCategory . ", ". $Address_id . ")<br><br>");
+
 		if (!$result) {
 			throw new Exception('Could not register_Item in database - please try again later.');
 		}

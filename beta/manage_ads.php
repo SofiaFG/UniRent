@@ -58,18 +58,16 @@
 
 							echo "<thead>";
 								echo "<tr>";
-									echo "<th data-priority='0'>ID do Bem</th>";
-									echo "<th data-priority='1'>Nome do Bem</th>";
-									echo "<th data-priority='2'>Preço do Aluguer</th>";
-									echo "<th data-priority='3'>Data de início do Aluguer</th>";
-									echo "<th data-priority='4'>Data de fim do Aluguer</th>";
-									echo "<th data-priority='5'>Status</th>";
-									echo "<th data-priority='6'>Ações</th>";
+									echo "<th data-priority='0'>Nome do Bem</th>";
+									echo "<th data-priority='1'>Preço do Aluguer</th>";
+									echo "<th data-priority='2'>Data de início do Aluguer</th>";
+									echo "<th data-priority='3'>Data de fim do Aluguer</th>";
+									echo "<th data-priority='4'>Status</th>";
+									echo "<th data-priority='5'>Ações</th>";
 								echo "</tr>";
 							echo "</thead>";
 							echo "<tfoot>";
 								echo "<tr>";
-									echo "<th>ID do Bem</th>";
 									echo "<th>Nome do Bem</th>";
 									echo "<th>Preço do Aluguer</th>";
 									echo "<th>Data de início do Aluguer</th>";
@@ -90,7 +88,6 @@
 								$initialAvailableDay = $row['initialAvailableDay'];
 								$endAvailableDay 	 = $row['endAvailableDay'];
 
-								echo "<td>$id</td>";
 								echo "<td>$name</td>";
 				                echo "<td>€ $price</td>";
 				                echo "<td>$initialAvailableDay</td>";

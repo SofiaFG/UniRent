@@ -33,16 +33,16 @@
 <section class="clearfix bg-dark equalHeight dashboardSection">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4 col-xs-12">
+			<div class="col-sm-6 col-xs-12">
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						Available <span class="label label-primary">Per day</span>
+						My Items <span class="label label"><a href="manage_ads_EN.php">Detalhes</a></span>
 					</div>
 					<div class="panel-body">
 						<h3><center>
 							<?php
 								// check for Customer rentals in Rental DB
-								$result_CheckRentend = $conn->query("SELECT * FROM Item i WHERE NOT EXISTS(SELECT * FROM Rental r WHERE r.Item_ID = i.id AND i.Customer_id = $Login_idLogin)");
+								$result_CheckRentend = $conn->query("select * from Item where Customer_id = " . $Login_idLogin . "");
 
 								if (!$result_CheckRentend) {
 									throw new Exception('Could not execute result_ToRent query');
@@ -54,46 +54,21 @@
 									echo $result_CheckRentend->num_rows . " unit";
 								} elseif ($result_CheckRentend->num_rows > 1) {
 									echo $result_CheckRentend->num_rows . " units";
+								} else {
+									echo "0 units";
 								}
 							?>
 						</center></h3>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4 col-xs-12">
+			<div class="col-sm-6 col-xs-12">
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						Rented <span class="label label-primary">Monthly</span>
+						My Rentings <span class="label label"><a href="my_rentals_EN.php">Details</a></span>
 					</div>
 					<div class="panel-body">
-						<h3><center>5 units</center></h3>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4 col-xs-12">
-				<div class="panel panel-default panel-card">
-					<div class="panel-heading">
-						Amount of Items <span class="label label-primary">Today</span>
-					</div>
-					<div class="panel-body">
-						<h3><center>
-							<?php
-								// check for Customer rentals in Rental DB
-								$result_ToRent = $conn->query("select * from Item where Customer_id = " . $Login_idLogin . "");
-
-								if (!$result_ToRent) {
-									throw new Exception('Could not execute result_ToRent query');
-								}
-
-								if ($result_ToRent->num_rows < 0) {
-									echo $result_ToRent->num_rows . " units";
-								} elseif ($result_ToRent->num_rows == 1) {
-									echo $result_ToRent->num_rows . " unit";
-								} elseif ($result_ToRent->num_rows > 1) {
-									echo $result_ToRent->num_rows . " units";
-								}
-							?>
-						</center></h3>
+						<h3><center>X units</center></h3>
 					</div>
 				</div>
 			</div>

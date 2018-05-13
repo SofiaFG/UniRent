@@ -117,22 +117,20 @@
 
 							echo "<thead>";
 								echo "<tr>";
-									echo "<th data-priority='0'>ID do Bem</th>";
-									echo "<th data-priority='1'>Nome do Bem</th>";
+									echo "<th data-priority='0'>Nome do Bem</th>";
+									echo "<th data-priority='1'>Borrower</th>";
 									echo "<th data-priority='2'>Preço do Aluguer</th>";
 									echo "<th data-priority='3'>Data de início do Aluguer</th>";
 									echo "<th data-priority='4'>Data de fim do Aluguer</th>";
-									echo "<th data-priority='5'>Status</th>";
 								echo "</tr>";
 							echo "</thead>";
 							echo "<tfoot>";
 								echo "<tr>";
-									echo "<th>ID do Bem</th>";
 									echo "<th>Nome do Bem</th>";
+									echo "<th>Borrower</th>";
 									echo "<th>Preço do Aluguer</th>";
 									echo "<th>Data de início do Aluguer</th>";
 									echo "<th>Data de fim do Aluguer</th>";
-									echo "<th>Status</th>";
 								echo "</tr>";
 							echo "</tfoot>";
 							echo "<tbody>";
@@ -147,21 +145,12 @@
 								$initialAvailableDay = $row['initialAvailableDay'];
 								$endAvailableDay 	 = $row['endAvailableDay'];
 
-								echo "<td>$id</td>";
 								echo "<td>$name</td>";
+								echo "<td>$id</td>";
 				                echo "<td>€ $price</td>";
 				                echo "<td>$initialAvailableDay</td>";
 				                echo "<td>$endAvailableDay</td>";
 
-								$result_AlreadyRented = $conn->query("SELECT * FROM Item i WHERE NOT EXISTS(SELECT * FROM Rental r WHERE r.Item_ID = i.id AND i.id = $id)");
-
-								if($result_AlreadyRented->num_rows > 0) {
-									echo "<td><span class='label label-success'>Disponível</span></td>";
-								} else {
-									echo "<td><span class='label label-warning'>Alugado</span></td>";
-								} 
-
-				                //echo "<td><span class='label label-danger'>Expirado</span></td>";
 				                echo "</tr>";
 							}
 						} else {

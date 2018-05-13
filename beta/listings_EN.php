@@ -89,10 +89,17 @@
 									throw new Exception('Could not execute result_ToRent query');
 								}
 
-								echo $result_ToRent->num_rows;
+								if ($result_ToRent->num_rows < 0) {
+									echo $result_ToRent->num_rows . " units";
+								} elseif ($result_ToRent->num_rows == 1) {
+									echo $result_ToRent->num_rows . " unit";
+								} elseif ($result_ToRent->num_rows > 1) {
+									echo $result_ToRent->num_rows . " units";
+								} else {
+									echo "0 units";
+								}
 							?>
 						</h2>
-						<p>Compared with last week <span class="resultInfo resultUp">10% <i class="fa fa-level-up" aria-hidden="true"></i></span></p>
 					</div>
 				</div>
 			</div>
@@ -103,8 +110,7 @@
 						My Rentings <span class="label label-primary">Today</span>
 					</div>
 					<div class="panel-body">
-						<h2>0</h2>
-						<p>Compared with last week <span class="resultInfo resultDown">5% <i class="fa fa-level-down" aria-hidden="true"></i></span></p>
+						<h2>No rentals yet</h2>
 					</div>
 				</div>
 			</div>

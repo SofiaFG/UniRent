@@ -34,16 +34,16 @@
 <section class="clearfix bg-dark equalHeight dashboardSection">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4 col-xs-12">
+			<div class="col-sm-6 col-xs-12">
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						Bens Disponíveis <span class="label label-primary">Por Dia</span>
+						Os Meus Bens <span class="label label"><a href="manage_ads.php">Detalhes</a></span>
 					</div>
 					<div class="panel-body">
 						<h3><center>
 							<?php
 								// check for Customer rentals in Rental DB
-								$result_CheckRentend = $conn->query("SELECT * FROM Item i WHERE NOT EXISTS(SELECT * FROM Rental r WHERE r.Item_ID = i.id AND i.Customer_id = $Login_idLogin)");
+								$result_CheckRentend = $conn->query("select * from Item where Customer_id = " . $Login_idLogin . "");
 
 								if (!$result_CheckRentend) {
 									throw new Exception('Could not execute result_ToRent query');
@@ -55,46 +55,21 @@
 									echo $result_CheckRentend->num_rows . " unidade";
 								} elseif ($result_CheckRentend->num_rows > 1) {
 									echo $result_CheckRentend->num_rows . " unidades";
+								} else {
+									echo "0 unidades";
 								}
 							?>
 						</center></h3>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4 col-xs-12">
+			<div class="col-sm-6 col-xs-12">
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						Bens Alugados <span class="label label-primary">Por mês</span>
+						Os Meus Alugueres <span class="label label"><a href="my_rentals.php">Detalhes</a></span>
 					</div>
 					<div class="panel-body">
-						<h3><center>5 unidades</center></h3>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4 col-xs-12">
-				<div class="panel panel-default panel-card">
-					<div class="panel-heading">
-						Total de Bens <span class="label label-primary">Hoje</span>
-					</div>
-					<div class="panel-body">
-						<h3><center>
-							<?php
-								// check for Customer rentals in Rental DB
-								$result_ToRent = $conn->query("select * from Item where Customer_id = " . $Login_idLogin . "");
-
-								if (!$result_ToRent) {
-									throw new Exception('Could not execute result_ToRent query');
-								}
-
-								if ($result_ToRent->num_rows < 0) {
-									echo $result_ToRent->num_rows . " unidades";
-								} elseif ($result_ToRent->num_rows == 1) {
-									echo $result_ToRent->num_rows . " unidade";
-								} elseif ($result_ToRent->num_rows > 1) {
-									echo $result_ToRent->num_rows . " unidades";
-								}
-							?>
-						</center></h3>
+						<h3><center>X unidades</center></h3>
 					</div>
 				</div>
 			</div>

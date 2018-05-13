@@ -89,10 +89,17 @@
 									throw new Exception('Could not execute result_ToRent query');
 								}
 
-								echo $result_ToRent->num_rows;
+								if ($result_ToRent->num_rows < 0) {
+									echo $result_ToRent->num_rows . " unidades";
+								} elseif ($result_ToRent->num_rows == 1) {
+									echo $result_ToRent->num_rows . " unidade";
+								} elseif ($result_ToRent->num_rows > 1) {
+									echo $result_ToRent->num_rows . " unidades";
+								} else {
+									echo "0 unidades";
+								}
 							?>
 						</h2>
-						<p>Em comparação com a semana passada <span class="resultInfo resultUp">10% <i class="fa fa-level-up" aria-hidden="true"></i></span></p>
 					</div>
 				</div>
 			</div>
@@ -103,8 +110,7 @@
 						Os meus alugueres <span class="label label-primary">Hoje</span>
 					</div>
 					<div class="panel-body">
-						<h2>0</h2>
-						<p>Em comparação com a semana passada <span class="resultInfo resultDown">5% <i class="fa fa-level-down" aria-hidden="true"></i></span></p>
+						<h2>Sem alugueres</h2>
 					</div>
 				</div>
 			</div>

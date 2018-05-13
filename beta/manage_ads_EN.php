@@ -58,18 +58,16 @@
 
 							echo "<thead>";
 								echo "<tr>";
-									echo "<th data-priority='0'>Item ID</th>";
-									echo "<th data-priority='1'>Item Name</th>";
-									echo "<th data-priority='2'>Rental Price</th>";
-									echo "<th data-priority='3'>Inital Rental Day</th>";
-									echo "<th data-priority='4'>End Rental Day</th>";
-									echo "<th data-priority='5'>Status</th>";
-									echo "<th data-priority='6'>Actions</th>";
+									echo "<th data-priority='0'>Item Name</th>";
+									echo "<th data-priority='1'>Rental Price</th>";
+									echo "<th data-priority='2'>Inital Rental Day</th>";
+									echo "<th data-priority='3'>End Rental Day</th>";
+									echo "<th data-priority='4'>Status</th>";
+									echo "<th data-priority='5'>Actions</th>";
 								echo "</tr>";
 							echo "</thead>";
 							echo "<tfoot>";
 								echo "<tr>";
-									echo "<th>Item ID</th>";
 									echo "<th>Item Name</th>";
 									echo "<th>Rental Price</th>";
 									echo "<th>Inital Rental Day</th>";
@@ -90,7 +88,6 @@
 								$initialAvailableDay = $row['initialAvailableDay'];
 								$endAvailableDay 	 = $row['endAvailableDay'];
 
-								echo "<td>$id</td>";
 								echo "<td>$name</td>";
 				                echo "<td>€ $price</td>";
 				                echo "<td>$initialAvailableDay</td>";
@@ -107,7 +104,7 @@
 								echo "<td>";
 									echo "<form action='view_item_profile_EN.php' method='GET'>";
 									echo "<div class='btn-group'>";
-										echo "<button type='submit' name='itemID' id='itemID' value='$id' class='btn btn-primary'>Ver</button>";
+										echo "<button type='submit' name='itemID' id='itemID' value='$id' class='btn btn-primary'>View</button>";
 										echo "<button type='button' name='ver' id='ver' class='btn btn-primary'>Edit</button>";
 										echo "<button type='button' name='ver' id='ver' class='btn btn-primary'>Delete</button>";
 									echo "</div>";
