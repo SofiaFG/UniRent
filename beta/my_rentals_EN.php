@@ -38,10 +38,10 @@
 							<tr class="rowItem">
 								<td>
 									<ul class="list-inline listingsInfo">
-										<li><a href="#"><img src="img/dashboard/listing.jpg" alt="Image Listings"></a></li>
+										<li><a href="#"><img src="img/dashboard/burger-img-01.png" alt="Image Listings"></a></li>
 									</ul>
 								</td>
-								<td>TV</td>
+								<td>Sande</td>
 								<td>784</td>
 								<td>29/01/2018</td>
 								<td>28/02/2018</td>
@@ -51,10 +51,10 @@
 							<tr class="rowItem">
 								<td>
 									<ul class="list-inline listingsInfo">
-										<li><a href="#"><img src="img\things\things-5.jpg" alt="Image Listings"></a></li>
+										<li><a href="#"><img src="img/dashboard/burger-img-02.jpg" alt="Image Listings"></a></li>
 									</ul>
 								</td>
-								<td>Microondas</td>
+								<td>Mini hamburguers</td>
 								<td>698</td>
 								<td>29/01/2018</td>
 								<td>15/12/2016</td>
@@ -64,10 +64,10 @@
 							<tr class="rowItem">
 								<td>
 									<ul class="list-inline listingsInfo">
-										<li><a href="#"><img src="img\things\things-4.jpg" alt="Image Listings"></a></li>
+										<li><a href="#"><img src="img/dashboard/coffe-img-01.jpg" alt="Image Listings"></a></li>
 									</ul>
 								</td>
-								<td>Escova de dente</td>
+								<td>Copo de café</td>
 								<td>450</td>
 								<td>29/01/2018</td>
 								<td>29/01/2018</td>
