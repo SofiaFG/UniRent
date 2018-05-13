@@ -137,7 +137,7 @@
 									<textarea maxlength="300" class="form-control" rows="3" id="itemDescription" name="itemDescription" placeholder="Exemplo: A GoPro tem um pequeno risco no lado superior direito."></textarea>
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
-									<label for="itemPrice">Preço*</label>
+									<label for="itemPrice">Preço/dia*</label>
 									<input maxlength="6" type="text" class="form-control" id="itemPrice" name="itemPrice" placeholder="€">
 								</div>
                 <div class="dateSelect col-sm-6 col-xs-12">
@@ -190,7 +190,7 @@
 											</select>
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
-									<label for="securityFee">Valor da taxa*</label>
+									<label for="securityFee">Valor da Caução</label>
 									<input  maxlength="6" type="text" class="form-control" id="securityFee" name="securityFee" placeholder="€">
 								</div>
 								<div class="form-group col-xs-12">

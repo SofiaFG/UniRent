@@ -63,7 +63,7 @@
 							<div class="howWorksInfo text-left">
 								<p>3º Passo</p>
 								<h2>Aluga</h2>
-								<p>Aluga qualquer bem que precises, diretamente com o <u>Owner</u>, de maneira simples e eficaz.</p>
+								<p>Aluga qualquer bem que precises, diretamente com o <em>Owner</em>, de maneira simples e eficaz.</p>
 							</div>
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 		              <div class="howWorksInfo text-right">
 		                <p>4º Passo</p>
 		                <h2>Devolve</h2>
-		                <p>Devolve o bem que alugaste ao seu <u>Owner</u>, não esquecendo de o entregar num horário conveniente. </p>
+		                <p>Devolve o bem que alugaste ao seu <em>Owner</em>, não esquecendo de o entregar num horário conveniente. </p>
 		              </div>
 		            </div>
 		          </div>

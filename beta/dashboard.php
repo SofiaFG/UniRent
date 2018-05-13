@@ -103,7 +103,7 @@
 			<div class="col-sm-4 col-xs-12">
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						As minhas Reviews <span class="label label-primary">Detalhes</span>
+						As minhas <em>Reviews</em> <span class="label label-primary">Detalhes</span>
 					</div>
 					<div class="panel-body plr">
 						<ul class="list-unstyled panel-list">
@@ -240,7 +240,7 @@
 			<div class="col-sm-4 col-xs-12">
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						Os meus Borrowers <span class="label label-primary">Detalhes</span>
+						Os meus <em>Borrowers</em> <span class="label label-primary">Detalhes</span>
 					</div>
 					<div class="panel-body plr">
 						<ul class="list-styled panel-list list-padding-sm">

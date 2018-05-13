@@ -43,8 +43,8 @@
 								</td>
 								<td>TV</td>
 								<td>784</td>
-								<td>29/01/2018 <br>9.15am</td>
-								<td>28/02/2018 <br>9.15am</td>
+								<td>29/01/2018</td>
+								<td>28/02/2018</td>
 								<td>Casa</td>
 								<td><span class="label label-danger">Finalizado</span></td>
 							</tr>
@@ -56,8 +56,8 @@
 								</td>
 								<td>Microondas</td>
 								<td>698</td>
-								<td>29/01/2018 <br>9.15am</td>
-								<td>15/12/2016 <br>9.15am</td>
+								<td>29/01/2018</td>
+								<td>15/12/2016</td>
 								<td>Eletrodoméstico</td>
 								<td><span class="label label-success">Em aluguer</span></td>
 							</tr>
@@ -69,8 +69,8 @@
 								</td>
 								<td>Escova de dente</td>
 								<td>450</td>
-								<td>29/01/2018 <br>9.15am</td>
-								<td>29/01/2018 <br>9.15am</td>
+								<td>29/01/2018</td>
+								<td>29/01/2018</td>
 								<td>Banho</td>
 								<td><span class="label label-danger">Finalizado</span></td>
 							</tr>

@@ -129,7 +129,7 @@
 					<div class="priceInfo">
 						<ul class="list-unstyled">
 							<li>15% da transacção pertence à UniRent</li>
-							<li>E o restante, ao Owner</li>
+							<li>E o restante, ao <em>Owner</em></li>
 						</ul>
 					</div>
 				</div>
