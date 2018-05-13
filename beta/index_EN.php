@@ -291,6 +291,22 @@
               </div>
             </div>
 
+			<div class="item row">
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="thingsBox">
+                  <div class="thingsImage">
+                    <img src="img/team/patrick.jpeg" alt="Patrick Fonseca" height="350" width="500">
+                  </div>
+                  <div class="thingsCaption">
+                    <ul class="list-inline captionItem">
+                      <li><i class="fa" aria-hidden="true"></i> Patrick Fonseca</li>
+                      <li><a href="https://www.linkedin.com/in/patrickfcf/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+			
             <div class="item row">
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="thingsBox">
@@ -301,22 +317,6 @@
                     <ul class="list-inline captionItem">
                       <li><i class="fa" aria-hidden="true"></i> Cátia Matias</li>
                       <li><a href="https://www.linkedin.com/in/catiamatias/" target="_blank">LinkedIn</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item row">
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="thingsBox">
-                  <div class="thingsImage">
-                    <img src="img/team/patrick.jpeg" alt="Patrick Fonseca" height="350" width="500">
-                  </div>
-                  <div class="thingsCaption">
-                    <ul class="list-inline captionItem">
-                      <li><i class="fa" aria-hidden="true"></i> Patrick Fonseca</li>
-                      <li><a href="https://www.linkedin.com/in/patrickfcf/" target="_blank">LinkedIn</a></li>
                     </ul>
                   </div>
                 </div>
@@ -393,7 +393,7 @@
             <form name="newsletter_form" onsubmit="return validateFormNewsletter()" class="loginForm" action="db/newsletter.php" method="post">
               <div class="form-group">
                 <label for="email">Email*</label>
-                <input type="text" class="form-control" name="email" id="email">
+                <input maxlength="45" type="text" class="form-control" name="email" id="email">
               </div>
               <div class="form-group">
                 <button type="submit" name="submit" class="btn btn-primary pull-left">Subscribe</button>

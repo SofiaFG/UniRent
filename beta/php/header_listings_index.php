@@ -143,7 +143,7 @@
                 <a href="listings.php"><i aria-hidden="true"></i>Bem vindo:</a>
               </li>
               <li class="dropdown singleDrop">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-ul icon-dash" aria-hidden="true"></i> Owner <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-ul icon-dash" aria-hidden="true"></i><em>Owner</em><i class="fa fa-angle-down" aria-hidden="true"></i></a>
                 <ul class="dropdown-menu dropdown-menu-left">
                   <li><a href="dashboard.php">Dashboard</a></li>
                   <li><a href="itens_history.php">Histórico dos meus Bens</a></li>
@@ -152,7 +152,7 @@
                 </ul>
               </li>
               <li class="dropdown singleDrop">
-                <a href="my_rentals.php" class="scrolling"><i class="fa fa-star-o" aria-hidden="true"></i> Borrower</a>
+                <a href="my_rentals.php" class="scrolling"><i class="fa fa-star-o" aria-hidden="true"></i> <em>Borrower</em></a>
               </li>
             </ul>
             <div class="row adjustRow">

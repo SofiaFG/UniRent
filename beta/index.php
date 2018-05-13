@@ -94,7 +94,7 @@
           <img src="img/works/Rent.png" width="160" width="160" alt="Image works">
           <div class="caption">
             <a href="how-it-works.php"><h3>Alugar</h3></a>
-            <p>Aluga qualquer bem diretamente com o <u>Owner</u> de uma maneira fácil.</p>
+            <p>Aluga qualquer bem diretamente com o <em>Owner</em> de uma maneira fácil.</p>
             <span style="display:inline-block; width: YOURWIDTH;"></span>
           </div>
         </div>
@@ -104,7 +104,7 @@
           <img src="img/works/Return.png" width="160" width="160" alt="Image works">
           <div class="caption">
             <a href="how-it-works.php"><h3>Devolver</h3></a>
-            <p>Depois de o utilizares, devolves o bem ao seu <u>Owner</u> da forma mais conveniente.</p>
+            <p>Depois de o utilizares, devolves o bem ao seu <em>Owner</em> da forma mais conveniente.</p>
             <span style="display:inline-block; width: YOURWIDTH;"></span>
           </div>
         </div>
@@ -392,10 +392,10 @@
         <div class="panel panel-default loginPanel">
           <div class="panel-heading text-center">Newsletter</div>
           <div class="panel-body">
-            <form name="newsletter_form" onsubmit="return validateFormNewsletter()" class="loginForm" action="db/newsletter.php" method="post">
+            <form name="newsletter_form" onsubmit="return validateFormNewsletter()" class="loginForm" action="sendEmail.php" method="post">
               <div class="form-group">
                 <label for="email">Email*</label>
-                <input type="text" class="form-control" name="email" id="email">
+                <input maxlength="45" type="text" class="form-control" name="email" id="email" >
               </div>
               <div class="form-group">
                 <button type="submit" name="submit" class="btn btn-primary pull-left">Subscrever</button>
