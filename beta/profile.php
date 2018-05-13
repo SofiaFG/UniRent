@@ -264,9 +264,7 @@
 						</div>
 					</div>
 					<div class="profileUserInfo bt profileName">
-						<p>Seu plano de seguro atualn</p>
-						<h2>Pacote de Platina</h2>
-						<h5>Próximo pagamento: <span>15/01/2017</span></h5>
+						<h4>Próximo Pagamento do Plano de Seguro: <span>15/01/2017</span></h4>
 						<a href="#" class="btn btn-primary">Alterar</a>
 					</div>
 				</div>
@@ -275,20 +273,20 @@
 				<form name="update_profile" onsubmit="return validateForm()" action="#" method="#">
 					<div class="dashboardBoxBg">
 						<div class="profileIntro">
-							<h2>Seu perfil</h2>
-							<p>Caro <?php echo $firstName . " " . $surname; ?>, por favor, verifique seus dados abaixo:</p>
+							<h2>O teu perfil</h2>
+							<p><?php echo $firstName . " " . $surname; ?>, por favor, verifica os teus dados:</p>
 						</div>
 					</div>
 					<div class="dashboardBoxBg mt30">
 						<div class="profileIntro">
-							<h3>Informações de contacto</h3>
+							<h3>Informações de Contacto</h3>
 							<div class="row">
 								<div class="form-group col-sm-6 col-xs-12">
-									<label for="firstName">Primeiro nome</label>
+									<label for="firstName">Primeiro Nome</label>
 									<input maxlength="45" type="text" class="form-control" id="firstName" name="firstName" placeholder="<?php echo  $firstName ?>" value="<?php echo  $firstName ?>">
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
-									<label for="surname">Último nome</label>
+									<label for="surname">Último Nome</label>
 									<input maxlength="45" type="text" class="form-control" id="surname" name="surname" placeholder="<?php echo  $surname ?>" value="<?php echo  $surname ?>">
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
@@ -296,11 +294,11 @@
 									<input maxlength="45" type="text" class="form-control" id="emailAdress" name="emailAdress" placeholder="<?php echo  $emailAdress ?>" value="<?php echo  $emailAdress ?>">
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
-									<label for="phoneNumber">Número de telemóvel</label>
+									<label for="phoneNumber">Número de Telemóvel</label>
 									<input maxlength="13" type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="<?php echo  $phoneNumber ?>" value="<?php echo  $phoneNumber ?>">
 								</div>
 								<div class="dateSelect col-sm-6 col-xs-12">
-									<label for="dateOfBirthday" class="control-label">Data de nascimento*</label>
+									<label for="dateOfBirthday" class="control-label">Data de Nascimento*</label>
 									<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
 										<input maxlength="10" type="text" class="form-control" name="dateOfBirthday" placeholder="<?php echo  $dateFormated ?>" value="<?php echo  $dateFormated ?>">
 										<div class="input-group-addon"> 
@@ -359,7 +357,7 @@
 					</div>
 					<div class="dashboardBoxBg mt30">
 						<div class="profileIntro">
-							<h3>Informações de morada</h3>
+							<h3>Informações de Morada</h3>
 							<div class="row">
 								<div class="form-group col-sm-6 col-xs-12">
 									<label for="country" class="control-label">País</label>
@@ -419,7 +417,7 @@
 									<input maxlength="60" type="text" class="form-control" id="addressLine2" name="addressLine2" placeholder="<?php echo  $addressLine2 ?>" value="<?php echo  $addressLine2 ?>">
 								</div>
 								<div class="form-group col-xs-6">
-									<label for="postalCode" class="control-label">Código de postal</label>
+									<label for="postalCode" class="control-label">Código-Postal</label>
 									<input maxlength="15" type="text" class="form-control" id="postalCode" name="postalCode" placeholder="<?php echo  $postalCode ?>" value="<?php echo  $postalCode ?>">
 								</div>
 							</div>
@@ -428,10 +426,10 @@
 
 					<div class="dashboardBoxBg mt30">
 						<div class="profileIntro">
-							<h3>Informação do estudante</h3>
+							<h3>Informação do Estudante</h3>
 							<div class="row">
 								<div id="countryOfStudy" class="form-group col-sm-6 col-xs-12">
-									<label for="countryOfStudy" class="control-label">País de estudo*</label>
+									<label for="countryOfStudy" class="control-label">País de Estudo*</label>
 									<div class="contactSelect scrollable">
 										<select name="countryOfStudy" id="countryOfStudy" class="select-drop">
 
@@ -456,7 +454,7 @@
 									</div>
 								</div>
 								<div id="EducationalEstablishment" class="form-group col-sm-6 col-xs-12">
-									<label for="EducationalEstablishment" class="control-label">Estabelecimento de ensino*</label>
+									<label for="EducationalEstablishment" class="control-label">Estabelecimento de Ensino*</label>
 									<div class="contactSelect scrollable">
 										<select name="EducationalEstablishment" id="EducationalEstablishment" class="select-drop">
 											
@@ -482,7 +480,7 @@
 								</div>
 								<div id="courseArea" class="form-group col-sm-6 col-xs-12">
 									<br><br>
-									<label for="courseArea" class="control-label">Área de curso*</label>
+									<label for="courseArea" class="control-label">Área de Curso*</label>
 									<div class="contactSelect scrollable">
 										<select name="courseArea" id="courseArea" class="select-drop">
 											
@@ -508,7 +506,7 @@
 								</div>
 								<div id="studentDegree" class="form-group col-sm-6 col-xs-12">
 									<br><br>
-									<label for="studentDegree" class="control-label">Grau de ensino*</label>
+									<label for="studentDegree" class="control-label">Grau de Ensino*</label>
 									<div class="contactSelect">
 										<select name="studentDegree" id="studentDegree" class="select-drop">
 											<?php
@@ -556,7 +554,7 @@
 									</div>
 								</div>
 								<div id="studentNumber" class="form-group col-xs-6">
-									<label for="studentNumber" class="control-label">Número de estudante</label>
+									<label for="studentNumber" class="control-label">Número de Estudante</label>
 									<input maxlength="45" type="text" class="form-control" id="studentNumber" name="studentNumber" placeholder="<?php echo  $studentNumber ?>" value="<?php echo  $studentNumber ?>">
 								</div>
 							</div>
@@ -565,7 +563,7 @@
 
 					<div class="form-group col-xs-15 mb0">
 						<br><br>
-						<center><button type="submit" name="submit_PT" class="btn btn-primary">Salvar alterações</button></center>
+						<center><button type="submit" name="submit_PT" class="btn btn-primary">Salvar Alterações</button></center>
 					</div>
 				</form>
 				<form name="update_password" onsubmit="return validatePasswordForm()" action="#" method="#">
