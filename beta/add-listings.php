@@ -143,7 +143,7 @@
                 <div class="dateSelect col-sm-6 col-xs-12">
                   <label for="yearBought" class="control-label">Ano em que foi comprado</label>
                   <div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-                    <input maxlength="10" type="text" class="form-control" id="yearBought" name="yearBought" placeholder="mm/dd/yyyy">
+                    <input maxlength="10" type="text" class="form-control" id="yearBought" name="yearBought" placeholder="dd/mm/aaaa">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar" aria-hidden="true"></i>
                     </div>

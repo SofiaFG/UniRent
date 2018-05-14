@@ -164,7 +164,7 @@
 									<div class="dateSelect col-sm-6 col-xs-12">
 										<label for="dateOfBirthday" class="control-label">Data de Nascimento*</label>
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-											<input maxlength="10" type="text" class="form-control" name="dateOfBirthday" placeholder="mm/dd/yyyy">
+											<input maxlength="10" type="text" class="form-control" name="dateOfBirthday" placeholder="dd/mm/aaaa">
 											<div class="input-group-addon">
 												<i class="fa fa-calendar" aria-hidden="true"></i>
 											</div>
