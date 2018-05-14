@@ -322,7 +322,7 @@
 
 											<?php
 
-												$result_Country = $conn->query("select id, countryPT from Country");
+												$result_Country = $conn->query("select id, countryPT from Country where id = 193");
 
 												while ($row = $result_Country->fetch_assoc()) {
               										unset($id, $name);
