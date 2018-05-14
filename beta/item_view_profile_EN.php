@@ -18,7 +18,6 @@
   /*********************************** ITEM DB *************************************/
   /*********************************************************************************/
 
-
   // check for Item in Item DB
   $result_Item = $conn->query("select * from Item where id = " . $itemID . "");
 
@@ -33,18 +32,20 @@
   $publishDate;
   $initialAvailableDay;
   $endAvailableDay;
+  $Customer_id;
   $SecurityPolice_id;
   $ItemCategory_id;
 
   if ($result_Item->num_rows>0) {
     while ($row = $result_Item->fetch_assoc()) {
-      unset($name, $description, $price, $publishDate, $initialAvailableDay, $endAvailableDay, $SecurityPolice_id, $ItemCategory_id);
+      unset($name, $description, $price, $publishDate, $initialAvailableDay, $endAvailableDay, $Customer_id, $SecurityPolice_id, $ItemCategory_id);
       $name                = $row['name'];
       $description         = $row['description'];
       $price               = $row['price'];
       $publishDate         = $row['publishDate'];
       $initialAvailableDay = $row['initialAvailableDay'];
       $endAvailableDay     = $row['endAvailableDay'];
+      $Customer_id         = $row['Customer_id'];
       $SecurityPolice_id   = $row['SecurityPolice_id'];
       $ItemCategory_id     = $row['ItemCategory_id'];
     }
@@ -98,6 +99,30 @@
       $type                       = $row['type'];
       $description_SecurityPolice = $row['description'];
       $fee                        = $row['fee'];
+    }
+  }
+
+  /*********************************************************************************/
+  /********************************* CUSTOMER DB ***********************************/
+  /*********************************************************************************/
+
+
+  // check for Customer in Customer DB
+  $result_Customer = $conn->query("select name, surname from Customer where id = " . $Login_idLogin . "");
+
+  if (!$result_Customer) {
+    throw new Exception('Could not execute Customer query');
+  }
+
+  // Customer variables
+  $Customer_name;
+  $Customer_surname;
+
+  if ($result_Customer->num_rows>0) {
+    while ($row = $result_Customer->fetch_assoc()) {
+      unset($Customer_name, $Customer_surname);
+      $Customer_name    = $row['name'];
+      $Customer_surname = $row['surname'];
     }
   }
 
@@ -164,51 +189,52 @@
               <label><?php echo "Published: " . $publishDate; ?></label>
               <hr>
             </li>
-						<li>
-							<h2>Carry out the rental</h2>
-              <p>Total price of rental: € ??</p>
-              <br>
-							<form class="loginForm">
-								<div class="form-group">
-									<input type="text" class="form-control" name="cardHOlderName" id="cardHOlderName" placeholder="Cardholder Name">
-								</div>
-								<div class="form-group">
-									<i class="fa fa-credit-card" aria-hidden="true"></i>
-									<input type="text" class="form-control" name="cardNumber" id="cardNumber" placeholder="Card Number">
-								</div>
-								<div class="row">
-									<div class="col-sm-6 col-xs-12">
-										<div class="dateSelect">
-											<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-												<input type="text" class="form-control" name="cardDateOfExpires" id="cardDateOfExpires" placeholder="mm/dd/yyyy">
-												<div class="input-group-addon">
-													<i class="fa fa-calendar" aria-hidden="true"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-xs-12">
-										<div class="form-group">
-											<i class="fa fa-question-circle-o" aria-hidden="true"></i>
-											<input type="text" class="form-control" id="cvc" name="cvc" placeholder="CVC">
-										</div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<label>
-										<input type="checkbox"> By confirming you agree to UniRent <a href="terms-of-services_profile_EN.php">Terms of Service</a>
-									</label>
-								</div>
-								<div class="form-group mgnBtm0">
-									<button type="submit" class="btn btn-primary">Confirm Rental</button>
-								</div>
-							</form>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+            <li>
+              <?php
+                if ($Login_idLogin == $Customer_id) {
+                  echo "<h2>This item is yours!</h2>";
+                  echo "<p>What do you want to do:</p>";
+                  echo "<br>";
+                  echo '<div class="row">';
+                    echo '<div class="col-sm-6 col-xs-12">';
+                      echo '<div class="form-group">';
+                        echo '<button type="submit" class="label label-success">Edit item</button>';
+                      echo '</div>';
+                    echo '</div>';                  
+                    echo '<div class="col-sm-6 col-xs-12">';
+                      echo '<div class="form-group">';
+                        echo '<button type="submit" class="label label-danger">Delete item</button>';
+                      echo '</div>';
+                    echo '</div>';
+                  echo '</div>';
+                } else {
+                  echo "<h2>Carry out the rental</h2>";
+                  echo "<p>Total price of the rental: € ??</p>";
+                  echo "<br>";
+                  echo '<form class="loginForm">';
+                    echo '<div class="form-group">';
+                      echo "<input type='text' class='form-control' name='cardHOlderName' id='cardHOlderName' placeholder='$Customer_name $Customer_surname' value='' disabled>";
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                      echo '<textarea rows="4" cols="50" class="form-control" name="purpose" id="purpose" placeholder="Rentals purpose"></textarea>';
+                    echo '</div>';
+                    echo '<div class="checkbox">';
+                      echo '<label>';
+                        echo '<input type="checkbox"> By confirming you agree to UniRent <a href="terms-of-services_profile_EN.php">Services Terms</a>';
+                      echo '</label>';
+                    echo '</div>';
+                    echo '<div class="form-group mgnBtm0">';
+                      echo '<button type="button" class="btn btn-primary">Confirm Rental</button>';
+                    echo '</div>';
+                  echo '</form>';
+                }
+              ?>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
