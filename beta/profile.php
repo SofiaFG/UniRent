@@ -312,7 +312,7 @@
 										<select name="nationality" id="nationality" class="select-drop">
 											<?php
 
-												$result_nationality = $conn->query("select id, nationality from Nationality");
+												$result_nationality = $conn->query("select * from Nationality where language = 'PT'");
 
 												while ($row = $result_nationality->fetch_assoc()) {
               										unset($id, $name);
@@ -365,7 +365,7 @@
 										<select name="country" id="country" class="select-drop">
 											<?php
 
-												$result_Country = $conn->query("select id, countryPT from Country");
+												$result_Country = $conn->query("select id, countryPT from Country where id = 193");
 
 												while ($row = $result_Country->fetch_assoc()) {
               										unset($id, $name);
@@ -435,7 +435,7 @@
 
 											<?php
 
-												$result_StudyCountry = $conn->query("select id, countryPT from Country");
+												$result_StudyCountry = $conn->query("select id, countryPT from Country where id = 193");
 
 												while ($row = $result_StudyCountry->fetch_assoc()) {
               										unset($id, $name);
@@ -573,7 +573,7 @@
 							<div class="row">
 								<div class="form-group col-xs-12">
 									<label for="currentPassword">Palavra passe atual</label>
-									<input maxlength="15" type="password" class="form-control" id="currentPassword" name="currentPassword" value="<?php echo  $password_login ?>">
+									<input maxlength="15" type="password" class="form-control" id="currentPassword" name="currentPassword" value="<?php echo  $password_login ?>" disabled>
 								</div>
 								<div class="form-group col-xs-12">
 									<label for="newPassword">Palavra passe</label>

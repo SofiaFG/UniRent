@@ -62,7 +62,7 @@
 	
 		// If ok, put in db
 		$sql = "insert into SecurityPolice values('', '" . $securityType . "', '" . $securityDescription . "', " . $securityFee . ")";
-
+		
 		if ($conn->query($sql) === TRUE) {
 		    $last_id = $conn->insert_id;
 		    //echo "New record created successfully. Last inserted ID is: " . $last_id;

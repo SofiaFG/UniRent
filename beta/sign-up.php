@@ -177,7 +177,7 @@
 
 												<?php
 
-													$result_nationality = $conn->query("select id, nationality from Nationality");
+													$result_nationality = $conn->query("select * from Nationality where language = 'PT'");
 
 													while ($row = $result_nationality->fetch_assoc()) {
                   										unset($id, $name);
@@ -231,7 +231,7 @@
 
 												<?php
 
-													$result_Country = $conn->query("select id, countryPT from Country");
+													$result_Country = $conn->query("select id, countryPT from Country where id = 193");
 
 													while ($row = $result_Country->fetch_assoc()) {
                   										unset($id, $name);
@@ -298,7 +298,7 @@
 
 												<?php
 
-													$result_StudyCountry = $conn->query("select id, countryPT from Country");
+													$result_StudyCountry = $conn->query("select id, countryPT from Country where id = 193");
 
 													while ($row = $result_StudyCountry->fetch_assoc()) {
                   										unset($id, $name);

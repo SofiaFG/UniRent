@@ -8,7 +8,7 @@
 	$itemCategory        = $_POST['itemCategory'];
 	$itemDescription     = $_POST['itemDescription'];
 	$itemPrice    		 = $_POST['itemPrice'];
-	$yearBought 		 = date('Y-m-d',strtotime($_POST['yearBought']));
+	$yearBought 		 = $_POST['yearBought'];
 	
 	// Galeria variables
 	$videoUrl    		 = $_POST['videoUrl'];
@@ -39,8 +39,13 @@
 		// Retrieve Login ID 
 		$Login_idLogin = retrieve_Login($login_session);
 
-		//Attempt to register SecurityPolice
-		$SecurityPolice_id = register_SecurityPolice($securityType, $securityDescription, $securityFee);
+		if ((strcmp("",$securityFee)) == 0) {
+			//Attempt to register SecurityPolice
+			$SecurityPolice_id = register_SecurityPolice($securityType, $securityDescription, 0);
+		} else {
+			//Attempt to register SecurityPolice
+			$SecurityPolice_id = register_SecurityPolice($securityType, $securityDescription, $securityFee);
+		}
 
 		// Attempt to register Address DB
 		$Address_id = register_Address($addressLine1, $addressLine2, $postalCode, $city, $country);
