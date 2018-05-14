@@ -134,7 +134,7 @@
                 <div class="dateSelect col-sm-6 col-xs-12">
                     <label for="endAvailableDay" class="control-label">Data de Fim</label>
                       <div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-                      <input maxlength="10" type="text" class="form-control" id="endAvailableDay" name="endAvailableDay" placeholder="<?php echo $endAvailableDay; ?>" value="<?php echo $endAvailableDay; ?>" diseblad>
+                      <input maxlength="10" type="text" class="form-control" id="endAvailableDay" name="endAvailableDay" placeholder="<?php echo $endAvailableDay; ?>" value="<?php echo $endAvailableDay; ?>" disabled>
                         <div class="input-group-addon">
                           <i class="fa fa-calendar" aria-hidden="true"></i>
                         </div>
