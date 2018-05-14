@@ -111,7 +111,9 @@
       </div>
     <div class="row">
       <div class="col-xs-12">
-        <div class="btnArea text-center"><a href="#" class="btn btn-primary">Vê agora <i class="fa fa-play-circle" aria-hidden="true"></i></a></div>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YyeIDNuknRs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -377,6 +379,37 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- INBOUND MARKETING CALL TO ACTION SECTION -->
+<section class="clearfix articlesArea">
+  <div class="container">
+    <div class="row">
+      <div class="page-header text-center">
+        <h2>Começa agora</h2>
+      </div>
+      <div class="col-xs-50">
+        <div class="servicesItem">
+          <ul class="list-inline listServices">
+            <li>
+              <div class="col-sm-18 col-xs-35">
+              <a href="login.php" class="btn btn-primary btn-transparent">
+                <span>Clica para <br><strong>Rentabiliza teus Bens</strong></span>
+              </a>
+              </div>
+            </li>
+            <li>
+              <div class="col-sm-18 col-xs-35">
+              <a href="login.php" class="btn btn-primary btn-transparent">
+                <span>Clica para <br><strong>Aluga o que precisas</strong></span>
+              </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
   </div>
 </section>
 

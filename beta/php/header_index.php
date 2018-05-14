@@ -91,6 +91,13 @@
               <ul class="nav navbar-nav navbar-right">
                 </li>
                 <li class=" dropdown singleDrop">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Começa agora<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-left">
+                      <li><a href="login.php">Rentabiliza os teus Bens</a></li>
+                      <li><a href="login.php">Aluga o que precisas</a></li>
+                  </ul>
+                </li>
+                <li class=" dropdown singleDrop">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ajuda <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                   <ul class="dropdown-menu dropdown-menu-left">
                       <li><a href="contact-us.php">Contactos</a></li>

@@ -36,7 +36,7 @@
 			<div class="col-sm-6 col-xs-12">
 				<div class="panel panel-default panel-card">
 					<div class="panel-heading">
-						My Items <span class="label label"><a href="manage_ads_EN.php">Detalhes</a></span>
+						My Items <span class="label label"><a href="manage_ads_EN.php">Details</a></span>
 					</div>
 					<div class="panel-body">
 						<h3><center>

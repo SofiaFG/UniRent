@@ -89,6 +89,13 @@
               <ul class="nav navbar-nav navbar-right">
                 </li>
                 <li class=" dropdown singleDrop">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Start now<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-left">
+                      <li><a href="login_EN.php">Monetize your goods</a></li>
+                      <li><a href="login_EN.php">Rent what you need</a></li>
+                  </ul>
+                </li>
+                <li class=" dropdown singleDrop">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                   <ul class="dropdown-menu dropdown-menu-left">
                       <li><a href="contact-us_EN.php">Contact Us</a></li>
