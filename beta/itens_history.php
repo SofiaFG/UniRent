@@ -57,7 +57,7 @@
 									<label for="initialRentalDay">Data de Início do Aluguer</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-											<input type="text" class="form-control" id="initialRentalDay" name="initialRentalDay" placeholder="mm/dd/yyyy">
+											<input type="text" class="form-control" id="initialRentalDay" name="initialRentalDay" placeholder="dd/mm/aaaa">
 											<div class="input-group-addon">
 												<i class="icon-listy icon-calendar"></i>
 											</div>
@@ -68,7 +68,7 @@
 									<label for="endRentalDay">Data de Fim do Aluguer</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-											<input type="text" class="form-control" id="endRentalDay" name="endRentalDay" placeholder="mm/dd/yyyy">
+											<input type="text" class="form-control" id="endRentalDay" name="endRentalDay" placeholder="dd/mm/aaaa">
 											<div class="input-group-addon">
 												<i class="icon-listy icon-calendar"></i>
 											</div>
@@ -79,7 +79,7 @@
 									<label for="publishDate">Data de Publicação do Bem</label>
 									<div class="dateSelect">
 										<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-											<input type="text" class="form-control" id="publishDate" name="publishDate" placeholder="mm/dd/yyyy">
+											<input type="text" class="form-control" id="publishDate" name="publishDate" placeholder="dd/mm/aaaa">
 											<div class="input-group-addon">
 												<i class="icon-listy icon-calendar"></i>
 											</div>

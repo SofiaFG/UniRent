@@ -380,7 +380,7 @@
 								<div class="dateSelect col-sm-6 col-xs-12">
                   				<label for="initialAvailableDay" class="control-label">Data de Início*</label>
                   					<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-                    				<input maxlength="10" type="text" class="form-control" id="initialAvailableDay" name="initialAvailableDay" placeholder="mm/dd/yyyy">
+                    				<input maxlength="10" type="text" class="form-control" id="initialAvailableDay" name="initialAvailableDay" placeholder="dd/mm/aaaa">
                     					<div class="input-group-addon">
                       					<i class="fa fa-calendar" aria-hidden="true"></i>
                     					</div>
@@ -389,7 +389,7 @@
                 			<div class="dateSelect col-sm-6 col-xs-12">
                   				<label for="endAvailableDay" class="control-label">Data de Fim*</label>
                   					<div class="input-group date ed-datepicker filterDate" data-provide="datepicker">
-                    				<input maxlength="10" type="text" class="form-control" id="endAvailableDay" name="endAvailableDay" placeholder="mm/dd/yyyy">
+                    				<input maxlength="10" type="text" class="form-control" id="endAvailableDay" name="endAvailableDay" placeholder="dd/mm/aaaa">
                     					<div class="input-group-addon">
                       					<i class="fa fa-calendar" aria-hidden="true"></i>
                     					</div>
