@@ -213,7 +213,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h2>Insert a new Item</h2>
+        <h2>Editar o bem: <?php echo $name; ?></h2>
         <ol class="breadcrumb">
           <li><a href="listings_EN.php">Home</a></li>
         </ol>

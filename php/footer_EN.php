@@ -54,7 +54,7 @@
                   </div>
                   <div class="col-sm-7 col-sm-pull-5 col-xs-12">
                     <div class="copyRightText">
-                      <p>Copyright &copy; 2018. All Rights Reserved by <a href="index_EN.php">UniRent</a></p>
+                      <p>UniRent &copy; 2018. All Rights Reserved by <a href="index_EN.php">UniRent</a></p>
                     </div>
                   </div>
                 </div>

@@ -299,11 +299,11 @@
 											</select>
 								</div>
 								<div class="form-group col-sm-6 col-xs-12">
-									<label for="securityFee">Fee*</label>
+									<label for="securityFee">Fee</label>
 									<input  maxlength="6" type="text" class="form-control" id="securityFee" name="securityFee" placeholder="€">
 								</div>
 								<div class="form-group col-xs-12">
-									<label for="securityDescription">Fee reason description</label>
+									<label for="securityDescription">Security Policy Reason</label>
 									<input  maxlength="200" type="text" class="form-control" id="securityDescription" name="securityDescription" placeholder="Describe the reason for the fee">
 								</div>
 							</div>

@@ -174,8 +174,8 @@
                   echo "<h3><?php echo 'Descrição: ' . $description_SecurityPolice ?></h3>";  
                 }
               ?>
-              <h3><?php echo "Descrição: " . $description_SecurityPolice; ?></h3>
-              <p><?php echo "Valor da taxa: € " . $fee ?></p>
+              <h3><?php echo "Explicação da Política de Segurança: " . $description_SecurityPolice; ?></h3>
+              <p><?php echo "Valor da Caução: € " . $fee ?></p>
               <hr>
               <label><?php echo "Categoria: " . $itemCategory; ?></label>
               <br>

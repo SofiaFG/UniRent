@@ -181,8 +181,8 @@
                   echo "<h3><?php echo 'Descrição: ' . $description_SecurityPolice ?></h3>";  
                 }
               ?>
-              <h3><?php echo "Descrição: " . $description_SecurityPolice; ?></h3>
-              <p><?php echo "Valor da taxa: € " . $fee ?></p>
+              <h3><?php echo "Explicação da Política de Segurança: " . $description_SecurityPolice; ?></h3>
+              <p><?php echo "Valor da Caução: € " . $fee ?></p>
               <hr>
               <label><?php echo "Categoria: " . $itemCategory; ?></label>
               <br>
@@ -192,8 +192,8 @@
 						<li>
               <?php
                 if ($Login_idLogin == $Customer_id) {
-                  echo "<h2>Este bem é seu!</h2>";
-                  echo "<p>O que deseja fazer:</p>";
+                  echo "<h2>Este bem é teu!</h2>";
+                  echo "<p>O que desejas fazer:</p>";
                   echo "<br>";
                   echo '<div class="row">';
                     echo '<div class="col-sm-6 col-xs-12">';

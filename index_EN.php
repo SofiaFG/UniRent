@@ -122,7 +122,7 @@
 <section class="clearfix appDownload">
   <div class="container">
     <div class="page-header text-center">
-      <h2>Download on App Store</h2>
+      <h2>Soon</h2>
     </div>
     <div class="row">
       <div class="col-sm-4 col-xs-12">
@@ -367,47 +367,24 @@
 </section>
 
 
-<!-- CALL TO ACTION SECTION -->
-<section class="clearfix callAction">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-15 col-sm-15 col-xs-20">
-				<div class="callInfo">
-					<h4><span>UniRent</span> is the <span>best way</span> <br>to Find Great Products for a short time</h4>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-
 <!-- INBOUND MARKETING CALL TO ACTION SECTION -->
-<section class="clearfix articlesArea">
+<section class="clearfix callAction">
   <div class="container">
     <div class="row">
-      <div class="page-header text-center">
-        <h2>Start now</h2>
-      </div>
-      <div class="col-xs-50">
-        <div class="servicesItem">
-          <ul class="list-inline listServices">
-            <li>
-              <div class="col-sm-18 col-xs-35">
-              <a href="login_EN.php" class="btn btn-primary btn-transparent">
-                <span>Click to <br><strong>Monetize your goods</strong></span>
-              </a>
-              </div>
-            </li>
-            <li>
-              <div class="col-sm-18 col-xs-35">
-              <a href="login_EN.php" class="btn btn-primary btn-transparent">
-                <span>Click to <br><strong>Rent what you need</strong></span>
-              </a>
-              </div>
-            </li>
-          </ul>
+      <div class="col-md-10 col-sm-9 col-xs-12">
+        <div class="callInfo">
+          <h4><span>UniRent</span> is the <span>best way</span> <br>to Find Great Products for a short time</h4>
         </div>
       </div>
+      <div class="col-md-2 col-sm-3 col-xs-12">
+        <div class="btnArea">
+          <a href="sign-up.php" class="btn btn-primary">Monetize your goods</a>
+        </div>
+        <div class="btnArea">
+          <a href="sign-up.php" class="btn btn-primary">Rent what you need</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

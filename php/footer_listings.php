@@ -8,7 +8,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <p>Copyright © 2018. Todos os direitos reservados</p>
+            <p>UniRent &copy; 2018. Todos os direitos reservados</p>
           </div>
         </div>
       </div>

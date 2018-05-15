@@ -124,7 +124,7 @@
 <section class="clearfix appDownload">
   <div class="container">
     <div class="page-header text-center">
-      <h2>Descarrega na App Store</h2>
+      <h2>Brevemente</h2>
     </div>
     <div class="row">
       <div class="col-sm-4 col-xs-12">
@@ -369,47 +369,24 @@
 </section>
 
 
-<!-- CALL TO ACTION SECTION -->
+<!-- INBOUND MARKETING CALL TO ACTION SECTION -->
 <section class="clearfix callAction">
   <div class="container">
     <div class="row">
-      <div class="col-md-15 col-sm-15 col-xs-20">
+      <div class="col-md-10 col-sm-9 col-xs-12">
         <div class="callInfo">
           <h4><span>UniRent</span> é a <span>melhor maneira</span> <br>para encontrar os Melhores Produtos para um curto período de tempo</h4>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- INBOUND MARKETING CALL TO ACTION SECTION -->
-<section class="clearfix articlesArea">
-  <div class="container">
-    <div class="row">
-      <div class="page-header text-center">
-        <h2>Começa agora</h2>
-      </div>
-      <div class="col-xs-50">
-        <div class="servicesItem">
-          <ul class="list-inline listServices">
-            <li>
-              <div class="col-sm-18 col-xs-35">
-              <a href="login.php" class="btn btn-primary btn-transparent">
-                <span>Clica para <br><strong>Rentabiliza teus Bens</strong></span>
-              </a>
-              </div>
-            </li>
-            <li>
-              <div class="col-sm-18 col-xs-35">
-              <a href="login.php" class="btn btn-primary btn-transparent">
-                <span>Clica para <br><strong>Aluga o que precisas</strong></span>
-              </a>
-              </div>
-            </li>
-          </ul>
+      <div class="col-md-2 col-sm-3 col-xs-12">
+        <div class="btnArea">
+          <a href="sign-up.php" class="btn btn-primary">Rentabiliza teus Bens</a>
+        </div>
+        <div class="btnArea">
+          <a href="sign-up.php" class="btn btn-primary">Aluga o que precisas</a>
         </div>
       </div>
+    </div>
   </div>
 </section>
 
@@ -419,7 +396,7 @@
   <div class="container">
     <div class="row">
       <div class="page-header text-center">
-        <h2>Fique atento às nossas novidades</h2>
+        <h2>Fica atento às nossas novidades</h2>
       </div>
       <div class="center-block col-md-5 col-sm-6 col-xs-12">
         <div class="panel panel-default loginPanel">

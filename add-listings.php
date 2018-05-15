@@ -305,7 +305,7 @@
 									<input  maxlength="6" type="text" class="form-control" id="securityFee" name="securityFee" placeholder="€">
 								</div>
 								<div class="form-group col-xs-12">
-									<label for="securityDescription">Descrição do motivo da taxa</label>
+									<label for="securityDescription">Explicação da Política de Segurança</label>
 									<input  maxlength="200" type="text" class="form-control" id="securityDescription" name="securityDescription">
 								</div>
 							</div>

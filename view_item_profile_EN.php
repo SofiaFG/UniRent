@@ -151,7 +151,7 @@
                   echo "<h3><?php echo 'Description: ' . $description_SecurityPolice ?></h3>";  
                 }
               ?>
-              <h3><?php echo "Description: " . $description_SecurityPolice; ?></h3>
+              <h3><?php echo "Security Policy Reason: " . $description_SecurityPolice; ?></h3>
               <p><?php echo "Fee: € " . $fee ?></p>
               <hr>
               <label><?php echo "Category: " . $itemCategory; ?></label>
